@@ -13,7 +13,7 @@ export const InputDeliveryContainer = styled.div`
 
 @media screen and (max-width: 500px) {
     margin: 10px auto 15px auto;
-    width: 94%;
+    width: 92%;
     font-size: 1em;
     
     
@@ -43,7 +43,6 @@ export const InputDeliveryContainer = styled.div`
             font-family: sans-serif;
             opacity: 0;
             display: block;
-            border: 1px solid red;
 
             animation: ${animaEnd};
             animation-duration: .5s;
@@ -84,7 +83,7 @@ export const InputDeliveryContainer = styled.div`
                 padding: 0 !important;
 
                 input[name='CIDADE']{
-                    width: 82% !important;
+                    width: 49% !important;
                     margin: 0 !important;
                     margin-top: 8px !important;
                 }
@@ -92,8 +91,12 @@ export const InputDeliveryContainer = styled.div`
                 input[name='BAIRRO']{
                     margin: 0 !important;
                     margin-top: 8px !important;
-                    width: 15% !important;
+                    width: 49% !important;
                 }
+            }
+
+            input[name='COMPLEMENTO']{
+                width: 100%;
             }
         }
 

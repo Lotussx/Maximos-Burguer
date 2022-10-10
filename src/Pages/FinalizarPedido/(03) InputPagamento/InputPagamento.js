@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InputDeliveryContainer } from '../InputDelivery/Styled-InputDelivery';
+import { InputPagamentoContainer } from './Styled-InputPagamento';
 
 import Global from '../../../Global';
 
@@ -33,22 +33,22 @@ export default function InputPagamento() {
     }
 
     return (
-        <InputDeliveryContainer className={formPAGAMENTO ? 'opcPagamentoCLOSE' : 'opcPagamentoOPEN'}>
+        <InputPagamentoContainer className={formPAGAMENTO ? '' : 'opcPagamentoOPEN'}>
             {/* Opcão "Sim" */}
-            <input type="radio" name="opcaoPAGA" value="Dinheiro" id="radio01" className='radio' onChange={handleChangePAGAMENTO} />
-            <label htmlFor='opcao'>Dinheiro</label>
+            <input type="radio" name="opcaoPAGA" value="Dinheiro" id="radio01" onChange={handleChangePAGAMENTO} />
+            <label htmlFor='opcaoPAGA'>Dinheiro</label>
             {/* Opcão "Pix" */}
-            <input type="radio" name="opcaoPAGA" value="Pix" id="radio02" className='radio' onChange={handleChangePAGAMENTO} />
-            <label htmlFor='opcao'>Pix</label>
+            <input type="radio" name="opcaoPAGA" value="Pix" id="radio02" onChange={handleChangePAGAMENTO} />
+            <label htmlFor='opcaoPAGA'>Pix</label>
             {/* Opcão "Cartão" */}
-            <input type="radio" name="opcaoPAGA" value="Cartão" id="radio03" className='radio' onChange={handleChangePAGAMENTO} />
-            <label htmlFor='opcao'>Cartão</label>
+            <input type="radio" name="opcaoPAGA" value="Cartão" id="radio03" onChange={handleChangePAGAMENTO} />
+            <label htmlFor='opcaoPAGA'>Cartão</label>
 
 
             <div className='trocoContainer'>
                 <label htmlFor='TROCO'>Valor do troco:</label>
-                <input className='teste' type='number' name='TROCO' placeholder='Insira o valor do troco.'  onBlur={inputTROCO}></input>
+                <input className='inputText' type='number' name='TROCO' placeholder='Insira o valor do troco.' onBlur={inputTROCO}></input>
             </div>
-        </InputDeliveryContainer>
+        </InputPagamentoContainer>
     )
 }

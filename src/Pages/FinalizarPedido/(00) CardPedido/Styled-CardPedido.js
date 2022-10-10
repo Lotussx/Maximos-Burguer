@@ -36,6 +36,8 @@ export const CardPedidoContainer = styled.div`
             height: 25%;
             padding-left: 15px;
             font-weight: bold;
+            padding-top: 5px;
+            padding-bottom: 7px;
         }
 
 }

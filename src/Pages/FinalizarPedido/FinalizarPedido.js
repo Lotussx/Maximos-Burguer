@@ -3,17 +3,16 @@ import Global from '../../Global.js';
 import { FinalizarPedidoContainer } from './Styled-FinalizarPedido';
 
 import Header from '../../Components/Header/Header';
-import AvisoModal from './AvisoModal/AvisoModal';
 
-
-import InputDelivery from './InputDelivery/InputDelivery.js';
-import CardPedido from './CardPedido/CardPedido.js';
-import VoltarCardapio from './VoltarCardapio/VoltarCardapio.js';
-import InputPagamento from './InputPagamento/InputPagamento.js';
+import CardPedido from './(00) CardPedido/CardPedido.js';
+import InfoCliente from './(01) InfoCliente/InfoCliente.js';
+import InputDelivery from './(02) InputDelivery/InputDelivery.js';
+import InputPagamento from './(03) InputPagamento/InputPagamento.js';
+import BtnFinalizar from './(04) BtnFinalizar/BtnFinalizar.js';
+import VoltarCardapio from './(05) VoltarCardapio/VoltarCardapio.js';
+import AvisoModal from './(06) AvisoModal/AvisoModal';
 
 export default function FinalizarPedido() {
-
-
 
     const [modalAviso, setModalAviso] = useState(false);
     const abrirModal = () => {
@@ -70,42 +69,26 @@ export default function FinalizarPedido() {
             {Global.newMsg !== '' ? (
                 <div className='mainContainer flex-class'>
                     <CardPedido />
-
                     <form className='formContainer flex-class'>
-                        {/* Input para inserir o nome */}
-                        <label htmlFor='name'>Digite seu nome:</label>
-                        <input name='nome' type='text' id='name' placeholder='Digite seu nome aqui...' className='inputText' required></input>
-                        {/* Input para inserir observações */}
-                        <label htmlFor='obsPedido'>Observações do pedido:</label>
-                        <input name='obsPedido' type='text' id='obsPedido' placeholder='Ex: sem alface e cebola...' className='inputText'></input>
-
-
+                        {/* Nome e Obs Pedido */}
+                        <InfoCliente />
+                        
                         {/* Delivery */}
                         <InputDelivery />
 
                         {/* OPC Pagamento */}
                         <InputPagamento />
-
-                        <div className='buttonFinalizar' onClick={abrirModal}>
-                            <button type='button'><p>Finalizar pedido</p></button>
-                        </div>
+                        
+                        {/* BTN para abrir o modal de aviso e pegar as informações dos input */}
+                        <BtnFinalizar click={abrirModal} />
                     </form>
                 </div>
-
-
             ) : (
-
                 <VoltarCardapio />
             )}
 
             <AvisoModal class={modalAviso === true ? 'avisoModalOn' : 'avisoModalOff'} click={fechaMODALaviso}></AvisoModal>
         </FinalizarPedidoContainer>
-
-
     )
-
-
-
-
 }
 

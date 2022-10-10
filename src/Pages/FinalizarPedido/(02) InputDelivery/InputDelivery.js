@@ -38,7 +38,7 @@ export default function InputDelivery() {
 
         console.log(e)
     }
-
+    
     // PEGAR O VALOR DO INPUT COMPLEMENTO
     const complementoInput = (e) => {
         const complemento = (e).target.value
@@ -54,12 +54,7 @@ export default function InputDelivery() {
             <input type="radio" name="opcao" value="Retirada no estabelicimento" id="radio02" className='radio' onChange={handleChange} />
             <label htmlFor='opcao'>Retirada no estabelicimento</label>
 
-
-
-
-
-
-
+            {/* Div para inserir as info de endereço */}
             <div className='enderecoContainer flex-class'>
                 <input type='text' {...register('CEP')} placeholder='Digite seu CEP' className='inputText' onBlur={checkCEP}></input>
                 <div className='ruaNum flex-class'>
