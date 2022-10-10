@@ -3,18 +3,17 @@ import styled from "styled-components";
 export const SlideContainer = styled.div`
         
         @media screen and (max-width: 500px) {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             height: 38%;
             color: red;
-            margin-top: 11vh;
+            margin-top: 09vh;
 
             .carousel-indicators{
                 margin: 0 !important;
             }
             
             .itemSlide{
-                border-radius: 15px;
                 background-repeat: no-repeat !important;
                 background-size: cover !important;
                 height: 300px;

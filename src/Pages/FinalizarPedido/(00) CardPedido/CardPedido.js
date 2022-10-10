@@ -5,7 +5,6 @@ import { CardPedidoContainer } from './Styled-CardPedido';
 
 export default function CardPedido() {
     return (
-
         <CardPedidoContainer>
             <h3>Pedido:</h3>
             <hr className='barra'></hr>
@@ -16,6 +15,5 @@ export default function CardPedido() {
                 <span>{Global.precoTotal}</span>
             </div>
         </CardPedidoContainer>
-
     )
 }

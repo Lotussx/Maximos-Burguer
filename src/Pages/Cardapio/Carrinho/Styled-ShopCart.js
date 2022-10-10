@@ -22,7 +22,7 @@ export const ContainerShopCart = styled.div`
 
 @media screen and (max-width: 500px) {
     position: fixed;
-    height: 10vh;
+    height: 09vh;
     width: 100%;
     bottom: 0;
     border-radius: 25px 25px 0 0;

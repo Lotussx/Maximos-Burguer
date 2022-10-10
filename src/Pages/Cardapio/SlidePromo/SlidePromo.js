@@ -8,7 +8,6 @@ export default function SlidePromo(props) {
 
     const { products, onADD } = props;
 
-
     return (
         <SlideContainer>
             <Carousel>
@@ -29,7 +28,7 @@ export default function SlidePromo(props) {
             </Carousel>
         </SlideContainer >
     )
-}
+};
 
 
 // <Carousel.Item className='itemCarousel flex-class'>
