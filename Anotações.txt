@@ -1,0 +1,2 @@
+Forma correta de adcionar className + condição:
+className={`opcPagamento ${formPAGAMENTO ? '' : 'opcPagamentoOPEN'}`
