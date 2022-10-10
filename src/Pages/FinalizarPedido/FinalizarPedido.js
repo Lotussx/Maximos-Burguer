@@ -5,79 +5,15 @@ import { FinalizarPedidoContainer } from './Styled-FinalizarPedido';
 import Header from '../../Components/Header/Header';
 import AvisoModal from './AvisoModal/AvisoModal';
 
-import { useForm } from 'react-hook-form';
 
 import InputDelivery from './InputDelivery/InputDelivery.js';
 import CardPedido from './CardPedido/CardPedido.js';
 import VoltarCardapio from './VoltarCardapio/VoltarCardapio.js';
+import InputPagamento from './InputPagamento/InputPagamento.js';
 
 export default function FinalizarPedido() {
 
-    const { register, setValue } = useForm();
 
-    // OPÇÃO ENTREGA
-    const [formDelivery, setformDelivery] = useState('false');
-    const handleChange = () => {
-        var radioCheck = document.querySelector('input[name="opcao"]:checked')
-        if (radioCheck.value === 'Delivery') {
-            Global.opcENTREGA = radioCheck.value;
-            Global.opcSELECIONADAen = true
-            setformDelivery(!formDelivery)
-        } else {
-            Global.opcENTREGA = radioCheck.value;
-            Global.opcSELECIONADAen = true
-            setformDelivery('false')
-        }
-    }
-
-    // CONSUMO DA API VIA CEP
-    const checkCEP = (e) => {
-        const cep = (e).target.value.replace(/\D/g, '');
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
-            .then(res => res.json()).then(data => {
-                console.log(data);
-                setValue('CEP', data.cep);
-                setValue('RUA', data.logradouro);
-                setValue('CIDADE', data.localidade);
-                setValue('BAIRRO', data.bairro);
-            });
-
-        console.log(e)
-    }
-
-
-    // PEGAR O VALOR DO INPUT COMPLEMENTO
-    const complementoInput = (e) => {
-        const complemento = (e).target.value
-        console.log(complemento)
-    }
-
-    // PEGAR O VALOR DO INPUT TROCO
-    const inputTROCO = (e) => {
-        const troco = (e).target.value
-        if (troco !== 0) {
-            Global.trocoPAGAMENTO = troco;
-        }
-    }
-
-    // OPÇÃO PAGAMENTO
-    const [formPAGAMENTO, setformPAGAMENTO] = useState('false');
-    const handleChangePAGAMENTO = () => {
-        let radioCheck = document.querySelector('input[name="opcaoPAGA"]:checked')
-        if (radioCheck.value === 'Dinheiro') {
-            Global.opcSELECIONADApag = true;
-            Global.opcPAGAMENTO = radioCheck.value;
-            setformPAGAMENTO(!formPAGAMENTO)
-        } else if (radioCheck.value === 'Pix') {
-            Global.opcSELECIONADApag = true;
-            Global.opcPAGAMENTO = radioCheck.value;
-            setformPAGAMENTO('false')
-        } else {
-            Global.opcSELECIONADApag = true;
-            Global.opcPAGAMENTO = radioCheck.value;
-            setformPAGAMENTO('false')
-        }
-    }
 
     const [modalAviso, setModalAviso] = useState(false);
     const abrirModal = () => {
@@ -147,29 +83,12 @@ export default function FinalizarPedido() {
                         {/* Delivery */}
                         <InputDelivery />
 
-
                         {/* OPC Pagamento */}
-                        <div className={`opcPagamento ${formPAGAMENTO ? '' : 'opcPagamentoOPEN'}`}>
-                            {/* Opcão "Sim" */}
-                            <input type="radio" name="opcaoPAGA" value="Dinheiro" id="radio01" className='radio' onChange={handleChangePAGAMENTO} />
-                            <label htmlFor='opcao'>Dinheiro</label>
-                            {/* Opcão "Pix" */}
-                            <input type="radio" name="opcaoPAGA" value="Pix" id="radio02" className='radio' onChange={handleChangePAGAMENTO} />
-                            <label htmlFor='opcao'>Pix</label>
-                            {/* Opcão "Cartão" */}
-                            <input type="radio" name="opcaoPAGA" value="Cartão" id="radio03" className='radio' onChange={handleChangePAGAMENTO} />
-                            <label htmlFor='opcao'>Cartão</label>
-                            <div className='trocoContainer'>
-                                <label htmlFor='troco'>Valor do troco:</label>
-                                <input type='number' name='troco' placeholder='Insira o valor do troco.' className='inputText' onBlur={inputTROCO}></input>
-                            </div>
-                        </div>
+                        <InputPagamento />
 
                         <div className='buttonFinalizar' onClick={abrirModal}>
                             <button type='button'><p>Finalizar pedido</p></button>
                         </div>
-
-
                     </form>
                 </div>
 

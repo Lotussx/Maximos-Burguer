@@ -44,51 +44,7 @@ export const FinalizarPedidoContainer = styled.body`
                     font-family: sans-serif;
                     font-size: .9em;
                     
-                }
-
-                
-                .opcPagamento{
-                    margin: 0px auto 15px auto;
-                    width: 94%;
-
-                    .radio{
-                        border: 1px solid red;
-                        width: 15px;
-                        height: 15px;
-                        padding-right: 15px;
-                    }
-    
-                    label{
-                        padding: 10px;
-                        font-size: 1em;
-                    }
-                    .trocoContainer{
-                        display: none;
-                    }
-                }
-
-                .opcPagamentoOPEN{
-                    .trocoContainer{
-                        margin-top: 5px;
-                        display: block;
-                        
-                        label{
-                            font-size: 1.1em;
-                            font-weight: bold;
-                            padding: 15px 0 15px 5px;
-                         }
-    
-                    .inputText{
-                        margin: 0 auto;
-                        margin-top: 5px;
-                        width: 92%;
-                        height: 30px;
-                        border-radius: 10px;
-                        
-                    }
-                    }
-                    
-                }
+                }   
             }
         
             .buttonFinalizar{
