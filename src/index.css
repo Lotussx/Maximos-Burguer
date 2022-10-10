@@ -1,0 +1,44 @@
+body,
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.block {
+    background-color: #e0e0e0;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+img.small {
+    max-height: 8rem;
+}
+
+.icons-fa {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.flex-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
