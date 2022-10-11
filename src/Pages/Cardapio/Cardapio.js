@@ -9,7 +9,7 @@ import ShopCart from './Carrinho/ShopCart';
 // import Main from '../../Components/Main/Main.js';
 import Header from '../../Components/Header/Header.js';
 import SlidePromo from './SlidePromo/SlidePromo.js';
-import Categorias from './Categorias/Categorias.js';
+import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
 
 
 export default function Cardapio() {
@@ -42,7 +42,7 @@ export default function Cardapio() {
         <CardapioStyle className='App'>
             <Header></Header>
             <SlidePromo products={products} onADD={onADD}></SlidePromo>
-            <Categorias />
+            <CardapioCategorias />
             {/* <div className='row'>
                 <Main onADD={onADD} products={products}></Main>
             </div> */}
