@@ -3,14 +3,16 @@ import { CardapioCategoriasContainer } from './Styled-CardapioCategorias';
 
 export default function CardapioCategorias() {
 
-    const [ComboContainer, setComboContainer] = useState(true)
-    const [PromoContainer, setPromoContainer] = useState(true)
-    const [HambuContainer, setHambuContainer] = useState(true)
-    const [BatataContainer, setBatataContainer] = useState(true)
-    const [BebidaContainer, setBebidaContainer] = useState(true)
+    const [allContainer, setAllContainer] = useState(true);
+    const [comboContainer, setComboContainer] = useState(true);
+    const [promoContainer, setPromoContainer] = useState(true);
+    const [hambuContainer, setHambuContainer] = useState(true);
+    const [batataContainer, setBatataContainer] = useState(true);
+    const [bebidaContainer, setBebidaContainer] = useState(true);
 
 
-    const handleChangeALL = () => {
+    const ChangeALL = () => {
+        setAllContainer(true);
         setComboContainer(true);
         setPromoContainer(true);
         setHambuContainer(true);
@@ -19,83 +21,89 @@ export default function CardapioCategorias() {
     }
 
 
-    const handleChangeCOMBO = () => {
-        setComboContainer(false)
-        setPromoContainer(false)
-        setHambuContainer(false)
-        setBatataContainer(false)
-        setBebidaContainer(false)
+    const desativa = () => {
+        setAllContainer(!true);
+        setComboContainer(!true);
+        setPromoContainer(!true);
+        setHambuContainer(!true);
+        setBatataContainer(!true);
+        setBebidaContainer(!true);
+    }
 
-        function Teste() {
+    const ChangeCOMBO = () => {
+        desativa()
+        setTimeout(function () {
             setComboContainer(true)
-        }
-
-        setInterval(Teste, 2000);
-
-
+        }, 200)
+    }
+    const ChangePROMO = () => {
+        desativa()
+        setTimeout(function () {
+            setPromoContainer(true)
+        }, 200)
+    }
+    const ChangeHAMBU = () => {
+        desativa()
+        setTimeout(function () {
+            setHambuContainer(true)
+        }, 200)
+    }
+    const ChangeBATATA = () => {
+        desativa()
+        setTimeout(function () {
+            setBatataContainer(true)
+        }, 200)
+    }
+    const ChangeBEBIDA = () => {
+        desativa()
+        setTimeout(function () {
+            setBebidaContainer(true)
+        }, 200)
     }
 
-    const handleChangePROMO = () => {
-        setPromoContainer(true)
-        setComboContainer(false)
-        setHambuContainer(false)
-        setBatataContainer(false)
-        setBebidaContainer(false)
-    }
 
-    const handleChangeHAMBURGUER = () => {
-        setHambuContainer(true)
-        setComboContainer(false)
-        setPromoContainer(false)
-        setBatataContainer(false)
-        setBebidaContainer(false)
-    }
-
-    const handleChangeBATATA = () => {
-        setBatataContainer(true)
-        setComboContainer(false)
-        setPromoContainer(false)
-        setHambuContainer(false)
-        setBebidaContainer(false)
-    }
-
-    const handleChangeBEBIDA = () => {
-        setComboContainer(false)
-        setPromoContainer(false)
-        setHambuContainer(false)
-        setBatataContainer(false)
-        setBebidaContainer(true)
-    }
 
     return (
         <CardapioCategoriasContainer className='flex-class'>
             <div className='menuCategorias flex-class'>
-                <li onClick={handleChangeALL}><h4>Todos</h4></li>
-                <li onClick={handleChangeCOMBO}><h4>Combos</h4></li>
-                <li onClick={handleChangePROMO}><h4>Promoções</h4></li>
-                <li onClick={handleChangeHAMBURGUER}><h4>Hamburguer</h4></li>
-                <li onClick={handleChangeBATATA}><h4>Batata Frita</h4></li>
-                <li onClick={handleChangeBEBIDA}><h4>Bebidas</h4></li>
+                <li onClick={ChangeALL}>
+                    <h4 className={allContainer ? 'categoriaON' : ''}>Todos</h4>
+                </li>
+                <li onClick={ChangeCOMBO}>
+                    <h4 className={comboContainer ? 'categoriaON' : ''}>Combos</h4>
+                </li>
+                <li onClick={ChangePROMO}>
+                    <h4 className={promoContainer ? 'categoriaON' : ''}>Promoções</h4>
+                </li>
+                <li onClick={ChangeHAMBU}>
+                    <h4 className={hambuContainer ? 'categoriaON' : ''}>Hamburguer</h4>
+                </li>
+                <li onClick={ChangeBATATA}>
+                    <h4 className={batataContainer ? 'categoriaON' : ''}>Batata Frita</h4>
+                </li>
+                <li onClick={ChangeBEBIDA}>
+                    <h4 className={bebidaContainer ? 'categoriaON' : ''}>Bebidas</h4>
+                </li>
             </div>
 
 
-            <div className={ComboContainer ? 'ComboContainerON' : 'ComboContainerOFF'}>
+            <div className={comboContainer ? 'ComboContainerON' : 'ComboContainerOFF'}>
                 <p>COMBO</p>
             </div>
 
-            <div className={PromoContainer ? 'PromoContainerON' : 'PromoContainerOFF'}>
+            <div className={promoContainer ? 'PromoContainerON' : 'PromoContainerOFF'}>
                 <p>PROMOÇÃO</p>
             </div>
 
-            <div className={HambuContainer ? 'HambuContainerON' : 'HambuContainerOFF'}>
+            <div className={hambuContainer ? 'HambuContainerON' : 'HambuContainerOFF'}>
                 <p>HAMBURGUER</p>
             </div>
 
-            <div className={BatataContainer ? 'BatataContainerON' : 'BatataContainerOFF'}>
+            <div className={batataContainer ? 'BatataContainerON' : 'BatataContainerOFF'}>
                 <p>BATATA</p>
             </div>
 
-            <div className={BebidaContainer ? 'BebidaContainerON' : 'BebidaContainerOFF'}>
+            <div className={bebidaContainer ? 'BebidaContainerON' : 'BebidaContainerOFF'}>
                 <p>BEBIDA</p>
             </div>
 

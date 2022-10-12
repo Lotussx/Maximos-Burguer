@@ -2,6 +2,26 @@ import styled from "styled-components";
 
 export const SlideContainer = styled.div`
         
+        @media screen and (max-height: 665px) {
+            height: 40% !important; 
+            margin-bottom: 19px !important;
+
+            .itemSlide{
+                height: 280px !important;
+            }
+
+            .carousel-caption{
+                h3{
+                    padding-bottom: 2px !important;
+                }
+                
+                p{
+                    margin-bottom: 7px !important;
+                }
+            }
+        }
+
+
         @media screen and (max-width: 500px) {
             width: 100%;
             margin: 0 auto;

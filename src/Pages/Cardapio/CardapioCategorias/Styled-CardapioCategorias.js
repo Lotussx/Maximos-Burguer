@@ -1,10 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const animaBorda = keyframes`
+    0%{
+
+    }
+    100%{
+        opacity: 1;
+        background-color: black;
+        color: white;
+    }
+`;
 
 export const CardapioCategoriasContainer = styled.div`
 
     @media screen and (max-width: 500px) {
         width: 100%;
-        border: 1px solid red;
         font-family: 'Oswald', sans-serif;
         margin-top: 10px;
         box-sizing: content-box;
@@ -15,11 +25,10 @@ export const CardapioCategoriasContainer = styled.div`
             width: 100%;
             justify-content: flex-start;
             overflow-x: scroll !important;
+            overflow-y: hidden !important;
             height: 8vh;
-            
 
             li{
-                border: 1px solid blue;
                 width: 40%;
                 height: 100% !important;
                 color: black;
@@ -35,6 +44,19 @@ export const CardapioCategoriasContainer = styled.div`
                     font-size: 1.1em;
                     font-weight: bold;
                     width: 120px !important;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+
+                .categoriaON{
+                    transition: .5s;
+                    animation: ${animaBorda};
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-in-out;
                 }
             }
         }
