@@ -25,7 +25,7 @@ export const SlideContainer = styled.div`
         @media screen and (max-width: 500px) {
             width: 100%;
             margin: 0 auto;
-            height: 38%;
+            height: 285px;
             color: red;
             margin-top: 09vh;
 
@@ -36,7 +36,7 @@ export const SlideContainer = styled.div`
             .itemSlide{
                 background-repeat: no-repeat !important;
                 background-size: cover !important;
-                height: 300px;
+                height: 285px;
                 flex-direction: column;
 
                 .carousel-caption{

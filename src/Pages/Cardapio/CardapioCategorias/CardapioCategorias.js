@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { CardapioCategoriasContainer } from './Styled-CardapioCategorias';
 
-export default function CardapioCategorias() {
+
+
+export default function CardapioCategorias(props) {
+
+    const { productsCOMBO, onADD } = props;
 
     const [allContainer, setAllContainer] = useState(true);
     const [comboContainer, setComboContainer] = useState(true);
@@ -19,8 +23,6 @@ export default function CardapioCategorias() {
         setBatataContainer(true);
         setBebidaContainer(true);
     }
-
-
     const desativa = () => {
         setAllContainer(!true);
         setComboContainer(!true);
@@ -29,7 +31,6 @@ export default function CardapioCategorias() {
         setBatataContainer(!true);
         setBebidaContainer(!true);
     }
-
     const ChangeCOMBO = () => {
         desativa()
         setTimeout(function () {
@@ -87,28 +88,42 @@ export default function CardapioCategorias() {
             </div>
 
 
-            <div className={comboContainer ? 'ComboContainerON' : 'ComboContainerOFF'}>
-                <p>COMBO</p>
+            <div className={comboContainer ? 'categoryON' : 'categoryOFF'}>
+                <div className='nomeCategoria flex-class'>
+                    <h3>Combos</h3>
+                </div>
+                {productsCOMBO.map((product) => (
+                    <div className='produto flex-class'>
+                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+
+                        </div>
+                        <div className='produtoINFO'>
+                            <div className='btnADD flex-class'>
+                                <button onClick={() => onADD(product)}>Adicionar no carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
 
-            <div className={promoContainer ? 'PromoContainerON' : 'PromoContainerOFF'}>
-                <p>PROMOÇÃO</p>
+            <div className={promoContainer ? 'categoryON' : 'categoryOFF'}>
+
             </div>
 
-            <div className={hambuContainer ? 'HambuContainerON' : 'HambuContainerOFF'}>
+            <div className={hambuContainer ? 'categoryON' : 'categoryOFF'}>
                 <p>HAMBURGUER</p>
             </div>
 
-            <div className={batataContainer ? 'BatataContainerON' : 'BatataContainerOFF'}>
+            <div className={batataContainer ? 'categoryON' : 'categoryOFF'}>
                 <p>BATATA</p>
             </div>
 
-            <div className={bebidaContainer ? 'BebidaContainerON' : 'BebidaContainerOFF'}>
+            <div className={bebidaContainer ? 'categoryON' : 'categoryOFF'}>
                 <p>BEBIDA</p>
             </div>
 
 
             <div className='espacoBotton'></div>
-        </CardapioCategoriasContainer>
+        </CardapioCategoriasContainer >
     )
 }

@@ -27,6 +27,30 @@ const data = {
             description: '1 X-EGG + 1 Batata P + Antarctica'
         },
     ],
+
+    productsCOMBO: [
+        {
+            id: '1',
+            name: 'COMBO 01',
+            price: 25.99,
+            image: Promo01,
+            description: '1 X-EGG + 1 Batata P + Antarctica'
+        },
+        {
+            id: '2',
+            name: 'COMBO 03',
+            price: 27.99,
+            image: Promo01,
+            description: '1 X-EGG + 1 Batata P + Antarctica'
+        },
+        {
+            id: '3',
+            name: 'COMBO 03',
+            price: 21.99,
+            image: Promo01,
+            description: '1 X-EGG + 1 Batata P + Antarctica'
+        },
+    ]
 };
 
 export default data;
