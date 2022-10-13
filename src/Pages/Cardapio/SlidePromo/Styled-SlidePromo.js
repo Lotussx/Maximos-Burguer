@@ -25,7 +25,7 @@ export const SlideContainer = styled.div`
         @media screen and (max-width: 500px) {
             width: 100%;
             margin: 0 auto;
-            height: 285px;
+            height: 260px;
             color: red;
             margin-top: 09vh;
 
@@ -36,7 +36,7 @@ export const SlideContainer = styled.div`
             .itemSlide{
                 background-repeat: no-repeat !important;
                 background-size: cover !important;
-                height: 285px;
+                height: 260px;
                 flex-direction: column;
 
                 .carousel-caption{
@@ -44,22 +44,26 @@ export const SlideContainer = styled.div`
                     padding-bottom: 5px !important;
                     text-shadow: 3px 3px 2px black;
                     
+                    
                     h3{
                         font-weight: bold;
-                        padding-bottom: 6px;
                         font-size: 1.2em;
-                        font-family: 'Oswald', sans-serif;  
+                        font-family: 'Oswald', sans-serif;
+                        margin: 0;
+                        margin-bottom: 10px;
                     }
 
                     p{
                         font-family: 'Oswald', sans-serif;  
                         padding: 0;
+                        margin: 0;
                     }
 
                     .precoProduto{
                         font-family: 'Oswald', sans-serif;  
                         font-size: 1.2em;
-                        height: 35px;
+                        margin: 0;
+                        margin-bottom: 5px;
                     }
 
                     .btnADD{

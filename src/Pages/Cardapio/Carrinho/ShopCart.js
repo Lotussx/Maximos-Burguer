@@ -41,12 +41,10 @@ export default function ShopCart(props) {
 
     return (
         <ContainerShopCart className={`flex-class ${openCart ? '' : 'carrinhoAberto'}`}>
-
             <div className='cartContent flex-class'>
-
                 <div className='cartIcon flex-class'>
                     <MdShoppingCart className='iconCart'></MdShoppingCart>
-                    <button>
+                    <button className='flex-class'>
                         {countCartItems}
                     </button>
                     <div className='arrowContainer flex-class' onClick={expandCart}>
@@ -77,8 +75,10 @@ export default function ShopCart(props) {
                                 <div key={item.id} className="item flex-class">
                                     <div className='itemName'><h4>{item.name}</h4></div>
                                     <div className='buttonDiv flex-class'>
-                                        <button onClick={() => onADD(item)}> + </button>
-                                        <button onClick={() => onREMOVE(item)}> - </button>
+                                        <div className='addREMOVE flex-class'>
+                                            <button onClick={() => onADD(item)}> + </button>
+                                            <button onClick={() => onREMOVE(item)}> - </button>
+                                        </div>
                                         <div className='itemPrice flex-class'>
                                             <p>{item.qty} </p>  x R$ {item.price.toFixed(2)}
                                         </div>

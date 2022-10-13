@@ -15,7 +15,7 @@ import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
 export default function Cardapio() {
 
 
-    const { products, productsCOMBO } = data;
+    const { products, productsCOMBO, productsPROMO, productsBATATA, productsHAMBU, productsBEBIDA } = data;
     const [cartItems, setCartItems] = useState([]);
 
     //Adcionar itens no  carrinho.
@@ -42,12 +42,14 @@ export default function Cardapio() {
         <CardapioStyle className='App'>
             <Header></Header>
             <SlidePromo products={products} onADD={onADD}></SlidePromo>
-            <CardapioCategorias productsCOMBO={productsCOMBO} onADD={onADD} />
-            {/* <div className='row'>
-                <Main onADD={onADD} products={products}></Main>
-            </div> */}
-
-
+            <CardapioCategorias 
+            productsCOMBO={productsCOMBO} 
+            productsPROMO={productsPROMO} 
+            productsBATATA={productsBATATA} 
+            productsHAMBU={productsHAMBU}
+            productsBEBIDA={productsBEBIDA}
+            onADD={onADD} 
+            />
             <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>
         </CardapioStyle>
     )

@@ -22,20 +22,22 @@ export const ContainerShopCart = styled.div`
 
 @media screen and (max-width: 500px) {
     position: fixed;
-    height: 09vh;
+    height: 8vh;
     width: 100%;
     bottom: 0;
     border-radius: 25px 25px 0 0;
     background-color: black;
     color: white;
     z-index: 3;
+    transition: .5s;
+
 
 
     &.carrinhoAberto{
-        height: 45vh !important;
+        height: 40vh !important;
         width: 100%;
         transition: .5s;
-        border-radius: 20px 20px 0 0;
+        border-radius: 25px 25px 0 0;
         
         .cartContent{
             flex-direction: column !important;
@@ -47,7 +49,7 @@ export const ContainerShopCart = styled.div`
                 transition: .5s;
                 height: 8vh;
                 justify-content: flex-start;
-                margin-top: -3%;
+                margin-top: -2%;
 
                 .iconCart{
                     margin-left: 5%;
@@ -82,12 +84,15 @@ export const ContainerShopCart = styled.div`
                 width: 100%;
                 background-color: gray;
                 border: 0.5px solid gray;
+                margin: 0 !important;
+                margin-bottom: 10px !important;
+                
             }
 
             .containerItensCart{
                 position: relative;
                 width: 100%;
-                height: 50%;
+                height: 47%;
                 overflow-y: scroll;
 
                 .item{
@@ -102,30 +107,39 @@ export const ContainerShopCart = styled.div`
                         font-weight: bold;
                         
                         h4{
-                            font-size: 1.1em;
+                            font-size: 1em;
                             margin: 3px 0 3px 0;
                         }
                     }
 
                     .buttonDiv{
                         transition: .5s;
-                        width: 55%;
+                        width: 45%;
+                        justify-content: space-around;
 
-                        button{
-                            transition: .5s;
-                            width: 30px;
-                            height: 30px;
-                            margin: 0 5px 0 5px;
-                            font-size: 1.2em;
-                            font-weight: bold;
-                            border-radius: 10px;
-                            border: 0px solid red;
+                        .addREMOVE{
+                            width: 40%;
+                            justify-content: space-around;
+
+                            button{
+                                transition: .5s;
+                                width: 25px;
+                                height: 25px;
+                                font-size: 1.2em;
+                                font-weight: bold;
+                                border-radius: 10px;
+                                border: 0px solid red;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
                         }
 
                         .itemPrice{
                             transition: .5s;
                             margin-left: 10px;
                             margin: 0;
+                            width: 50%;
 
                             p{
                                 margin: 2px 5px 0 0;
@@ -144,14 +158,15 @@ export const ContainerShopCart = styled.div`
             .precoTotalContainer{
                 position: relative;
                 bottom: 0;
-                margin-bottom: 10%;
+                margin-bottom: 13%;
                 width: 100%;
-                height: 8vh;
+                height: 5vh;
                 justify-content: flex-start;
                 transition: .8s ease;
                 position: absolute;
 
                 div{
+                    font-size: 1.2em;
                     margin-left: 5%;
                 }
 
@@ -222,10 +237,11 @@ export const ContainerShopCart = styled.div`
                 background-color: white;
                 border: 0px solid white;
                 font-weight: bold;
-                height: 40%;
+                height: 45%;
                 width: 100%;
-                border-radius: 10px;
+                border-radius: 15px;
                 font-family: 'Oswald', sans-serif;
+                font-size: .9em;
                 animation: ${animaButton};
                 box-shadow: 1px 1px 20px white;
                 animation-iteration-count: infinite;
@@ -239,25 +255,26 @@ export const ContainerShopCart = styled.div`
             transition: .5s;
             width: 35%;
             height: 100%;
+            margin-top: 3px;
         
 
         .iconCart{
-            font-size: 2.8em;
+            font-size: 2.4em;
         }
 
         button{
-            width: 25px;
-            height: 25px;
+            width: 23px;
+            height: 23px;
             margin-left: -20px;
             margin-top: -30px;
             border-radius: 50%;
             border: 0px solid red;
             background-color: red;
             color: white;
+            font-size: .8em;
             }
         }
-
-        
+    
         .carrinhoVazio{
                 margin: 0;
                 width: 80%;
@@ -274,7 +291,7 @@ export const ContainerShopCart = styled.div`
             height: 100%;
             
             div{
-                font-size: 1.1em;
+                font-size: 1em;
                 margin: 0 10px 0 10px;
             }
 

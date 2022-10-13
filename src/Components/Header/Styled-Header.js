@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3 !important;
     
         .logo-title{
             height: 100%;

@@ -5,7 +5,7 @@ import { CardapioCategoriasContainer } from './Styled-CardapioCategorias';
 
 export default function CardapioCategorias(props) {
 
-    const { productsCOMBO, onADD } = props;
+    const { onADD, productsCOMBO, productsPROMO, productsBATATA, productsHAMBU, productsBEBIDA } = props;
 
     const [allContainer, setAllContainer] = useState(true);
     const [comboContainer, setComboContainer] = useState(true);
@@ -97,9 +97,15 @@ export default function CardapioCategorias(props) {
                         <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
 
                         </div>
-                        <div className='produtoINFO'>
+                        <div className='produtoINFO flex-class'>
+                            <div className='nomePreco'>
+                                {product.name} | R$ {product.price}
+                            </div>
+                            <div className='produtoDescri'>
+                                {product.description}
+                            </div>
                             <div className='btnADD flex-class'>
-                                <button onClick={() => onADD(product)}>Adicionar no carrinho</button>
+                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -107,19 +113,99 @@ export default function CardapioCategorias(props) {
             </div>
 
             <div className={promoContainer ? 'categoryON' : 'categoryOFF'}>
+                <div className='nomeCategoria flex-class'>
+                    <h3>Promoções</h3>
+                </div>
+                {productsPROMO.map((product) => (
+                    <div className='produto flex-class'>
+                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
 
+                        </div>
+                        <div className='produtoINFO flex-class'>
+                            <div className='nomePreco'>
+                                {product.name} | R$ {product.price}
+                            </div>
+                            <div className='produtoDescri'>
+                                {product.description}
+                            </div>
+                            <div className='btnADD flex-class'>
+                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
 
             <div className={hambuContainer ? 'categoryON' : 'categoryOFF'}>
-                <p>HAMBURGUER</p>
+                <div className='nomeCategoria flex-class'>
+                    <h3>Hamburguer</h3>
+                </div>
+                {productsHAMBU.map((product) => (
+                    <div className='produto flex-class'>
+                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+
+                        </div>
+                        <div className='produtoINFO flex-class'>
+                            <div className='nomePreco'>
+                                {product.name} | R$ {product.price}
+                            </div>
+                            <div className='produtoDescri'>
+                                {product.description}
+                            </div>
+                            <div className='btnADD flex-class'>
+                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
 
             <div className={batataContainer ? 'categoryON' : 'categoryOFF'}>
-                <p>BATATA</p>
+                <div className='nomeCategoria flex-class'>
+                    <h3>Batata</h3>
+                </div>
+                {productsBATATA.map((product) => (
+                    <div className='produto flex-class'>
+                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+
+                        </div>
+                        <div className='produtoINFO flex-class'>
+                            <div className='nomePreco'>
+                                {product.name} | R$ {product.price}
+                            </div>
+                            <div className='produtoDescri'>
+                                {product.description}
+                            </div>
+                            <div className='btnADD flex-class'>
+                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
 
             <div className={bebidaContainer ? 'categoryON' : 'categoryOFF'}>
-                <p>BEBIDA</p>
+                <div className='nomeCategoria flex-class'>
+                    <h3>Bebida</h3>
+                </div>
+                {productsBEBIDA.map((product) => (
+                    <div className='produto flex-class'>
+                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+
+                        </div>
+                        <div className='produtoINFO flex-class'>
+                            <div className='nomePreco'>
+                                {product.name} | R$ {product.price}
+                            </div>
+                            <div className='produtoDescri'>
+                                {product.description}
+                            </div>
+                            <div className='btnADD flex-class'>
+                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
 
 
