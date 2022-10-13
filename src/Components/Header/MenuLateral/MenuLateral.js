@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function MenuLateral() {
 
-    const [isActive, setActive] = useState('false');
+    const [isActive, setActive] = useState(false);
 
     const handleToggle = () => {
         setActive(!isActive);

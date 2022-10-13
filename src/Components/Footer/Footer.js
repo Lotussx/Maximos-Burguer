@@ -22,13 +22,13 @@ export default function Footer() {
                     </div>
                 </Link>
                 <Link to='/Cardapio' className='link'>
-                    <div c lassName='flex-class'>
+                    <div className='flex-class'>
                         <IoRestaurant className='icons-footer'></IoRestaurant>
                         <p>Cardápio</p>
                     </div>
                 </Link>
                 <Link to='/Contato' className='link'>
-                    <div className='flex-class' href>
+                    <div className='flex-class'>
                         <BsTelephoneFill className='icons-footer'></BsTelephoneFill>
                         <p>Contato</p>
                     </div>
