@@ -75,7 +75,7 @@ export const MenuLateralContainer = styled.div`
 
     .botoes{
         width: 70%;
-        height: 70%;
+        height: 60%;
         font-family: 'Oswald', sans-serif;  
 
         a{
@@ -97,7 +97,6 @@ export const MenuLateralContainer = styled.div`
     .credits{
         font-family: 'Oswald', sans-serif;  
         color: white;
-        bottom: 0 !important;
     }
 }
 

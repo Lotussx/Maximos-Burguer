@@ -5,6 +5,7 @@ import './App.css';
 import Home from './Pages/Home/Home.js';
 import Cardapio from './Pages/Cardapio/Cardapio.js';
 import FinalizarPedido from './Pages/FinalizarPedido/FinalizarPedido';
+import Contato from './Pages/Contato/Contato';
 
 
 
@@ -14,6 +15,7 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/Cardapio" element={<Cardapio />} />
+                <Route path="/Contato" element={<Contato />} />
                 <Route path="/FinalizarPedido" element={<FinalizarPedido />} />
             </Routes>
         </Router>

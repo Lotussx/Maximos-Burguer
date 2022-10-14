@@ -20,7 +20,8 @@ export default function MenuLateral() {
             <div className='botoes'>
                 <Link to='/'><h3>Página Inicial</h3></Link> <hr />
                 <Link to='/Cardapio'><h3>Cardápio</h3></Link> <hr />
-                <a href='https://api.whatsapp.com/send?phone=558197216235' target='_blank' rel="noopener noreferrer"><h3>Fale Conosco</h3></a> <hr />
+                <Link to='/Contato'><h3>Fale Conosco</h3></Link> <hr />
+                <a href='https://api.whatsapp.com/send?phone=558197216235' target='_blank' rel="noopener noreferrer"><h3>Whatsapp</h3></a> <hr />
                 <a href='https://www.instagram.com/hamburgueria_maximosburguer/' target='_blank' rel="noopener noreferrer"><h3>Instagram</h3></a> <hr />
             </div>
             <div className='credits'>

@@ -22,6 +22,6 @@ export default class Globais {
 
     static opcPAGAMENTO = '';
     static trocoPAGAMENTO = 0;
-
     static opcDelivery = '';
+
 }
