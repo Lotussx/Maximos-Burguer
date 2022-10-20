@@ -246,6 +246,7 @@ export const CardapioCategoriasContainer = styled.div`
                             font-size: 1em;
                             flex-wrap: nowrap;
                         }
+
                     }
 
                     .espaco{
@@ -259,15 +260,34 @@ export const CardapioCategoriasContainer = styled.div`
                     }
 
                     .preco{
+                        font-size: .9em;
                         
                         p{
                             margin: 0;
                             padding: 0;
-                            font-size: .9em;
                             margin-left: 4px;
                         }
-                        
+
+                        span{
+                            margin-left: 2px;
+                        }
                     }
+                }
+            }
+
+            .btnConfirma{
+                width: 90%;
+                padding: 10px 0 15px 0;
+            
+
+                button{
+                    width: 100%;
+                    border-radius: 15px;
+                    box-shadow: 1px 1px 5px black;
+                    color: white;
+                    background-color: #198754;
+                    border: 0px solid red;
+                    text-shadow: 1px 1px 1px black;
                 }
             }
         }

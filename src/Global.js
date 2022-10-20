@@ -26,4 +26,6 @@ export default class Globais {
 
     static nomeProdutoAdcional = ''
 
+    static infoAdcionais = [];
+
 }

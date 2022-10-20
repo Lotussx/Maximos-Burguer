@@ -19,14 +19,39 @@ export default function CardapioCategorias(props) {
 
     const modalAdcionais = (product) => {
         setAbrirModalAdcionais(!abrirModalAdcionais)
-        onADD(product)
-        console.log(product)
 
+        let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+
+
+        onADD(product)
         Global.nomeProdutoAdcional = product.name
-        console.log(Global.nomeProdutoAdcional)
     }
+
     const fecharModalAdcionais = () => {
         setAbrirModalAdcionais(!abrirModalAdcionais)
+    }
+
+    const confimaADC = () => {
+        let select = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
+        let selectPreco = document.querySelectorAll('.preco span');
+        let infoAdcionais = [];
+        let totalADC = 0;
+
+        for (let i = 0; i < select.length; i++){
+            if (select[i].checked === true){
+               infoAdcionais.push(select[i].value)
+               selectPreco = parseFloat(selectPreco.innerHTML)
+
+               totalADC = totalADC + selectPreco.innerHTML)
+               console.log('ALOHA ', infoAdcionais)
+               console.log('SLA ', totalADC)
+            }
+        }
+        console.log(selectPreco.innerHTML)
+        console.log(select)
     }
 
 
@@ -410,6 +435,11 @@ export default function CardapioCategorias(props) {
                         </div>
 
                     </div>
+
+                    <div className='btnConfirma flex-class'>
+                        <button onClick={confimaADC}>Confirmar</button>
+                    </div>
+
                 </div>
             </div>
 
