@@ -1,2 +1,94 @@
 Forma correta de adcionar className + condição:
 className={`opcPagamento ${formPAGAMENTO ? '' : 'opcPagamentoOPEN'}`
+
+https://picsum.photos/200/300
+
+CATEGORIAS:
+
+Combos
+Promoções
+
+Beirutes
+MilkShake
+Hotdog
+Hamburguer
+Batata Frita
+Petisco
+
+
+
+
+Tradicional 
+
+Açaí 200ML   --- R$ 7,00
+1 fruta, 3 acompanhamento, 1 caldas.
+
+Açaí 300ML  --- R$10,00
+2 fruta, 4 acompanhamento, 2 caldas
+
+Açaí 400ml  --- R$13,00
+2 fruta, 4 acompanhamento, 2 caldas.
+
+Açaí 500ml --- R$16,00
+2 frutas,5 acompanhamentos, 2 caldas.
+
+[18/10 14:25] Pamela Cun: Frutas
+
+ Banana
+Abacaxi
+Morango
+Kiwi
+Uva
+
+Caldas
+
+Morango
+Chocolate
+Mel
+Leite condensado
+
+Embutidos
+Leite em pó
+Granola
+Farinha de amendoim
+Jujuba
+M&M
+Sucrilhos
+Chocolate
+Kit-kat
+Farinha lacta
+Ovo Maltine
+Oreo
+Biss
+Granulado
+
+Adicionais
+
+Fruta  --- R$2,00
+Calda --- R$ 1,00
+Embutidos --- 1,50
+[17:18, 18/10/2022] Danilo Silva (Cliente): Adicionais
+
+
+
+Frango  --- R$3,00
+Carne  --- R$4,00
+Carne de sol  --- R$5,00
+Picanha  --- R$8,00
+Calabresa  --- R$3,00
+Bacon  ---  R$3,00
+Salcicha  --- R$2,00
+Queijo mussarela  --- R$2,00
+Cream cheese --- R$3,00
+Queijo cheddar  --- R$3,00
+Ovo  --- R$2,00
+
+
+
+
+"customizeUI.stylesheet": {
+        ".editor-instance>.monaco-editor::before": "background-image: url('https://images2.alphacoders.com/963/thumb-1920-963909.jpg') !important; content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background-size: cover;",
+        ".monaco-editor-background": "background: none!important",
+        ".monaco-editor .margin": "background: none!important"
+
+    }

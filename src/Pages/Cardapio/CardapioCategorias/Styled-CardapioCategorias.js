@@ -2,7 +2,6 @@ import styled, { keyframes } from "styled-components";
 
 const animaBorda = keyframes`
     0%{
-
     }
     100%{
         opacity: 1;
@@ -13,12 +12,20 @@ const animaBorda = keyframes`
 
 const animaCategoria = keyframes`
     0%{
-
     }
     
     100%{
         margin-top: 0;
         opacity: 1;
+    }
+`;
+
+const animaModaladd = keyframes`
+    0%{
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
     }
 `;
 
@@ -75,8 +82,7 @@ export const CardapioCategoriasContainer = styled.div`
                 }
             }
         }
-
-        
+   
         .categoryOFF{
             display: none;
             opacity: 0;
@@ -112,11 +118,12 @@ export const CardapioCategoriasContainer = styled.div`
             .produto{
                 width: 90%;
                 border-radius: 15px;
-                height: 115px;
+                height: 120px;
                 box-shadow: 1px 1px 5px black;
                 background-color: white;
                 margin: 8px auto;
                 justify-content: space-around;
+
 
                 .produtoIMG{
                     width: 25%;
@@ -128,7 +135,7 @@ export const CardapioCategoriasContainer = styled.div`
                 }
                 .produtoINFO{
                     width: 65%;
-                    height: 87%;
+                    height: 90%;
                     flex-direction: column;
                     justify-content: space-between;
 
@@ -156,9 +163,115 @@ export const CardapioCategoriasContainer = styled.div`
                             font-weight: bold;
                         }
                     }
+                    
+                }
+            }
+            
+        }
+
+        .modalAdcionaisOFF{
+            display: none;
+        }
+        .modalAdcionaisON{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100vw;
+            top: 0;
+            height: 100vh;
+            z-index: 6;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+        
+            .modalAdcionaisContent{
+                opacity: 0;
+                margin-top: 300px;
+                width: 90%;
+                background-color: white;
+                border-radius: 15px;
+                flex-direction: column;
+                justify-content: flex-start;
+                animation: ${animaModaladd};
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+
+            .nomeProduto{
+                width: 90%;
+                height: 40px;
+                justify-content: space-between;
+                padding-top: 10px;
+
+                .space{
+                    width: 30px;
+                    height: 30px;
+                    font-size: 1.8em;
+                }
+                .nome{
+                    font-weight: bold;
+                    font-size: 1.3em;
+                }
+            }
+
+            .aviso{
+                width: 90%;
+                text-align: center;
+                font-size: .9em;
+            }
+
+            .selectAdcionais{
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 90%;
+
+                .select{
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .input{
+                        justify-content: flex-start;
+
+                        label{
+                            margin-left: 4px;
+                        }
+
+                        input{
+                            width: 15px;
+                            height: 15px;
+                        }
+
+                        p{
+                            margin: 0;
+                            padding: 0;
+                            padding-right: 4px;
+                            font-size: 1em;
+                            flex-wrap: nowrap;
+                        }
+                    }
+
+                    .espaco{
+                        width: 100%;
+
+                        div{
+                            width: 100%;
+                            height: 1px;
+                            background-color: lightgray;
+                        }
+                    }
+
+                    .preco{
+                        
+                        p{
+                            margin: 0;
+                            padding: 0;
+                            font-size: .9em;
+                            margin-left: 4px;
+                        }
+                        
+                    }
                 }
             }
         }
+
 
         .espacoBotton{
             width: 100%;
@@ -168,6 +281,7 @@ export const CardapioCategoriasContainer = styled.div`
 
 
     }
+}
 
 
 `;
