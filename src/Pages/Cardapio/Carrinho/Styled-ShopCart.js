@@ -92,7 +92,7 @@ export const ContainerShopCart = styled.div`
             .containerItensCart{
                 position: relative;
                 width: 100%;
-                height: 47%;
+                height: 45%;
                 overflow-y: scroll;
 
                 .item{
@@ -154,11 +154,10 @@ export const ContainerShopCart = styled.div`
 
             }
 
-
             .precoTotalContainer{
                 position: relative;
                 bottom: 0;
-                margin-bottom: 13%;
+                margin-bottom: 12%;
                 width: 100%;
                 height: 5vh;
                 justify-content: flex-start;
@@ -291,7 +290,7 @@ export const ContainerShopCart = styled.div`
             height: 100%;
             
             div{
-                font-size: 1em;
+                font-size: 1.1em !important;
                 margin: 0 10px 0 10px;
             }
 
@@ -305,10 +304,25 @@ export const ContainerShopCart = styled.div`
             }
             
         }
-    }
 
-    
-    
+        .precoAdcionais{
+            width: 100%;
+            justify-content: flex-start;
+            font-family: 'Oswald', sans-serif;
+            padding-left: 5%;
+
+            p{
+                margin: 0;
+                padding: 0;
+                margin-left: 5px !important;
+            }
+
+            strong{
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
 
 
 

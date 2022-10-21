@@ -6,14 +6,12 @@ import data from '../../data.js';
 import '../../App.css';
 
 import ShopCart from './Carrinho/ShopCart';
-// import Main from '../../Components/Main/Main.js';
 import Header from '../../Components/Header/Header.js';
 import SlidePromo from './SlidePromo/SlidePromo.js';
 import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
 
 
 export default function Cardapio() {
-
 
     const { products, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA } = data;
     const [cartItems, setCartItems] = useState([]);
@@ -42,15 +40,16 @@ export default function Cardapio() {
         <CardapioStyle className='App'>
             <Header></Header>
             <SlidePromo products={products} onADD={onADD}></SlidePromo>
-            <CardapioCategorias 
-            productsESPECIAL={productsESPECIAL} 
-            productsHOTDOG={productsHOTDOG} 
-            productsBATATA={productsBATATA} 
-            productsHAMBU={productsHAMBU}
-            productsBEBIDA={productsBEBIDA}
-            onADD={onADD} 
+            <CardapioCategorias
+                productsESPECIAL={productsESPECIAL}
+                productsHOTDOG={productsHOTDOG}
+                productsBATATA={productsBATATA}
+                productsHAMBU={productsHAMBU}
+                productsBEBIDA={productsBEBIDA}
+                countCartItems={cartItems.length}
+                onADD={onADD}
             />
             <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>
         </CardapioStyle>
     )
-}
+};

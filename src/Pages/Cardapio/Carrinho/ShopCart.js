@@ -10,13 +10,14 @@ import Global from '../../../Global.js';
 
 
 export default function ShopCart(props) {
-
-
+    
+    
     const { countCartItems } = props;
     const { cartItems, onADD, onREMOVE } = props;
-    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-
+    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0) + Global.precoAdcionais;
+    
     const totalPrice = itemsPrice;
+    
 
     //expandir o carrnho
     const [openCart, setOpenCart] = useState('false');
@@ -69,9 +70,9 @@ export default function ShopCart(props) {
                 }
 
                 {!openCart &&
-                    <div className='containerItensCart'>
-                        {
-                            cartItems.map((item) => (
+                    <>
+                        <div className='containerItensCart'>
+                            {cartItems.map((item) => (
                                 <div key={item.id} className="item flex-class">
                                     <div className='itemName'><h4>{item.name}</h4></div>
                                     <div className='buttonDiv flex-class'>
@@ -84,20 +85,33 @@ export default function ShopCart(props) {
                                         </div>
                                     </div>
                                 </div>
-                            ))
-                        }
-                    </div>
+                            ))}
+
+                        </div>
+
+
+
+                    </>
                 }
 
+
+
                 {cartItems.length !== 0 &&
-                    <div className='precoTotalContainer flex-class'>
-                        <div className='precoTotal'>
-                            <strong>Preço Total:</strong>
+                    <>
+                        {Global.precoAdcionais !== 0 && openCart === false &&
+                            <div className='precoAdcionais flex-class'>
+                                <strong>Adcionais: </strong><p>R$ {Global.precoAdcionais.toFixed(2)}</p>
+                            </div>
+                        }
+                        <div className='precoTotalContainer flex-class'>
+                            <div className='precoTotal'>
+                                <strong>Preço Total:</strong>
+                            </div>
+                            <div className='preco'>
+                                <p>R$ {totalPrice.toFixed(2)}</p>
+                            </div>
                         </div>
-                        <div className='preco'>
-                            <p>R$ {totalPrice.toFixed(2)}</p>
-                        </div>
-                    </div>
+                    </>
                 }
 
                 {!openCart &&

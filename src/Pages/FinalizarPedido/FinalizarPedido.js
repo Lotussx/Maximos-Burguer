@@ -5,12 +5,13 @@ import { FinalizarPedidoContainer } from './Styled-FinalizarPedido';
 import Header from '../../Components/Header/Header';
 
 import CardPedido from './(00) CardPedido/CardPedido.js';
-import InfoCliente from './(01) InfoCliente/InfoCliente.js';
-import InputDelivery from './(02) InputDelivery/InputDelivery.js';
-import InputPagamento from './(03) InputPagamento/InputPagamento.js';
+import CardAdcionais from './(01) CardAdcionais/CardAdcionais.js';
+import InfoCliente from './(02) InfoCliente/InfoCliente.js';
+import InputDelivery from './(03) InputDelivery/InputDelivery.js';
 import BtnFinalizar from './(04) BtnFinalizar/BtnFinalizar.js';
-import VoltarCardapio from './(05) VoltarCardapio/VoltarCardapio.js';
-import AvisoModal from './(06) AvisoModal/AvisoModal';
+import InputPagamento from './(05) InputPagamento/InputPagamento.js';
+import VoltarCardapio from './(06) VoltarCardapio/VoltarCardapio.js';
+import AvisoModal from './(07) AvisoModal/AvisoModal';
 
 export default function FinalizarPedido() {
 
@@ -69,16 +70,19 @@ export default function FinalizarPedido() {
             {Global.newMsg !== '' ? (
                 <div className='mainContainer flex-class'>
                     <CardPedido />
+                    {Global.infoAdcionais !== [] &&
+                        <CardAdcionais />
+                    }
                     <form className='formContainer flex-class'>
                         {/* Nome e Obs Pedido */}
                         <InfoCliente />
-                        
+
                         {/* Delivery */}
                         <InputDelivery />
 
                         {/* OPC Pagamento */}
                         <InputPagamento />
-                        
+
                         {/* BTN para abrir o modal de aviso e pegar as informações dos input */}
                         <BtnFinalizar click={abrirModal} />
                     </form>

@@ -6,7 +6,7 @@ import { IoClose } from 'react-icons/io5'
 
 export default function CardapioCategorias(props) {
 
-    const { onADD, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA } = props;
+    const { onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA } = props;
 
     const [allContainer, setAllContainer] = useState(true);
     const [hambuContainer, setHambuContainer] = useState(true);
@@ -19,39 +19,50 @@ export default function CardapioCategorias(props) {
 
     const modalAdcionais = (product) => {
         setAbrirModalAdcionais(!abrirModalAdcionais)
-
         let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].checked = false;
         }
-
-
-        onADD(product)
         Global.nomeProdutoAdcional = product.name
+        Global.produto = product
     }
 
     const fecharModalAdcionais = () => {
         setAbrirModalAdcionais(!abrirModalAdcionais)
     }
 
+
     const confimaADC = () => {
+
         let select = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
         let selectPreco = document.querySelectorAll('.preco span');
         let infoAdcionais = [];
         let totalADC = 0;
+        let infoADCstring = ''
+        let adcionalPRONTO = ''
 
-        for (let i = 0; i < select.length; i++){
-            if (select[i].checked === true){
-               infoAdcionais.push(select[i].value)
-               selectPreco = parseFloat(selectPreco.innerHTML)
+        for (let i = 0; i < select.length; i++) {
+            if (select[i].checked === true) {
+                infoAdcionais.push(select[i].value)
+                let preco = selectPreco[i].innerHTML
+                preco = parseFloat(preco)
 
-               totalADC = totalADC + selectPreco.innerHTML)
-               console.log('ALOHA ', infoAdcionais)
-               console.log('SLA ', totalADC)
+                totalADC = totalADC + preco
+                infoADCstring = infoAdcionais.join(' - ')
             }
         }
-        console.log(selectPreco.innerHTML)
-        console.log(select)
+
+        if (infoADCstring !== '') {
+            adcionalPRONTO = document.querySelector('.nomeProduto .nome');
+            adcionalPRONTO = adcionalPRONTO.innerHTML
+            adcionalPRONTO = '[' + adcionalPRONTO + ': ' + infoADCstring + ']';
+            Global.infoAdcionais.push(adcionalPRONTO);
+            Global.newinfoAdcionais = Global.infoAdcionais.join("\n")
+            Global.precoAdcionais = Global.precoAdcionais + totalADC;
+        }
+
+        onADD(Global.produto)
+        fecharModalAdcionais()
     }
 
 
@@ -437,7 +448,7 @@ export default function CardapioCategorias(props) {
                     </div>
 
                     <div className='btnConfirma flex-class'>
-                        <button onClick={confimaADC}>Confirmar</button>
+                        <button onClick={() => confimaADC(Global.produto)}>Confirmar</button>
                     </div>
 
                 </div>
