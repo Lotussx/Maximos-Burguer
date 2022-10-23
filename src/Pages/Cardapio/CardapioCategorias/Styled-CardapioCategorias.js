@@ -10,16 +10,6 @@ const animaBorda = keyframes`
     }
 `;
 
-const animaCategoria = keyframes`
-    0%{
-    }
-    
-    100%{
-        margin-top: 0;
-        opacity: 1;
-    }
-`;
-
 const animaModaladd = keyframes`
     0%{
     }
@@ -83,96 +73,15 @@ export const CardapioCategoriasContainer = styled.div`
             }
         }
    
-        .categoryOFF{
-            display: none;
-            opacity: 0;
-            transition: .3s;
-        }
-
-        .categoryON{
-            opacity: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            margin-top: -100px;
-
-            animation: ${animaCategoria};
-            animation-duration: 1s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-
-            .nomeCategoria{
-                width: 100%;
-                justify-content: flex-start;
-                margin-top: 15px;
-
-                h3{
-                    font-size: 1.4em;
-                    font-weight: bold;
-                    padding-left: 25px;
-                }
-            }
-
-            .produto{
-                width: 90%;
-                border-radius: 15px;
-                height: 120px;
-                box-shadow: 1px 1px 5px black;
-                background-color: white;
-                margin: 8px auto;
-                justify-content: space-around;
+        
 
 
-                .produtoIMG{
-                    width: 25%;
-                    height: 85%;
-                    background-position: center !important;
-                    background-size: 180% !important;
-                    border-radius: 10px;
-                    box-shadow: 1px 1px 5px black;
-                }
-                .produtoINFO{
-                    width: 65%;
-                    height: 90%;
-                    flex-direction: column;
-                    justify-content: space-between;
 
-                    .nomePreco{
-                        font-weight: bold;
-                        font-size: .9em;
-                    }
-
-                    .produtoDescri{
-                        font-size: 0.8em;
-                        text-align: center;
-                    }
-
-                    .btnADD{
-                        height: 25px;
-                        width: 80%;
-
-                        button{
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 20px;
-                            font-size: .8em;
-                            text-align: center;
-                            box-shadow: 1px 1px 3px black;
-                            font-weight: bold;
-                        }
-                    }
-                    
-                }
-            }
-            
-        }
-
-        .modalAdcionaisOFF{
+        .modalAdicionaisOFF{
             display: none;
         }
-        .modalAdcionaisON{
+
+        .modalAdicionaisON{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -183,7 +92,7 @@ export const CardapioCategoriasContainer = styled.div`
             z-index: 6;
             background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
         
-            .modalAdcionaisContent{
+            .modalAdicionaisContent{
                 opacity: 0;
                 margin-top: 300px;
                 width: 90%;

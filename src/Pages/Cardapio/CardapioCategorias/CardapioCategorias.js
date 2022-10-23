@@ -3,22 +3,32 @@ import { CardapioCategoriasContainer } from './Styled-CardapioCategorias';
 
 import Global from '../../../Global';
 import { IoClose } from 'react-icons/io5'
+import Categoria from './Categoria/Categoria';
+
 
 export default function CardapioCategorias(props) {
 
-    const { onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA } = props;
+    const { onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA, productsBEIRUTES } = props;
 
     const [allContainer, setAllContainer] = useState(true);
     const [hambuContainer, setHambuContainer] = useState(true);
     const [especialContainer, setEspecialContainer] = useState(true);
     const [hotdogContainer, setHotdogContainer] = useState(true);
+    const [beiruteContainer, setBeiruteContainer] = useState(true);
     const [batataContainer, setBatataContainer] = useState(true);
     const [bebidaContainer, setBebidaContainer] = useState(true);
 
-    const [abrirModalAdcionais, setAbrirModalAdcionais] = useState(false)
+    const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
 
-    const modalAdcionais = (product) => {
-        setAbrirModalAdcionais(!abrirModalAdcionais)
+    const modalAdicionais = (product) => {
+
+        if (countCartItems === 0) {
+            Global.infoAdcionais = [];
+            Global.precoAdcionais = 0;
+        }
+
+
+        setabrirModalAdicionais(!abrirModalAdicionais)
         let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].checked = false;
@@ -27,9 +37,10 @@ export default function CardapioCategorias(props) {
         Global.produto = product
     }
 
-    const fecharModalAdcionais = () => {
-        setAbrirModalAdcionais(!abrirModalAdcionais)
+    const fecharModalAdicionais = () => {
+        setabrirModalAdicionais(!abrirModalAdicionais)
     }
+
 
 
     const confimaADC = () => {
@@ -57,13 +68,15 @@ export default function CardapioCategorias(props) {
             adcionalPRONTO = adcionalPRONTO.innerHTML
             adcionalPRONTO = '[' + adcionalPRONTO + ': ' + infoADCstring + ']';
             Global.infoAdcionais.push(adcionalPRONTO);
-            Global.newinfoAdcionais = Global.infoAdcionais.join("\n")
             Global.precoAdcionais = Global.precoAdcionais + totalADC;
         }
 
         onADD(Global.produto)
-        fecharModalAdcionais()
+        fecharModalAdicionais()
     }
+
+
+
 
 
     const ChangeALL = () => {
@@ -73,6 +86,7 @@ export default function CardapioCategorias(props) {
         setHambuContainer(true);
         setBatataContainer(true);
         setBebidaContainer(true);
+        setBeiruteContainer(true);
     }
     const desativa = () => {
         setAllContainer(!true);
@@ -81,6 +95,13 @@ export default function CardapioCategorias(props) {
         setHambuContainer(!true);
         setBatataContainer(!true);
         setBebidaContainer(!true);
+        setBeiruteContainer(!true);
+    }
+    const ChangeHAMBU = () => {
+        desativa()
+        setTimeout(function () {
+            setHambuContainer(true)
+        }, 200)
     }
     const ChangeESPECIAL = () => {
         desativa()
@@ -94,10 +115,10 @@ export default function CardapioCategorias(props) {
             setHotdogContainer(true)
         }, 200)
     }
-    const ChangeHAMBU = () => {
+    const ChangeBeirute = () => {
         desativa()
         setTimeout(function () {
-            setHambuContainer(true)
+            setBeiruteContainer(true)
         }, 200)
     }
     const ChangeBATATA = () => {
@@ -130,6 +151,9 @@ export default function CardapioCategorias(props) {
                 <li onClick={ChangeHOTDOG}>
                     <h4 className={hotdogContainer ? 'categoriaON' : ''}>Hotdog</h4>
                 </li>
+                <li onClick={ChangeBeirute}>
+                    <h4 className={beiruteContainer ? 'categoriaON' : ''}>Beirutes</h4>
+                </li>
                 <li onClick={ChangeBATATA}>
                     <h4 className={batataContainer ? 'categoriaON' : ''}>Batata Frita</h4>
                 </li>
@@ -138,146 +162,65 @@ export default function CardapioCategorias(props) {
                 </li>
             </div>
 
-            <div className={hambuContainer ? 'categoryON' : 'categoryOFF'}>
-                <div className='nomeCategoria flex-class'>
-                    <h3>Hamburguer</h3>
-                </div>
-                {productsHAMBU.map((product) => (
-                    <div className='produto flex-class'>
-                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+            <>
+                <Categoria className={hambuContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Hamburguer'
+                    modalAdicionais={modalAdicionais}
+                    productsMAP={productsHAMBU}
+                />
 
-                        </div>
-                        <div className='produtoINFO flex-class'>
-                            <div className='nomePreco'>
-                                {product.name} | R$ {product.price.toFixed(2)}
-                            </div>
-                            <div className='produtoDescri'>
-                                {product.description}
-                            </div>
-                            <div className='btnADD flex-class'>
-                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+                <Categoria className={especialContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Hamburguers Especiais'
+                    modalAdicionais={modalAdicionais}
+                    productsMAP={productsESPECIAL}
+                />
 
-            <div className={especialContainer ? 'categoryON' : 'categoryOFF'}>
-                <div className='nomeCategoria flex-class'>
-                    <h3>Hamburguers Especiais</h3>
-                </div>
-                {productsESPECIAL.map((product) => (
+                <Categoria className={hotdogContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Hot Dog'
+                    modalAdicionais={modalAdicionais}
+                    productsMAP={productsHOTDOG}
+                />
 
-                    <div className='produto flex-class'>
-                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+                <Categoria className={beiruteContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Beirutes'
+                    modalAdicionais={modalAdicionais}
+                    productsMAP={productsBEIRUTES}
+                />
 
-                        </div>
-                        <div className='produtoINFO flex-class'>
-                            <div className='nomePreco'>
-                                {product.name} | R$ {product.price.toFixed(2)}
-                            </div>
-                            <div className='produtoDescri'>
-                                {product.description}
-                            </div>
-                            <div className='btnADD flex-class'>
-                                <button onClick={() => modalAdcionais(product)}>Adcionar ao carrinho</button>
-                                {/* <button onClick={() => onADD(product)}>Adicionar ao carrinho</button> */}
-                            </div>
-                        </div>
-                    </div>
+                <Categoria className={batataContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Batata Frita'
+                    modalAdicionais={onADD}
+                    productsMAP={productsBATATA}
+                />
 
-                ))}
-            </div>
+                <Categoria className={bebidaContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Bebidas'
+                    modalAdicionais={onADD}
+                    productsMAP={productsBEBIDA}
+                />
+
+            </>
 
 
-            <div className={hotdogContainer ? 'categoryON' : 'categoryOFF'}>
-                <div className='nomeCategoria flex-class'>
-                    <h3>Hot Dog</h3>
-                </div>
-                {productsHOTDOG.map((product) => (
-                    <div className='produto flex-class'>
-                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
+            <div className={abrirModalAdicionais === false ? 'modalAdicionaisOFF' : 'modalAdicionaisON'}>
+                <div className='modalAdicionaisContent flex-class'>
 
-                        </div>
-                        <div className='produtoINFO flex-class'>
-                            <div className='nomePreco'>
-                                {product.name} | R$ {product.price.toFixed(2)}
-                            </div>
-                            <div className='produtoDescri'>
-                                {product.description}
-                            </div>
-                            <div className='btnADD flex-class'>
-                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <div className={batataContainer ? 'categoryON' : 'categoryOFF'}>
-                <div className='nomeCategoria flex-class'>
-                    <h3>Batata</h3>
-                </div>
-                {productsBATATA.map((product) => (
-                    <div className='produto flex-class'>
-                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
-
-                        </div>
-                        <div className='produtoINFO flex-class'>
-                            <div className='nomePreco'>
-                                {product.name} | R$ {product.price.toFixed(2)}
-                            </div>
-                            <div className='produtoDescri'>
-                                {product.description}
-                            </div>
-                            <div className='btnADD flex-class'>
-                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <div className={bebidaContainer ? 'categoryON' : 'categoryOFF'}>
-                <div className='nomeCategoria flex-class'>
-                    <h3>Bebida</h3>
-                </div>
-                {productsBEBIDA.map((product) => (
-                    <div className='produto flex-class'>
-                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}>
-
-                        </div>
-                        <div className='produtoINFO flex-class'>
-                            <div className='nomePreco'>
-                                {product.name} | R$ {product.price}
-                            </div>
-                            <div className='produtoDescri'>
-                                {product.description}
-                            </div>
-                            <div className='btnADD flex-class'>
-                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <div className={abrirModalAdcionais === false ? 'modalAdcionaisOFF' : 'modalAdcionaisON'}>
-                <div className='modalAdcionaisContent flex-class'>
-
+                    {/* Nome do produto */}
                     <div className='nomeProduto flex-class'>
                         <div className='space'></div>
                         <div className='nome'>{Global.nomeProdutoAdcional}</div>
-                        <div className='space flex-class' onClick={fecharModalAdcionais}>
+                        <div className='space flex-class' onClick={fecharModalAdicionais}>
                             <IoClose></IoClose>
                         </div>
                     </div>
 
+                    {/* Aviso sobre os adcionais */}
                     <div className='aviso flex-class'>
                         <p>Escolha os adcionais e clique em "Confirmar". Caso não queira nenhum, deixar caixinhas em branco e clicar em "Confirmar".</p>
                         <hr></hr>
                     </div>
 
+                    {/* Select adcionais 01 */}
                     <div className='selectAdcionais flex-class'>
 
                         <div className='select flex-class'>
@@ -447,6 +390,7 @@ export default function CardapioCategorias(props) {
 
                     </div>
 
+                    {/* Confirmar adcionais */}
                     <div className='btnConfirma flex-class'>
                         <button onClick={() => confimaADC(Global.produto)}>Confirmar</button>
                     </div>

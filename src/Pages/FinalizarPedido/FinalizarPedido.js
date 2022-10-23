@@ -70,7 +70,7 @@ export default function FinalizarPedido() {
             {Global.newMsg !== '' ? (
                 <div className='mainContainer flex-class'>
                     <CardPedido />
-                    {Global.infoAdcionais !== [] &&
+                    {Global.infoAdcionais.length !== 0   &&
                         <CardAdcionais />
                     }
                     <form className='formContainer flex-class'>

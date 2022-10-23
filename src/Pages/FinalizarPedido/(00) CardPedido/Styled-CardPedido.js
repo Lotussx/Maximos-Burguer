@@ -29,6 +29,7 @@ export const CardPedidoContainer = styled.div`
         .infoPedido{
             padding-left: 15px;
             padding-right: 15px;
+            font-weight: .9em;
         }
 
         .precoPedido{

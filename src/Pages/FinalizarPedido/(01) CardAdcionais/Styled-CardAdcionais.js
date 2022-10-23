@@ -25,18 +25,20 @@ export const CardAdcionaisContainer = styled.div`
             margin-bottom: 3px;
         }
 
-        .infoPedido{
+        .infoADC{
             padding-left: 15px;
             padding-right: 15px;
+            font-size: .9em;
         }
 
-        .precoPedido{
+        .precoADC{
             width: 92%;
             height: 25%;
             padding-left: 15px;
             font-weight: bold;
             padding-top: 5px;
             padding-bottom: 7px;
+            font-size: 1em;
         }
 }
 

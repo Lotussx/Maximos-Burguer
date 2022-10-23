@@ -108,7 +108,7 @@ const data = {
         },
         {
             id: '12',
-            name: 'X-TUDO',
+            name: 'X-TUDÃO',
             price: 18.00,
             image: Promo01,
             description: 'Pão, carne (220g), queijo, calabresa, bacon, salsicha, ovo, presunto, frango, cheddar, salada c/cebola caramelizada, creme e barbecue.'
@@ -224,11 +224,53 @@ const data = {
             image: Promo01,
             description: 'Pão, carne moída, salcicha, charque, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
         },
-
     ],
 
+    productsBEIRUTES: [
+        {
+            id: '28',
+            name: 'BEIRUTE DE FRANGO',
+            price: 25.00,
+            image: Promo01,
+            description: 'Pão sírio, frango em cubos, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+        },
+        {
+            id: '29',
+            name: 'BEIRUTE DE FRALDINHA',
+            price: 28.00,
+            image: Promo01,
+            description: 'Pão sírio, fraudinha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+        },
+        {
+            id: '30',
+            name: 'BEIRUTE DE CAMARÃO',
+            price: 35.00,
+            image: Promo01,
+            description: 'Pão sírio, camarão, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+        },
+        {
+            id: '31',
+            name: 'BEIRUTE MISTO',
+            price: 32.00,
+            image: Promo01,
+            description: 'Pão sírio, frango em cubos, fraldinha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+        },
+        {
+            id: '32',
+            name: 'BEIRUTE DE PICANHA',
+            price: 38.00,
+            image: Promo01,
+            description: 'Pão sírio, picanha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+        },
+        {
+            id: '33',
+            name: 'BEIRUTE DE CARNE DE SOL',
+            price: 36.00,
+            image: Promo01,
+            description: 'Pão sírio, carne de sol, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+        },
 
-
+    ],
 
     productsBATATA: [
         {

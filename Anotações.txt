@@ -93,3 +93,231 @@ Ovo  --- R$2,00
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+CARDÁPIO:
+
+<-- Hamburguer -->
+
+Hambúrguer   -----  R$8,00
+Pão, carne 130gm, salada c/cebola caramelizada, creme e barbecue.
+
+X-Burguer  -----   R$10,00
+Pão, carne 130gm, queijo, salada c/cebola caramelizada, creme e barbecue.
+
+X-Egg  -----  R$12,00
+Pão, carne 130gm, queijo, ovo, salada c/cebola caramelizada, creme e barbecue.
+
+X-Cheddar  -----  R$13,00
+Pão, carne 130gm, cheddar, salada c/cebola caramelizada, creme e barbecue.
+
+X-Bacon  -----  R$13,00
+Pão, carne 130gm, queijo, bacon, salada c/cebola caramelizada, creme e barbecue.
+
+X-Egg Bacon  -----  R$15,00
+Pão, carne 130gm, queijo ovo, bacon, salada c/cebola caramelizada, creme e barbecue.
+
+X-calabresa   ----- R$13,00
+Pão, carne 130gm, queijo, calabresa, salada c/cebola caramelizada, creme e barbecue.
+
+X-Egg Calabresa  -----   R$14,00
+Pão, carne 130gm, queijo, calabresa, ovo, salada c/cebola caramelizada, creme e barbecue.
+
+X-Dog     ------   R$12,00
+Pão, carne 130gm, queijo, salcicha, salada c/cebola caramelizada, creme e barbecue.
+
+X-Frango   -----  R$13,00
+Pão, Frango 130gm, queijo, salada c/cebola caramelizada, creme e barbecue.
+
+X-Tudo   -----   R$18,00
+Pão, carne 130gm, queijo, calabresa, bacon, salcicha, ovo, presunto, salada c/cebola caramelizada, creme e barbecue.
+
+X-Tudão    -----    R$26,00
+Pão, carne 220gm, queijo, calabresa, bacon, salcicha, ovos, presunto, frango, cheddar, salada c/cebola caramelizada, creme e barbecue.
+
+
+BATATA FRITA
+
+Tadicional P._____R$7,00
+Batata, sal e parmesão.
+Tradicional M.______R$10,00
+Batata, sal e parmesão.
+Tradicional G._____R$14,00
+Batata, sal e parmesão.
+Cabalabresa______ R$16,00
+Batata, calabresa, cheddar e parmesão.
+Bacon_______R$17,00
+Batata, bacon, cheddar e parmesão.
+
+
+
+CARDÁPIO ESPECIAL
+
+Cheddar Duplo   -----    R$17,00
+Pão, 2 carnes 130gm, queijo, cheddar, salada c/cebola caramelizada, creme e barbecue.
+
+Especial Coalho    -----    R$18,00
+Pão, 2 carnes 130gm, queijo coalho, salada c/cebola caramelizada creme e barbecue.
+
+X-Coração    -----   R$18,00
+Pão, coração, queijo coalho, salada c/cebola caramelizada creme e barbecue.
+
+X-Carne de Sol    -----   R$19,00
+Pão, Carne de Sol 130 gm cubos, queijo coalho, salada c/cebola caramelizada, creme e barbecue.
+
+X-Picanha     -----    R$20,00
+Pão, picanha 130gm cubos, queijo coalho, cheddar, salada c/cebola caramelizada, creme e barbecue.
+
+X-Bacon Duplo    ------    R$18,00
+Pão, 2 carnes 130gm, bacon, cheddar, salada c/cebola caramelizada, creme e barbecue.
+
+X-Duplo bacon  ------    R$17,00
+Pão, 2 carnes 130gm, bacon, salada c/cebola caramelizada, creme e barbecue.
+
+Máximos Burguer   -----  R$34,00
+Pão grande, 2 carnes 220gm, queijo, calabresa, bacon, salcicha, ovos, presunto, frango, cheddar, salada c/cebola caramelizada, creme e barbecue.
+
+Big Máximos    -----    R$40,00
+Pão super grande, 4 carnes 130gm, queijo, salcicha, bacon, ovo, presunto, calabresa, salada c/cebola caramelizada, creme e barbecue.
+
+
+HOT DOG CARDÁPIO ESPECIAL
+
+Hot Dog Tradicional    -----   R$ 8,00
+Pão, carne moída, salcicha, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, maionese da casa e barbecue.
+
+Hot Dog Frango    -----   R$11,00
+Pão, carne moída, salcicha, frango, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.
+
+Hot Dog Carne de Sol    -----   R$13,00
+Pão, carne moída, salcicha, carne de sol, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.
+
+Hot Dog Calabresa    -----    R$12,00
+Pão, carne moída, salcicha, calabresa, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.
+
+Hot Dog Bacon    -----    R$12,00
+Pão, carne moída, salcicha, bacon, cheddar, cebola, tomate, milho, ervilha, barata palha, queijo maçaricado, molho da casa e barbecue.
+
+Hot Dog Charque    -----    R$13,00
+Pão, carne moída, salcicha, charque, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.
+
+
+
+CARDÁPIO ESPECIAL BEIRUTE
+
+Beirute de Frango   ----- R$25,00
+Pão sírio, frango em cubos, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa 
+
+Beirute de Fraldinha    -----       R$28,00
+Pão sírio, fraudinha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.
+
+Beirute de Camarão    -----   R$35,00
+ Pão sírio, camarão, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.
+
+Beirute Misto    -----    R$32
+Pão sírio, frango em cubos, fraldinha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.
+
+Beirute de Picanha     -----    R$38
+Pão sírio, picanha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.
+
+Beirute Carne de sol   -----   R$36,00
+Pão sírio, carne de sol, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.
+
+
+Cardápio Açaí
+
+Açaí 200ML   --- R$ 7,00
+1 fruta, 3 acompanhamento, 1 caldas.
+
+Açaí 300ML  --- R$10,00
+2 fruta, 4 acompanhamento, 2 caldas
+
+Açaí 400ml  --- R$13,00
+2 fruta, 4 acompanhamento, 2 caldas.
+
+Açaí 500ml --- R$16,00
+2 frutas,5 acompanhamentos, 2 caldas.
+
+[18/10 14:25] Pamela Cun: Frutas
+
+ Banana
+Abacaxi
+Morango
+Kiwi
+Uva
+
+Caldas
+
+Morango
+Chocolate
+Mel
+Leite condensado
+
+Embutidos
+Leite em pó
+Granola
+Farinha de amendoim
+Jujuba
+M&M
+Sucrilhos
+Chocolate
+Kit-kat
+Farinha lacta
+Ovo Maltine
+Oreo
+Biss
+Granulado
+
+Adicionais
+
+Fruta  --- R$2,00
+Calda --- R$ 1,00
+Embutidos --- 1,50
+
+Adicionais
+
+
+Frango  --- R$3,00
+Carne  --- R$4,00
+Carne de sol  --- R$5,00
+Picanha  --- R$8,00
+Calabresa  --- R$3,00
+Bacon  ---  R$3,00
+Salcicha  --- R$2,00
+Queijo mussarela  --- R$2,00
+Cream cheese --- R$3,00
+Queijo cheddar  --- R$3,00
+Ovo  --- R$2,00
+
+
+Cardápio milkshake
+
+Milkshake acompanhamento 1 calda 
+
+300ML   --  R$7,00    400ML   --  R$10,00
+
+Sabores
+Ninho com oreo 
+Ovo Maltine
+ Africano
+ Chocolate  
+ Morango 
+ Chocomenta
+ 
+ADICIONAIS 
+ 
+COMBERTURA EXTRA CALDAS
+
+CHOCOLATE  1,00
+MORANGO  1,00
+LEITE CONDENSADO 1,00

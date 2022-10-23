@@ -12,20 +12,26 @@ export default function AvisoModal(props) {
         console.log(nomePEDIDO)
         Global.trocoPAGAMENTO = parseFloat(Global.trocoPAGAMENTO).toFixed(2);
 
+        if (Global.infoAdcionais.length === 0){
+            Global.infoAdcionais = 'Sem adcionais'
+        }else{
+            Global.infoAdcionais = Global.infoAdcionais.join('  -  ')
+        }
+
         if (Global.opcENTREGA === 'Delivery' && Global.opcPAGAMENTO === 'Dinheiro') {
-            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A%0A=================================%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A*VALOR PARA TROCO:* R$ " + Global.trocoPAGAMENTO + "%0A=================================%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A*CEP:* " + Global.endCEP + "%0A*RUA:* " + Global.endRUA + "%0A*N°:* " + Global.endNUM + "%0A*CIDADE:* " + Global.endCID + "%0A*BAIRRO:* " + Global.endBAIRRO + "%0A*OBS. ENTREGA:* " + Global.obsPEDIDO + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
+            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A%0A=================================%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A*VALOR PARA TROCO:* R$ " + Global.trocoPAGAMENTO + "%0A%0A=================================%0A*ADCIONAIS:* %0A%0A" + Global.infoAdcionais + "%0A=================================%0A%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A*CEP:* " + Global.endCEP + "%0A*RUA:* " + Global.endRUA + "%0A*N°:* " + Global.endNUM + "%0A*CIDADE:* " + Global.endCID + "%0A*BAIRRO:* " + Global.endBAIRRO + "%0A*OBS. ENTREGA:* " + Global.obsPEDIDO + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
         }
 
         if (Global.opcENTREGA === 'Delivery' && Global.opcPAGAMENTO !== 'Dinheiro') {
-            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A%0A=================================%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A=================================%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A*CEP:* " + Global.endCEP + "%0A*RUA:* " + Global.endRUA + "%0A*N°:* " + Global.endNUM + "%0A*CIDADE:* " + Global.endCID + "%0A*BAIRRO:* " + Global.endBAIRRO + "%0A*OBS. ENTREGA:* " + Global.obsPEDIDO + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
+            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A%0A=================================%0A%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*ADCIONAIS:* " + Global.infoAdcionais + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A%0A=================================%0A%0A*ADCIONAIS:* %0A%0A" + Global.infoAdcionais + "%0A%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A*CEP:* " + Global.endCEP + "%0A*RUA:* " + Global.endRUA + "%0A*N°:* " + Global.endNUM + "%0A*CIDADE:* " + Global.endCID + "%0A*BAIRRO:* " + Global.endBAIRRO + "%0A*OBS. ENTREGA:* " + Global.obsPEDIDO + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
         }
 
         if (Global.opcENTREGA !== 'Delivery' && Global.opcPAGAMENTO === 'Dinheiro') {
-            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A%0A=================================%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A*VALOR PARA TROCO:* R$ " + Global.trocoPAGAMENTO + "%0A=================================%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
+            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A%0A=================================%0A%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*ADCIONAIS:* " + Global.infoAdcionais + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A*VALOR PARA TROCO:* R$ " + Global.trocoPAGAMENTO + "%0A%0A=================================%0A%0A*ADCIONAIS:* %0A%0A" + Global.infoAdcionais + "%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
         }
 
         if (Global.opcENTREGA !== 'Delivery' && Global.opcPAGAMENTO !== 'Dinheiro') {
-            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A=================================%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A%0A=================================%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
+            url = ("https://api.whatsapp.com/send?phone=5581991437844&text=*PEDIDO:* " + Global.nomePEDIDO + "%0A=================================%0A%0A*NOME:* " + Global.nome + "%0A*OBS. DO PEDIDO:* " + Global.obsPEDIDO + "%0A*ADCIONAIS:* " + Global.infoAdcionais + "%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A%0A=================================%0A%0A*ADCIONAIS:* %0A%0A" + Global.infoAdcionais + "%0A%0A*OPC. ENTREGA:* " + Global.opcENTREGA + "%0A%0A*TOTAL:* " + Global.precoPEDIDO);
         }
         window.open(url);
 

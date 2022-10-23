@@ -13,7 +13,7 @@ import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
 
 export default function Cardapio() {
 
-    const { products, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA } = data;
+    const { products, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA, productsBEIRUTES } = data;
     const [cartItems, setCartItems] = useState([]);
 
     //Adcionar itens no  carrinho.
@@ -46,6 +46,7 @@ export default function Cardapio() {
                 productsBATATA={productsBATATA}
                 productsHAMBU={productsHAMBU}
                 productsBEBIDA={productsBEBIDA}
+                productsBEIRUTES={productsBEIRUTES}
                 countCartItems={cartItems.length}
                 onADD={onADD}
             />

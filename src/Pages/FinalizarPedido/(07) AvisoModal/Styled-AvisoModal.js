@@ -36,7 +36,7 @@ export const AvisoModalContainer = styled.div`
                 animation-fill-mode: forwards;
                 animation-duration: 1s;
 
-                position: absolute;
+                position: fixed;
                 margin: 0;
                 width: 100vw;
                 height: 130%;

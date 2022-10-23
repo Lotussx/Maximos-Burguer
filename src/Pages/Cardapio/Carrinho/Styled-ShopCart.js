@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+    import styled, { keyframes } from "styled-components";
 
 const animaButton = keyframes`
      0%{
@@ -34,7 +34,7 @@ export const ContainerShopCart = styled.div`
 
 
     &.carrinhoAberto{
-        height: 40vh !important;
+        height: 42vh !important;
         width: 100%;
         transition: .5s;
         border-radius: 25px 25px 0 0;
@@ -140,6 +140,7 @@ export const ContainerShopCart = styled.div`
                             margin-left: 10px;
                             margin: 0;
                             width: 50%;
+                            justify-content: flex-end;
 
                             p{
                                 margin: 2px 5px 0 0;
@@ -307,14 +308,15 @@ export const ContainerShopCart = styled.div`
 
         .precoAdcionais{
             width: 100%;
-            justify-content: flex-start;
+            justify-content: space-between;
             font-family: 'Oswald', sans-serif;
-            padding-left: 5%;
+            padding: 0 5%;
+            margin-top: 5px;
 
             p{
                 margin: 0;
                 padding: 0;
-                margin-left: 5px !important;
+                margin-right: 5px !important;
             }
 
             strong{

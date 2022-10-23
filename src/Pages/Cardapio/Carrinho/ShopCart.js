@@ -100,7 +100,7 @@ export default function ShopCart(props) {
                     <>
                         {Global.precoAdcionais !== 0 && openCart === false &&
                             <div className='precoAdcionais flex-class'>
-                                <strong>Adcionais: </strong><p>R$ {Global.precoAdcionais.toFixed(2)}</p>
+                                <strong>ADICIONAIS: </strong><p>R$ {Global.precoAdcionais.toFixed(2)}</p>
                             </div>
                         }
                         <div className='precoTotalContainer flex-class'>
