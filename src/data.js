@@ -274,40 +274,72 @@ const data = {
 
     productsBATATA: [
         {
-            id: '19',
+            id: '34',
             name: 'Tadicional P',
             price: 7.00,
             image: 'https://picsum.photos/200',
             description: 'Batata, sal e parmesão'
         },
         {
-            id: '20',
+            id: '35',
             name: 'Tradicional M',
             price: 10.00,
             image: 'https://picsum.photos/200',
             description: 'Batata, sal e parmesão'
         },
         {
-            id: '21',
+            id: '36',
             name: 'Tradicional G',
             price: 14.00,
             image: 'https://picsum.photos/200',
             description: 'Batata, sal e parmesão'
         },
         {
-            id: '22',
+            id: '37',
             name: 'Calabrasesa',
             price: 16.00,
             image: 'https://picsum.photos/200',
             description: 'Batata, calabresa, cheddar e parmesão.'
         },
         {
-            id: '23',
+            id: '38',
             name: 'Bacon',
             price: 17.00,
             image: 'https://picsum.photos/200',
             description: 'Batata, bacon, cheddar e parmesão.'
         },
+    ],
+
+    productsACAI: [
+        {
+            id: '39',
+            name: 'AÇAÍ 200ML',
+            price: 7.00,
+            image: 'https://picsum.photos/200',
+            description: '1 fruta, 3 acompanhamento, 1 caldas.'
+        },
+        {
+            id: '40',
+            name: 'AÇAÍ 300ML',
+            price: 10.00,
+            image: 'https://picsum.photos/200',
+            description: '2 frutas, 4 acompanhamento, 2 caldas.'
+        },
+        {
+            id: '41',
+            name: 'AÇAÍ 400ML',
+            price: 13.00,
+            image: 'https://picsum.photos/200',
+            description: '2 frutas, 4 acompanhamento, 2 caldas.'
+        },
+        {
+            id: '42',
+            name: 'AÇAÍ 500ML',
+            price: 16.00,
+            image: 'https://picsum.photos/200',
+            description: '2 frutas, 5 acompanhamento, 2 caldas.'
+        },
+        
     ],
 
     productsBEBIDA: [

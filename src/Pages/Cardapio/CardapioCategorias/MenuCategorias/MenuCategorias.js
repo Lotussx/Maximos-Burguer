@@ -1,8 +1,8 @@
 import React from 'react'
 import { MenuCategoriasConteiner } from './Styled-MenuCategorias'
 
-export default function MenuCategorias({ChangeALL, allContainer, ChangeBATATA, batataContainer, ChangeBEBIDA, bebidaContainer, ChangeBeirute, beiruteContainer, ChangeHAMBU, hambuContainer, ChangeHOTDOG, hotdogContainer, ChangeESPECIAL, especialContainer}) {
-    
+export default function MenuCategorias({ ChangeALL, allContainer, ChangeBATATA, batataContainer, ChangeBEBIDA, bebidaContainer, acaiContainer, ChangeACAI, ChangeBeirute, beiruteContainer, ChangeHAMBU, hambuContainer, ChangeHOTDOG, hotdogContainer, ChangeESPECIAL, especialContainer }) {
+
 
     return (
         <MenuCategoriasConteiner className='flex-class'>
@@ -23,6 +23,9 @@ export default function MenuCategorias({ChangeALL, allContainer, ChangeBATATA, b
             </li>
             <li onClick={ChangeBATATA}>
                 <h4 className={batataContainer ? 'categoriaON' : ''}>Batata Frita</h4>
+            </li>
+            <li onClick={ChangeACAI}>
+                <h4 className={acaiContainer ? 'categoriaON' : ''}>Açaí</h4>
             </li>
             <li onClick={ChangeBEBIDA}>
                 <h4 className={bebidaContainer ? 'categoriaON' : ''}>Bebidas</h4>

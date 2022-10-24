@@ -5,13 +5,14 @@ import Global from '../../../Global';
 import Categoria from './Categoria/Categoria';
 import Adicionais from './Adicionais/Adicionais';
 import MenuCategorias from './MenuCategorias/MenuCategorias';
+import BoxAcai from './BoxAcai/BoxAcai.js';
 
 
-export default function CardapioCategorias(props) {
+export default function CardapioCategorias({ onADD, countCartItems, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTE, productsBEBIDA, productsBATATA, productsACAI }) {
 
-    const { onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEBIDA, productsBEIRUTES } = props;
 
     const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
+    const [abrirModalAcai, setAbrirModalAcai] = useState(false)
 
     const [allContainer, setAllContainer] = useState(true);
     const [hambuContainer, setHambuContainer] = useState(true);
@@ -19,6 +20,7 @@ export default function CardapioCategorias(props) {
     const [hotdogContainer, setHotdogContainer] = useState(true);
     const [beiruteContainer, setBeiruteContainer] = useState(true);
     const [batataContainer, setBatataContainer] = useState(true);
+    const [acaiContainer, setAcaiContainer] = useState(true);
     const [bebidaContainer, setBebidaContainer] = useState(true);
 
 
@@ -30,6 +32,7 @@ export default function CardapioCategorias(props) {
         setBatataContainer(true);
         setBebidaContainer(true);
         setBeiruteContainer(true);
+        setAcaiContainer(true)
     }
     const desativa = () => {
         setAllContainer(!true);
@@ -39,6 +42,7 @@ export default function CardapioCategorias(props) {
         setBatataContainer(!true);
         setBebidaContainer(!true);
         setBeiruteContainer(!true);
+        setAcaiContainer(!true)
     }
     const ChangeHAMBU = () => {
         desativa()
@@ -68,6 +72,12 @@ export default function CardapioCategorias(props) {
         desativa()
         setTimeout(function () {
             setBatataContainer(true)
+        }, 200)
+    }
+    const ChangeACAI = () => {
+        desativa()
+        setTimeout(function () {
+            setAcaiContainer(true)
         }, 200)
     }
     const ChangeBEBIDA = () => {
@@ -126,6 +136,28 @@ export default function CardapioCategorias(props) {
         fecharModalAdicionais()
     }
 
+
+
+    const modalAcai = (product) => {
+
+        if (countCartItems === 0) {
+            Global.infoAdcionais = [];
+            Global.precoAdcionais = 0;
+        }
+        setabrirModalAdicionais(!abrirModalAdicionais)
+        let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+        Global.nomeProdutoAdcional = product.name
+        Global.produto = product
+    }
+
+    const fecharModalAcai = () => {
+        setAbrirModalAcai(!abrirModalAcai)
+    }
+
+
     return (
         <CardapioCategoriasContainer className='flex-class'>
 
@@ -138,6 +170,7 @@ export default function CardapioCategorias(props) {
                     ChangeHOTDOG={ChangeHOTDOG} hotdogContainer={hotdogContainer}
                     ChangeBeirute={ChangeBeirute} beiruteContainer={beiruteContainer}
                     ChangeBATATA={ChangeBATATA} batataContainer={batataContainer}
+                    ChangeACAI={ChangeACAI} acaiContainer={acaiContainer}
                     ChangeBEBIDA={ChangeBEBIDA} bebidaContainer={bebidaContainer}
                 />
             </>
@@ -147,38 +180,45 @@ export default function CardapioCategorias(props) {
                 <Categoria className={hambuContainer ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hamburguer'
                     modalAdicionais={modalAdicionais}
-                    productsMAP={productsHAMBU}
+                    products={productsHAMBU}
+                    btnText='Adicionar ao carrinho'
                 />
 
                 <Categoria className={especialContainer ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hamburguers Especiais'
                     modalAdicionais={modalAdicionais}
-                    productsMAP={productsESPECIAL}
+                    products={productsESPECIAL}
+                    btnText='Adicionar ao carrinho'
                 />
 
                 <Categoria className={hotdogContainer ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hot Dog'
                     modalAdicionais={modalAdicionais}
-                    productsMAP={productsHOTDOG}
+                    products={productsHOTDOG}
+                    btnText='Adicionar ao carrinho'
                 />
 
                 <Categoria className={beiruteContainer ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Beirutes'
                     modalAdicionais={modalAdicionais}
-                    productsMAP={productsBEIRUTES}
+                    products={productsBEIRUTE}
+                    btnText='Adicionar ao carrinho'
                 />
 
                 <Categoria className={batataContainer ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Batata Frita'
                     modalAdicionais={onADD}
-                    productsMAP={productsBATATA}
+                    products={productsBATATA}
+                    btnText='Adicionar ao carrinho'
                 />
 
-                <Categoria className={bebidaContainer ? 'categoryON' : 'categoryOFF'}
-                    nomeCategoria='Bebidas'
-                    modalAdicionais={onADD}
-                    productsMAP={productsBEBIDA}
+                <Categoria className={acaiContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Açaí'
+                    modalAdicionais={modalAcai}
+                    products={productsACAI}
+                    btnText='Monte seu açaí'
                 />
+
 
             </>
 
@@ -191,6 +231,18 @@ export default function CardapioCategorias(props) {
                     confirmaAdicional={() => confirmaADC(Global.produto)}
                 />
             </>
+
+            {/* Box Açaí */}
+            <>
+                <BoxAcai
+                    className={abrirModalAcai === false ? 'modalAdicionaisOFF' : 'modalAdicionaisON'}
+                    nomeProduto={Global.nomeProdutoAdcional}
+                    fecharModalAdicionais={fecharModalAcai}
+                    confirmaAdicional={() => confirmaADC(Global.produto)}
+
+                />
+            </>
+
 
             <div className='espacoBotton'></div>
         </CardapioCategoriasContainer >

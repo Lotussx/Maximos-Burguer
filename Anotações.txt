@@ -248,7 +248,7 @@ Açaí 400ml  --- R$13,00
 Açaí 500ml --- R$16,00
 2 frutas,5 acompanhamentos, 2 caldas.
 
-[18/10 14:25] Pamela Cun: Frutas
+
 
  Banana
 Abacaxi
@@ -263,6 +263,7 @@ Chocolate
 Mel
 Leite condensado
 
+===== ACOMPANHAMENTOS =====
 Embutidos
 Leite em pó
 Granola
@@ -278,7 +279,7 @@ Oreo
 Biss
 Granulado
 
-Adicionais
+===== ADICIONAIS =====
 
 Fruta  --- R$2,00
 Calda --- R$ 1,00
