@@ -5,14 +5,14 @@ import Global from '../../../Global';
 import Categoria from './Categoria/Categoria';
 import Adicionais from './Adicionais/Adicionais';
 import MenuCategorias from './MenuCategorias/MenuCategorias';
-import BoxAcai from './BoxAcai/BoxAcai.js';
+import BoxAcai from './BoxAcai/BoxAcai';
 
 
-export default function CardapioCategorias({ onADD, countCartItems, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTE, productsBEBIDA, productsBATATA, productsACAI }) {
+export default function CardapioCategorias({ onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI }) {
 
 
-    const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
     const [abrirModalAcai, setAbrirModalAcai] = useState(false)
+    const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
 
     const [allContainer, setAllContainer] = useState(true);
     const [hambuContainer, setHambuContainer] = useState(true);
@@ -138,24 +138,112 @@ export default function CardapioCategorias({ onADD, countCartItems, productsHAMB
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const modalAcai = (product) => {
+        Global.descriAcai = product.description
+        Global.acai = product.name
 
         if (countCartItems === 0) {
             Global.infoAdcionais = [];
             Global.precoAdcionais = 0;
         }
-        setabrirModalAdicionais(!abrirModalAdicionais)
-        let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
+
+        // Desmarcar todos os inputs ao abrir
+        let inputs = document.querySelectorAll('.selectAdcionais .frutas input');
+        console.log(inputs)
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].checked = false;
         }
-        Global.nomeProdutoAdcional = product.name
+
+        // Habilitar todos os inputs
+        let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
+        for (let i = 0; i < inputsCheck.length; i++) {
+            inputsCheck[i].disabled = false
+        }
+
         Global.produto = product
+        setAbrirModalAcai(!abrirModalAcai)
     }
+
 
     const fecharModalAcai = () => {
         setAbrirModalAcai(!abrirModalAcai)
     }
+
+    const verificaFruta = () => {
+
+        if (Global.acai === 'AÇAÍ 200ML') {
+            let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
+            let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
+            let inputsCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
+
+            if (inputsCHECKED.length === 1) {
+                for (let i = 0; i < inputsCheck.length; i++) {
+
+                    if (inputsCheck[i].checked === true) {
+
+                    } else {
+                        inputsCheck[i].disabled = true
+                    }
+                }
+            } else if (inputsCHECKED.length === 0) {
+                for (let i = 0; i < inputsDISABLED.length; i++) {
+                    inputsDISABLED[i].disabled = false
+                }
+            }
+        }
+
+        if (Global.acai === 'AÇAÍ 300ML' || Global.acai === 'AÇAÍ 400ML' || Global.acai === 'AÇAÍ 500ML') {
+            let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
+            let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
+            let inputsCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
+            
+            if (inputsCHECKED.length === 2) {
+                for (let i = 0; i < inputsCheck.length; i++) {
+
+                    if (inputsCheck[i].checked === true) {
+
+                    } else {
+                        inputsCheck[i].disabled = true
+                    }
+                }
+            } else if (inputsCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED.length; i++) {
+                    inputsDISABLED[i].disabled = false
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     return (
@@ -171,6 +259,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsHAMB
                     ChangeBeirute={ChangeBeirute} beiruteContainer={beiruteContainer}
                     ChangeBATATA={ChangeBATATA} batataContainer={batataContainer}
                     ChangeACAI={ChangeACAI} acaiContainer={acaiContainer}
+
                     ChangeBEBIDA={ChangeBEBIDA} bebidaContainer={bebidaContainer}
                 />
             </>
@@ -219,7 +308,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsHAMB
                     btnText='Monte seu açaí'
                 />
 
-
             </>
 
             {/* Box Adicionais */}
@@ -239,12 +327,12 @@ export default function CardapioCategorias({ onADD, countCartItems, productsHAMB
                     nomeProduto={Global.nomeProdutoAdcional}
                     fecharModalAdicionais={fecharModalAcai}
                     confirmaAdicional={() => confirmaADC(Global.produto)}
-
+                    verificaFruta={verificaFruta}
                 />
             </>
-
 
             <div className='espacoBotton'></div>
         </CardapioCategoriasContainer >
     )
 }
+

@@ -18,7 +18,6 @@ export default function Categoria({ products, modalAdicionais, className, nomeCa
                         </div>
                     </div>
                 ))}
-
             </>
 
         </CategoriaContainer>

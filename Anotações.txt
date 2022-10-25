@@ -67,7 +67,7 @@ Adicionais
 Fruta  --- R$2,00
 Calda --- R$ 1,00
 Embutidos --- 1,50
-[17:18, 18/10/2022] Danilo Silva (Cliente): Adicionais
+
 
 
 
@@ -271,6 +271,7 @@ Farinha de amendoim
 Jujuba
 M&M
 Sucrilhos
+
 Chocolate
 Kit-kat
 Farinha lacta
@@ -322,3 +323,12 @@ COMBERTURA EXTRA CALDAS
 CHOCOLATE  1,00
 MORANGO  1,00
 LEITE CONDENSADO 1,00
+
+
+
+
+
+
+MODELO ESPERADO DA MSG Açaí
+
+[AÇAÍ 200ML: frutas(xxxx, xxxx, xxxx)  -  Caldas(xxxx) - Acompanhamentos(xxxx, xxxx, xxxx) Adicionais(xxxx, xxx)]

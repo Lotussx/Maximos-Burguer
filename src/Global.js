@@ -32,4 +32,9 @@ export default class Globais {
 
     static produto
     static newinfoAdcionais
+
+    static descriAcai = '';
+    static acai = '';
+    static infoAcai = [];
+    static precoAcai = 0;
 }

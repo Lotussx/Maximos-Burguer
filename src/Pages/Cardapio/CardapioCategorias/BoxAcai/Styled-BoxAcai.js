@@ -52,6 +52,38 @@ export const BoxAcaiContainer = styled.div`
             flex-direction: column;
             justify-content: flex-start;
             width: 90%;
+
+            p{
+                margin: 0;
+            }
+
+            hr{
+                margin: 3px 0;
+            }
+
+            .checkbox{
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .frutas{
+                padding-bottom: 10px;
+            }
+
+            .acompanhamentos{
+                padding-bottom: 10px;
+
+                .wrapper{
+
+                    .content{
+                        width: 50%;
+                    }
+                }
+            }
+
+            .caldas{
+                padding-bottom: 10px;
+            }
         }
 
         .btnConfirma{
