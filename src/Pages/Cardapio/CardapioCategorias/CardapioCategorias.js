@@ -13,6 +13,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
     const [abrirModalAcai, setAbrirModalAcai] = useState(false)
     const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
+    const [modalAdicionaisAcai, setmodalAdicionaisAcai] = useState(false)
 
     const [allContainer, setAllContainer] = useState(true);
     const [hambuContainer, setHambuContainer] = useState(true);
@@ -87,6 +88,8 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         }, 200)
     }
 
+
+
     const modalAdicionais = (product) => {
 
         if (countCartItems === 0) {
@@ -101,9 +104,12 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         Global.nomeProdutoAdcional = product.name
         Global.produto = product
     }
+
     const fecharModalAdicionais = () => {
         setabrirModalAdicionais(!abrirModalAdicionais)
     }
+
+
     const confirmaADC = () => {
 
         let select = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
@@ -153,7 +159,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
 
 
-
     const modalAcai = (product) => {
         Global.descriAcai = product.description
         Global.acai = product.name
@@ -182,10 +187,11 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
 
     const fecharModalAcai = () => {
-        setAbrirModalAcai(!abrirModalAcai)
+        setAbrirModalAcai(false)
+        setmodalAdicionaisAcai(false)
     }
 
-    const verificaFruta = () => {
+    const verificaACAI = () => {
 
         if (Global.acai === 'AÇAÍ 200ML') {
             let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
@@ -194,45 +200,64 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
             if (inputsCHECKED.length === 1) {
                 for (let i = 0; i < inputsCheck.length; i++) {
-
-                    if (inputsCheck[i].checked === true) {
-
-                    } else {
+                    if (inputsCheck[i].checked !== true) {
                         inputsCheck[i].disabled = true
-                    }
+                    } 
                 }
             } else if (inputsCHECKED.length === 0) {
                 for (let i = 0; i < inputsDISABLED.length; i++) {
                     inputsDISABLED[i].disabled = false
                 }
             }
-        }
 
-        if (Global.acai === 'AÇAÍ 300ML' || Global.acai === 'AÇAÍ 400ML' || Global.acai === 'AÇAÍ 500ML') {
-            let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
-            let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
-            let inputsCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
-            
-            if (inputsCHECKED.length === 2) {
-                for (let i = 0; i < inputsCheck.length; i++) {
 
-                    if (inputsCheck[i].checked === true) {
+
+            let inputsDISABLED02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input:disabled')
+            let checkbox02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input')
+            let inputsCHECKED02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input:checked')
+
+            if (inputsCHECKED02.length === 3) {
+                for (let i = 0; i < checkbox02.length; i++) {
+                    if (checkbox02[i].checked === true) {
 
                     } else {
-                        inputsCheck[i].disabled = true
+                        checkbox02[i].disabled = true
                     }
                 }
-            } else if (inputsCHECKED.length === 1) {
-                for (let i = 0; i < inputsDISABLED.length; i++) {
-                    inputsDISABLED[i].disabled = false
+            } else if (inputsCHECKED02.length === 2) {
+                for (let i = 0; i < inputsDISABLED02.length; i++) {
+                    inputsDISABLED02[i].disabled = false
+                }
+            }
+
+
+            if (Global.acai === 'AÇAÍ 300ML' || Global.acai === 'AÇAÍ 400ML' || Global.acai === 'AÇAÍ 500ML') {
+                let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
+                let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
+                let inputsCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
+
+                if (inputsCHECKED.length === 2) {
+                    for (let i = 0; i < inputsCheck.length; i++) {
+
+                        if (inputsCheck[i].checked === true) {
+
+                        } else {
+                            inputsCheck[i].disabled = true
+                        }
+                    }
+                } else if (inputsCHECKED.length === 1) {
+                    for (let i = 0; i < inputsDISABLED.length; i++) {
+                        inputsDISABLED[i].disabled = false
+                    }
                 }
             }
         }
     }
 
 
-
-
+    const modalAcai02 = () => {
+        setmodalAdicionaisAcai(!modalAdicionaisAcai)
+    }
 
 
 
@@ -324,10 +349,13 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
             <>
                 <BoxAcai
                     className={abrirModalAcai === false ? 'modalAdicionaisOFF' : 'modalAdicionaisON'}
+                    className2={modalAdicionaisAcai === false ? '' : 'marginModal'}
+                    className3={modalAdicionaisAcai === false ? '' : 'opcAdionaisAcai'}
                     nomeProduto={Global.nomeProdutoAdcional}
                     fecharModalAdicionais={fecharModalAcai}
                     confirmaAdicional={() => confirmaADC(Global.produto)}
-                    verificaFruta={verificaFruta}
+                    verificaACAI={verificaACAI}
+                    modalAcai02={modalAcai02}
                 />
             </>
 
