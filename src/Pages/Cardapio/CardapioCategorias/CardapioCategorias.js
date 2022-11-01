@@ -188,6 +188,10 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         let checkbox03 = document.querySelectorAll('.selectAdcionais .caldas input')
         let caldasCHECKED = document.querySelectorAll('.selectAdcionais .caldas    input:checked')
 
+        if (countCartItems === 0){
+            Global.acaiPRONTO = [];
+        }
+
 
         if (Global.acai === 'AÇAÍ 200ML') {
 
@@ -364,7 +368,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
 
     const modalAcai02 = () => {
-
         let inputs = document.querySelectorAll('.selectAdcionais input:checked');
         let inputsFRUTAS = document.querySelectorAll('.selectAdcionais .frutas input:checked');
         let inputsACOMPANHAMENTOS = document.querySelectorAll('.selectAdcionais .acompanhamentos input:checked');
@@ -394,22 +397,50 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         acompanhamentos = acompanhamentos + arrAcompanhamentos.join(' - ')
         caldas = caldas + arrCaldas.join(' - ')
 
-        console.log(frutas)
-        console.log(acompanhamentos)
-        console.log(caldas)
-
+        
         let acai = Global.acai + ' - ' + frutas + ' | ' + acompanhamentos + ' | ' + caldas
         Global.acaitext = acai
         console.log(acai)
 
         setmodalAdicionaisAcai(!modalAdicionaisAcai)
+
+        // Desmarcar todos os inputs ao abrir
+        let inputsx = document.querySelectorAll('.adicionaisAcai input');
+        for (let i = 0; i < inputsx.length; i++) {
+            inputsx[i].checked = false;
+        }
     }
 
     const confirmaACAI = () => {
-        let precos = document.querySelectorAll('')
-        let inputs = document.querySelectorAll('.opcAdionaisAcai h4')
+        if (countCartItems === 0){
+            Global.adcACAI = []
+        }
+        
+        let input = document.querySelectorAll('.adicionaisAcai input')
+        let preco = document.querySelectorAll('.adicionaisAcai span')
+        
+        for (let i = 0; i < input.length; i++){
+            if(input[i].checked === true){
+               Global.adcACAI.push(input[i].value)
+               Global.precoAdcionais = Global.precoAdcionais + parseFloat(preco[i].innerHTML)
+            }
+        }
 
-        console.log(inputs)
+        
+
+        let txtADC = Global.adcACAI.join(' - ')
+
+        let adcACAI = 'ADICIONAIS: ' + txtADC
+
+        Global.acaitext = Global.acaitext + ' | ' + adcACAI
+
+        
+        Global.acaiPRONTO.push(Global.acaitext)
+        console.log(Global.acaiPRONTO)
+        
+        onADD(Global.produto)
+        setAbrirModalAcai(false)
+        setmodalAdicionaisAcai(false)
     }
 
 

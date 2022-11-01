@@ -119,15 +119,15 @@ export default function BoxAcai({ className, className2, className3, fecharModal
                         <hr></hr>
                         <div className='checkbox flex-class'>
                             <input onChange={verificaACAI} type='checkbox' name='Morango' value='Morango'></input>
-                            <label htmlFor='Morango '>Morango</label>
+                            <label htmlFor='Morango '>Calda de Morango</label>
                         </div>
                         <div className='checkbox flex-class'>
                             <input onChange={verificaACAI} type='checkbox' name='Chocolate' value='Chocolate'></input>
-                            <label htmlFor='Chocolate '>Chocolate</label>
+                            <label htmlFor='Chocolate '>Calda de Chocolate</label>
                         </div>
                         <div className='checkbox flex-class'>
                             <input onChange={verificaACAI} type='checkbox' name='Mel' value='Mel'></input>
-                            <label htmlFor='Mel '>Mel</label>
+                            <label htmlFor='Mel '>Calda de Mel</label>
                         </div>
                         <div className='checkbox flex-class'>
                             <input onChange={verificaACAI} type='checkbox' name='Leite condensado' value='Leite condensado'></input>
@@ -197,9 +197,9 @@ export default function BoxAcai({ className, className2, className3, fecharModal
                 <div className='adicionaisCALDAS'>
                     <h4>Caldas</h4>
 
-                    <Checkbox preco='1,00' nomeAdicional='Morango' />
-                    <Checkbox preco='1,00' nomeAdicional='Chocolate' />
-                    <Checkbox preco='1,00' nomeAdicional='Mel' />
+                    <Checkbox preco='1,00' nomeAdicional='Calda de Morango' />
+                    <Checkbox preco='1,00' nomeAdicional='Calda de Chocolate' />
+                    <Checkbox preco='1,00' nomeAdicional='Calda de Mel' />
                     <Checkbox preco='1,00' nomeAdicional='Leite condensado' />
                 </div>
 

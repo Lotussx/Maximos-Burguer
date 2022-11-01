@@ -71,7 +71,16 @@ export default function FinalizarPedido() {
                 <div className='mainContainer flex-class'>
                     <CardPedido />
                     {Global.infoAdcionais.length !== 0   &&
-                        <CardAdcionais />
+                        <CardAdcionais 
+                            adicionais='Adicionais: '
+                            arrMap={Global.infoAdcionais}
+                        />
+                    }
+                    {Global.acaiPRONTO.length !== 0   &&
+                        <CardAdcionais 
+                            adicionais='Açaí: '
+                            arrMap={Global.acaiPRONTO}
+                        />
                     }
                     <form className='formContainer flex-class'>
                         {/* Nome e Obs Pedido */}

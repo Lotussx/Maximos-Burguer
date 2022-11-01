@@ -9,7 +9,7 @@ import ShopCart from './Carrinho/ShopCart';
 import Header from '../../Components/Header/Header.js';
 import SlidePromo from './SlidePromo/SlidePromo.js';
 import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
-
+import Global from '../../Global'
 
 export default function Cardapio() {
 

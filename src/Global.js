@@ -40,6 +40,11 @@ export default class Globais {
 
 
     static acaitext = '';
+    static adcACAI = [];
+    static precoAdcACAI = 0;
+
+    static acaiPRONTO = [];
+    
 
 
 }

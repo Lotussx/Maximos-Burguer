@@ -1,23 +1,18 @@
 import React from 'react';
 import { CardAdcionaisContainer } from './Styled-CardAdcionais';
 
-import Global from '../../../Global';
-
-export default function CardAdcionais() {
+export default function CardAdcionais({adicionais, arrMap}) {
 
 
     return (
 
         <CardAdcionaisContainer >
-            <h3>Adcionais:</h3>
+            <h3>{adicionais}</h3>
             <hr className='barra'></hr>
             <div className='infoADC'>
-                {Global.infoAdcionais.map((item) => (
-                    <div>{item}</div>
+                {arrMap.map((item) => (
+                    <div className='item'>{item}</div>
                 ))}
-            </div>
-            <div className='precoADC'>
-                <span>R$ {Global.precoAdcionais.toFixed(2)}</span>
             </div>
         </CardAdcionaisContainer>
 
