@@ -144,21 +144,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     const modalAcai = (product) => {
         Global.descriAcai = product.description
         Global.acai = product.name
@@ -169,14 +154,13 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         }
 
         // Desmarcar todos os inputs ao abrir
-        let inputs = document.querySelectorAll('.selectAdcionais .frutas input');
-        console.log(inputs)
+        let inputs = document.querySelectorAll('.selectAdcionais input');
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].checked = false;
         }
 
         // Habilitar todos os inputs
-        let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
+        let inputsCheck = document.querySelectorAll('.selectAdcionais input')
         for (let i = 0; i < inputsCheck.length; i++) {
             inputsCheck[i].disabled = false
         }
@@ -192,71 +176,240 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     }
 
     const verificaACAI = () => {
+        let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
+        let checkbox01 = document.querySelectorAll('.selectAdcionais .frutas input')
+        let frutasCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
+
+        let inputsDISABLED02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input:disabled')
+        let checkbox02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input')
+        let acompCHECKED = document.querySelectorAll('.selectAdcionais .acompanhamentos input:checked')
+
+        let inputsDISABLED03 = document.querySelectorAll('.selectAdcionais .caldas input:disabled')
+        let checkbox03 = document.querySelectorAll('.selectAdcionais .caldas input')
+        let caldasCHECKED = document.querySelectorAll('.selectAdcionais .caldas    input:checked')
+
 
         if (Global.acai === 'AÇAÍ 200ML') {
-            let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
-            let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
-            let inputsCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
 
-            if (inputsCHECKED.length === 1) {
-                for (let i = 0; i < inputsCheck.length; i++) {
-                    if (inputsCheck[i].checked !== true) {
-                        inputsCheck[i].disabled = true
-                    } 
+            if (frutasCHECKED.length === 1) {
+                for (let i = 0; i < checkbox01.length; i++) {
+                    if (checkbox01[i].checked !== true) {
+                        checkbox01[i].disabled = true
+                    }
                 }
-            } else if (inputsCHECKED.length === 0) {
+            } else if (frutasCHECKED.length === 0) {
                 for (let i = 0; i < inputsDISABLED.length; i++) {
                     inputsDISABLED[i].disabled = false
                 }
             }
 
 
-
-            let inputsDISABLED02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input:disabled')
-            let checkbox02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input')
-            let inputsCHECKED02 = document.querySelectorAll('.selectAdcionais .acompanhamentos input:checked')
-
-            if (inputsCHECKED02.length === 3) {
+            if (acompCHECKED.length === 3) {
                 for (let i = 0; i < checkbox02.length; i++) {
-                    if (checkbox02[i].checked === true) {
-
-                    } else {
+                    if (checkbox02[i].checked !== true) {
                         checkbox02[i].disabled = true
                     }
                 }
-            } else if (inputsCHECKED02.length === 2) {
+            } else if (acompCHECKED.length === 2) {
                 for (let i = 0; i < inputsDISABLED02.length; i++) {
                     inputsDISABLED02[i].disabled = false
                 }
             }
 
 
-            if (Global.acai === 'AÇAÍ 300ML' || Global.acai === 'AÇAÍ 400ML' || Global.acai === 'AÇAÍ 500ML') {
-                let inputsDISABLED = document.querySelectorAll('.selectAdcionais .frutas input:disabled')
-                let inputsCheck = document.querySelectorAll('.selectAdcionais .frutas input')
-                let inputsCHECKED = document.querySelectorAll('.selectAdcionais .frutas input:checked')
-
-                if (inputsCHECKED.length === 2) {
-                    for (let i = 0; i < inputsCheck.length; i++) {
-
-                        if (inputsCheck[i].checked === true) {
-
-                        } else {
-                            inputsCheck[i].disabled = true
-                        }
-                    }
-                } else if (inputsCHECKED.length === 1) {
-                    for (let i = 0; i < inputsDISABLED.length; i++) {
-                        inputsDISABLED[i].disabled = false
+            if (caldasCHECKED.length === 1) {
+                for (let i = 0; i < checkbox03.length; i++) {
+                    if (checkbox03[i].checked !== true) {
+                        checkbox03[i].disabled = true
                     }
                 }
+            } else if (caldasCHECKED.length === 0) {
+                for (let i = 0; i < inputsDISABLED03.length; i++) {
+                    inputsDISABLED03[i].disabled = false
+                }
             }
+
         }
+
+        if (Global.acai === 'AÇAÍ 300ML') {
+
+            if (frutasCHECKED.length === 2) {
+                for (let i = 0; i < checkbox01.length; i++) {
+                    if (checkbox01[i].checked !== true) {
+                        checkbox01[i].disabled = true
+                    }
+                }
+            } else if (frutasCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED.length; i++) {
+                    inputsDISABLED[i].disabled = false
+                }
+            }
+
+
+            if (acompCHECKED.length === 4) {
+                for (let i = 0; i < checkbox02.length; i++) {
+                    if (checkbox02[i].checked !== true) {
+                        checkbox02[i].disabled = true
+                    }
+                }
+            } else if (acompCHECKED.length === 3) {
+                for (let i = 0; i < inputsDISABLED02.length; i++) {
+                    inputsDISABLED02[i].disabled = false
+                }
+            }
+
+
+            if (caldasCHECKED.length === 2) {
+                for (let i = 0; i < checkbox03.length; i++) {
+                    if (checkbox03[i].checked !== true) {
+                        checkbox03[i].disabled = true
+                    }
+                }
+            } else if (caldasCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED03.length; i++) {
+                    inputsDISABLED03[i].disabled = false
+                }
+            }
+
+        }
+
+        if (Global.acai === 'AÇAÍ 300ML' || Global.acai === 'AÇAÍ 400ML') {
+
+            if (frutasCHECKED.length === 2) {
+                for (let i = 0; i < checkbox01.length; i++) {
+                    if (checkbox01[i].checked !== true) {
+                        checkbox01[i].disabled = true
+                    }
+                }
+            } else if (frutasCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED.length; i++) {
+                    inputsDISABLED[i].disabled = false
+                }
+            }
+
+
+            if (acompCHECKED.length === 4) {
+                for (let i = 0; i < checkbox02.length; i++) {
+                    if (checkbox02[i].checked !== true) {
+                        checkbox02[i].disabled = true
+                    }
+                }
+            } else if (acompCHECKED.length === 3) {
+                for (let i = 0; i < inputsDISABLED02.length; i++) {
+                    inputsDISABLED02[i].disabled = false
+                }
+            }
+
+
+            if (caldasCHECKED.length === 2) {
+                for (let i = 0; i < checkbox03.length; i++) {
+                    if (checkbox03[i].checked !== true) {
+                        checkbox03[i].disabled = true
+                    }
+                }
+            } else if (caldasCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED03.length; i++) {
+                    inputsDISABLED03[i].disabled = false
+                }
+            }
+
+        }
+
+        if (Global.acai === 'AÇAÍ 500ML') {
+
+            if (frutasCHECKED.length === 2) {
+                for (let i = 0; i < checkbox01.length; i++) {
+                    if (checkbox01[i].checked !== true) {
+                        checkbox01[i].disabled = true
+                    }
+                }
+            } else if (frutasCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED.length; i++) {
+                    inputsDISABLED[i].disabled = false
+                }
+            }
+
+
+            if (acompCHECKED.length === 5) {
+                for (let i = 0; i < checkbox02.length; i++) {
+                    if (checkbox02[i].checked !== true) {
+                        checkbox02[i].disabled = true
+                    }
+                }
+            } else if (acompCHECKED.length === 4) {
+                for (let i = 0; i < inputsDISABLED02.length; i++) {
+                    inputsDISABLED02[i].disabled = false
+                }
+            }
+
+
+            if (caldasCHECKED.length === 2) {
+                for (let i = 0; i < checkbox03.length; i++) {
+                    if (checkbox03[i].checked !== true) {
+                        checkbox03[i].disabled = true
+                    }
+                }
+            } else if (caldasCHECKED.length === 1) {
+                for (let i = 0; i < inputsDISABLED03.length; i++) {
+                    inputsDISABLED03[i].disabled = false
+                }
+            }
+
+        }
+
+
+
     }
 
 
+
     const modalAcai02 = () => {
+
+        let inputs = document.querySelectorAll('.selectAdcionais input:checked');
+        let inputsFRUTAS = document.querySelectorAll('.selectAdcionais .frutas input:checked');
+        let inputsACOMPANHAMENTOS = document.querySelectorAll('.selectAdcionais .acompanhamentos input:checked');
+        let inputsCALDAS = document.querySelectorAll('.selectAdcionais .caldas input:checked');
+
+        let frutas = 'FRUTAS: '
+        let acompanhamentos = 'ACOMPANHAMENTOS: '
+        let caldas = 'CALDA: '
+        let arrFrutas = []
+        let arrAcompanhamentos = []
+        let arrCaldas = []
+
+
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputsFRUTAS[i] !== undefined) {
+                arrFrutas.push(inputsFRUTAS[i].value);
+            }
+            if (inputsACOMPANHAMENTOS[i] !== undefined) {
+                arrAcompanhamentos.push(inputsACOMPANHAMENTOS[i].value);
+            }
+            if (inputsCALDAS[i] !== undefined) {
+                arrCaldas.push(inputsCALDAS[i].value);
+            }
+        }
+
+        frutas = frutas + arrFrutas.join(' - ')
+        acompanhamentos = acompanhamentos + arrAcompanhamentos.join(' - ')
+        caldas = caldas + arrCaldas.join(' - ')
+
+        console.log(frutas)
+        console.log(acompanhamentos)
+        console.log(caldas)
+
+        let acai = Global.acai + ' - ' + frutas + ' | ' + acompanhamentos + ' | ' + caldas
+        Global.acaitext = acai
+        console.log(acai)
+
         setmodalAdicionaisAcai(!modalAdicionaisAcai)
+    }
+
+    const confirmaACAI = () => {
+        let precos = document.querySelectorAll('')
+        let inputs = document.querySelectorAll('.opcAdionaisAcai h4')
+
+        console.log(inputs)
     }
 
 
@@ -356,6 +509,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
                     confirmaAdicional={() => confirmaADC(Global.produto)}
                     verificaACAI={verificaACAI}
                     modalAcai02={modalAcai02}
+                    confirmaACAI={confirmaACAI}
                 />
             </>
 

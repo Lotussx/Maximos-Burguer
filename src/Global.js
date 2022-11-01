@@ -37,4 +37,9 @@ export default class Globais {
     static acai = '';
     static infoAcai = [];
     static precoAcai = 0;
+
+
+    static acaitext = '';
+
+
 }

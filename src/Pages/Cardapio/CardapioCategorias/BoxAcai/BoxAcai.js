@@ -6,7 +6,7 @@ import Global from '../../../../Global';
 import Checkbox from '../Adicionais/Checkbox/Checkbox';
 
 
-export default function BoxAcai({ className, className2, className3, fecharModalAdicionais, modalAcai02, verificaACAI }) {
+export default function BoxAcai({ className, className2, className3, fecharModalAdicionais, modalAcai02, verificaACAI, confirmaACAI }) {
 
 
     return (
@@ -204,7 +204,7 @@ export default function BoxAcai({ className, className2, className3, fecharModal
                 </div>
 
                 <div className='btnConfirma flex-class'>
-                    <button onClick={modalAcai02}>Próximo</button>
+                    <button onClick={confirmaACAI}>Confirmar</button>
                 </div>
             </div>
         </BoxAcaiContainer >
