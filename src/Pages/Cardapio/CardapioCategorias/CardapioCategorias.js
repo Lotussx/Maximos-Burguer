@@ -188,7 +188,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         let checkbox03 = document.querySelectorAll('.selectAdcionais .caldas input')
         let caldasCHECKED = document.querySelectorAll('.selectAdcionais .caldas    input:checked')
 
-        if (countCartItems === 0){
+        if (countCartItems === 0) {
             Global.acaiPRONTO = [];
         }
 
@@ -397,7 +397,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         acompanhamentos = acompanhamentos + arrAcompanhamentos.join(' - ')
         caldas = caldas + arrCaldas.join(' - ')
 
-        
+
         let acai = Global.acai + ' - ' + frutas + ' | ' + acompanhamentos + ' | ' + caldas
         Global.acaitext = acai
         console.log(acai)
@@ -412,21 +412,21 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     }
 
     const confirmaACAI = () => {
-        if (countCartItems === 0){
+        if (countCartItems === 0) {
             Global.adcACAI = []
         }
-        
+
         let input = document.querySelectorAll('.adicionaisAcai input')
         let preco = document.querySelectorAll('.adicionaisAcai span')
-        
-        for (let i = 0; i < input.length; i++){
-            if(input[i].checked === true){
-               Global.adcACAI.push(input[i].value)
-               Global.precoAdcionais = Global.precoAdcionais + parseFloat(preco[i].innerHTML)
+
+        Global.adcACAI = []
+
+        for (let i = 0; i < input.length; i++) {
+            if (input[i].checked === true) {
+                Global.adcACAI.push(input[i].value)
+                Global.precoAdcionais = Global.precoAdcionais + parseFloat(preco[i].innerHTML)
             }
         }
-
-        
 
         let txtADC = Global.adcACAI.join(' - ')
 
@@ -434,10 +434,10 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
         Global.acaitext = Global.acaitext + ' | ' + adcACAI
 
-        
+
         Global.acaiPRONTO.push(Global.acaitext)
         console.log(Global.acaiPRONTO)
-        
+
         onADD(Global.produto)
         setAbrirModalAcai(false)
         setmodalAdicionaisAcai(false)
