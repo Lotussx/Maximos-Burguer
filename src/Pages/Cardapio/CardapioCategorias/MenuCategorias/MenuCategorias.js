@@ -1,7 +1,7 @@
 import React from 'react'
 import { MenuCategoriasConteiner } from './Styled-MenuCategorias'
 
-export default function MenuCategorias({ ChangeALL, allContainer, ChangeBATATA, batataContainer, ChangeBEBIDA, bebidaContainer, acaiContainer, ChangeACAI, ChangeBeirute, beiruteContainer, ChangeHAMBU, hambuContainer, ChangeHOTDOG, hotdogContainer, ChangeESPECIAL, especialContainer }) {
+export default function MenuCategorias({ ChangeALL, allContainer, ChangeBATATA, batataContainer, ChangeBEBIDA, bebidaContainer, acaiContainer, ChangeACAI, ChangeBeirute, beiruteContainer, ChangeHAMBU, hambuContainer, ChangeHOTDOG, hotdogContainer, ChangeESPECIAL, especialContainer, ChangeMILKSHAKE, milkShakeContainer }) {
 
 
     return (
@@ -26,6 +26,9 @@ export default function MenuCategorias({ ChangeALL, allContainer, ChangeBATATA, 
             </li>
             <li onClick={ChangeACAI}>
                 <h4 className={acaiContainer ? 'categoriaON' : ''}>Açaí</h4>
+            </li>
+            <li onClick={ChangeMILKSHAKE}>
+                <h4 className={milkShakeContainer ? 'categoriaON' : ''}>Milk Shake</h4>
             </li>
             <li onClick={ChangeBEBIDA}>
                 <h4 className={bebidaContainer ? 'categoriaON' : ''}>Bebidas</h4>

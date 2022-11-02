@@ -44,6 +44,12 @@ export default class Globais {
     static precoAdcACAI = 0;
 
     static acaiPRONTO = [];
+
+
+
+    static milkShake = '';
+    static milkSHAKEpronto = [];
+    static descriMilkShake = '';
     
 
 

@@ -37,7 +37,15 @@ export default function AvisoModal(props) {
             if (Global.acaiPRONTO === []) {
                 return
             } else {
-                return ("%0A%0A*AÇAÍ:* " + Global.acaiPRONTO  + "%0A%0A=================================")
+                return ("%0A%0A*AÇAÍ:* " + Global.acaiPRONTO + "%0A%0A=================================")
+            }
+        }
+
+        function adicionaisMILKSHAKE() {
+            if (Global.acaiPRONTO === []) {
+                return
+            } else {
+                return ("%0A%0A*MILKSHAKE:* " + Global.milkSHAKEpronto + "%0A%0A=================================")
             }
         }
 
@@ -66,6 +74,7 @@ export default function AvisoModal(props) {
             + opcPagamento()
             + adicionais()
             + adicionaisACAI()
+            + adicionaisMILKSHAKE()
             + opcEntrega()
             + precoTotal()
 

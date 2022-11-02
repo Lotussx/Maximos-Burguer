@@ -339,7 +339,24 @@ const data = {
             image: 'https://picsum.photos/200',
             description: '2 frutas, 5 acompanhamento, 2 caldas.'
         },
-        
+
+    ],
+
+    productsMILKSHAKE: [
+        {
+            id: '43',
+            name: 'MILKSHAKE 300ML',
+            price: 7.00,
+            image: Promo01,
+            description: '1 sabor, 1 calda.'
+        },
+        {
+            id: '44',
+            name: 'MILKSHAKE 400ML',
+            price: 10.00,
+            image: Promo01,
+            description: '1 sabor, 1 calda.'
+        },
     ],
 
     productsBEBIDA: [
@@ -365,6 +382,8 @@ const data = {
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, perspiciatis.'
         },
     ]
+
+
 };
 
 export default data;

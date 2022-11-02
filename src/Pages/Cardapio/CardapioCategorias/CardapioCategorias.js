@@ -6,13 +6,15 @@ import Categoria from './Categoria/Categoria';
 import Adicionais from './Adicionais/Adicionais';
 import MenuCategorias from './MenuCategorias/MenuCategorias';
 import BoxAcai from './BoxAcai/BoxAcai';
+import BoxMilkShake from './BoxMilkShake/BoxMilkShake';
 
 
-export default function CardapioCategorias({ onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI }) {
+export default function CardapioCategorias({ onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI, productsMILKSHAKE }) {
 
 
     const [abrirModalAcai, setAbrirModalAcai] = useState(false)
     const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
+    const [abrirModalMilkShake, setAbrirModalMilkShake] = useState(false)
     const [modalAdicionaisAcai, setmodalAdicionaisAcai] = useState(false)
 
     const [allContainer, setAllContainer] = useState(true);
@@ -22,6 +24,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     const [beiruteContainer, setBeiruteContainer] = useState(true);
     const [batataContainer, setBatataContainer] = useState(true);
     const [acaiContainer, setAcaiContainer] = useState(true);
+    const [milkShakeContainer, setMilkShakeContainer] = useState(true);
     const [bebidaContainer, setBebidaContainer] = useState(true);
 
 
@@ -33,7 +36,8 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         setBatataContainer(true);
         setBebidaContainer(true);
         setBeiruteContainer(true);
-        setAcaiContainer(true)
+        setAcaiContainer(true);
+        setMilkShakeContainer(true);
     }
     const desativa = () => {
         setAllContainer(!true);
@@ -44,6 +48,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         setBebidaContainer(!true);
         setBeiruteContainer(!true);
         setAcaiContainer(!true)
+        setMilkShakeContainer(!true);
     }
     const ChangeHAMBU = () => {
         desativa()
@@ -81,6 +86,12 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
             setAcaiContainer(true)
         }, 200)
     }
+    const ChangeMILKSHAKE = () => {
+        desativa()
+        setTimeout(function () {
+            setMilkShakeContainer(true)
+        }, 200)
+    }
     const ChangeBEBIDA = () => {
         desativa()
         setTimeout(function () {
@@ -95,6 +106,8 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         if (countCartItems === 0) {
             Global.infoAdcionais = [];
             Global.precoAdcionais = 0;
+            Global.milkSHAKEpronto = []
+            Global.acaiPRONTO = []
         }
         setabrirModalAdicionais(!abrirModalAdicionais)
         let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
@@ -108,7 +121,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     const fecharModalAdicionais = () => {
         setabrirModalAdicionais(!abrirModalAdicionais)
     }
-
 
     const confirmaADC = () => {
 
@@ -142,8 +154,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         fecharModalAdicionais()
     }
 
-
-
     const modalAcai = (product) => {
         Global.descriAcai = product.description
         Global.acai = product.name
@@ -151,6 +161,8 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         if (countCartItems === 0) {
             Global.infoAdcionais = [];
             Global.precoAdcionais = 0;
+            Global.milkSHAKEpronto = []
+            Global.acaiPRONTO = []
         }
 
         // Desmarcar todos os inputs ao abrir
@@ -168,7 +180,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         Global.produto = product
         setAbrirModalAcai(!abrirModalAcai)
     }
-
 
     const fecharModalAcai = () => {
         setAbrirModalAcai(false)
@@ -189,7 +200,10 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         let caldasCHECKED = document.querySelectorAll('.selectAdcionais .caldas    input:checked')
 
         if (countCartItems === 0) {
-            Global.acaiPRONTO = [];
+            Global.infoAdcionais = [];
+            Global.precoAdcionais = 0;
+            Global.milkSHAKEpronto = []
+            Global.acaiPRONTO = []
         }
 
 
@@ -360,12 +374,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
             }
 
         }
-
-
-
     }
-
-
 
     const modalAcai02 = () => {
         let inputs = document.querySelectorAll('.selectAdcionais input:checked');
@@ -412,10 +421,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     }
 
     const confirmaACAI = () => {
-        if (countCartItems === 0) {
-            Global.adcACAI = []
-        }
-
         let input = document.querySelectorAll('.adicionaisAcai input')
         let preco = document.querySelectorAll('.adicionaisAcai span')
 
@@ -444,6 +449,125 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     }
 
 
+    const modalMilkSHAKE = (product) => {
+        Global.descriMilkShake = product.description
+        Global.milkShake = product.name
+
+
+        if (countCartItems === 0) {
+            Global.infoAdcionais = [];
+            Global.precoAdcionais = 0;
+        }
+
+        // Desmarcar todos os inputs ao abrir
+        let inputs = document.querySelectorAll('.selectMILKSHAKE input');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+
+        // Habilitar todos os inputs
+        let inputsCheck = document.querySelectorAll('.selectMILKSHAKE input')
+        for (let i = 0; i < inputsCheck.length; i++) {
+            inputsCheck[i].disabled = false
+        }
+
+        Global.produto = product
+
+        setAbrirModalMilkShake(!abrirModalMilkShake)
+    }
+
+    const fecharModalMilkShake = () => {
+        setAbrirModalMilkShake(false)
+    }
+
+    const verificaMILKSHAKE = () => {
+        let inputsDISABLED = document.querySelectorAll('.selectMILKSHAKE .sabor input:disabled')
+        let checkbox01 = document.querySelectorAll('.selectMILKSHAKE .sabor input')
+        let saborCHECKED = document.querySelectorAll('.selectMILKSHAKE .sabor input:checked')
+
+        let inputsDISABLED02 = document.querySelectorAll('.selectMILKSHAKE .caldas input:disabled')
+        let checkbox02 = document.querySelectorAll('.selectMILKSHAKE .caldas input')
+        let caldaCHECKED = document.querySelectorAll('.selectMILKSHAKE .caldas input:checked')
+
+        if (countCartItems === 0) {
+            Global.milkSHAKEpronto = [];
+        }
+
+        if (Global.milkShake === 'MILKSHAKE 300ML' || 'MILKSHAKE 400ML') {
+
+            if (saborCHECKED.length === 1) {
+                for (let i = 0; i < checkbox01.length; i++) {
+                    if (checkbox01[i].checked !== true) {
+                        checkbox01[i].disabled = true
+                    }
+                }
+            } else if (saborCHECKED.length === 0) {
+                for (let i = 0; i < inputsDISABLED.length; i++) {
+                    inputsDISABLED[i].disabled = false
+                }
+            }
+
+
+            if (caldaCHECKED.length === 1) {
+                for (let i = 0; i < checkbox02.length; i++) {
+                    if (checkbox02[i].checked !== true) {
+                        checkbox02[i].disabled = true
+                    }
+                }
+            } else if (caldaCHECKED.length === 0) {
+                for (let i = 0; i < inputsDISABLED02.length; i++) {
+                    inputsDISABLED02[i].disabled = false
+                }
+            }
+        }
+    }
+
+    const confirmaMILKSHAKE = () => {
+       
+
+        let sabor = 'SABOR: ';
+        let saborx = []
+        let saborCHECKED = document.querySelectorAll('.selectMILKSHAKE .sabor input:checked')
+        for (let i = 0; i < saborCHECKED.length; i++) {
+            saborx.push(saborCHECKED[i].value)
+        }
+
+        let calda = 'CALDA: ';
+        let caldax = []
+        let caldaCHECKED = document.querySelectorAll('.selectMILKSHAKE .caldas input:checked')
+        for (let i = 0; i < caldaCHECKED.length; i++) {
+            caldax.push(caldaCHECKED[i].value)
+        }
+
+        sabor = sabor + saborx.join(' - ')
+        console.log(sabor)
+
+        calda = calda + caldax.join(' - ')
+        console.log(calda)
+
+        let adc = 'ADICIONAIS: ';
+        let adcx = []
+        let adcINPUTS = document.querySelectorAll('.selectMILKSHAKE .adicionais input')
+        let precoADC = document.querySelectorAll('.selectMILKSHAKE .adicionais span')
+        let valorPreco = 0
+
+        for (let i = 0; i < adcINPUTS.length; i++) {
+            if (adcINPUTS[i].checked === true) {
+                adcx.push(adcINPUTS[i].value)
+                valorPreco = valorPreco + parseFloat(precoADC[i].innerHTML)
+            }
+        }
+
+        adc = adc + adcx.join(' - ')
+        let MilkshakePronto = Global.produto.name + ': ' + sabor + ' | ' + calda + ' | ' + adc;
+        Global.milkSHAKEpronto.push(MilkshakePronto)
+
+        Global.precoAdcionais = Global.precoAdcionais + valorPreco
+
+        setAbrirModalMilkShake(false)
+
+        onADD(Global.produto)
+    }
 
 
 
@@ -468,6 +592,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
                     ChangeBeirute={ChangeBeirute} beiruteContainer={beiruteContainer}
                     ChangeBATATA={ChangeBATATA} batataContainer={batataContainer}
                     ChangeACAI={ChangeACAI} acaiContainer={acaiContainer}
+                    ChangeMILKSHAKE={ChangeMILKSHAKE} milkShakeContainer={milkShakeContainer}
 
                     ChangeBEBIDA={ChangeBEBIDA} bebidaContainer={bebidaContainer}
                 />
@@ -517,6 +642,13 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
                     btnText='Monte seu açaí'
                 />
 
+                <Categoria className={milkShakeContainer ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='MilkShake'
+                    modalAdicionais={modalMilkSHAKE}
+                    products={productsMILKSHAKE}
+                    btnText='Monte seu MilkShake'
+                />
+
             </>
 
             {/* Box Adicionais */}
@@ -541,6 +673,17 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
                     verificaACAI={verificaACAI}
                     modalAcai02={modalAcai02}
                     confirmaACAI={confirmaACAI}
+                />
+            </>
+
+            <>
+                <BoxMilkShake
+                    className={abrirModalMilkShake === false ? 'modalAdicionaisOFF' : 'modalAdicionaisON'}
+                    fecharModalMilkShake={fecharModalMilkShake}
+                    verificaMILKSHAKE={verificaMILKSHAKE}
+                    confirmaMILKSHAKE={confirmaMILKSHAKE}
+
+
                 />
             </>
 

@@ -13,7 +13,7 @@ import Global from '../../Global'
 
 export default function Cardapio() {
 
-    const { products, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI } = data;
+    const { products, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
 
 
     const [cartItems, setCartItems] = useState([]);
@@ -51,6 +51,7 @@ export default function Cardapio() {
                 productsBEBIDA={productsBEBIDA}
                 productsBATATA={productsBATATA}
                 productsACAI={productsACAI}
+                productsMILKSHAKE={productsMILKSHAKE}
                 countCartItems={cartItems.length}
                 onADD={onADD}
 

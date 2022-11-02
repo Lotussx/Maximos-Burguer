@@ -82,6 +82,12 @@ export default function FinalizarPedido() {
                             arrMap={Global.acaiPRONTO}
                         />
                     }
+                    {Global.milkSHAKEpronto.length !== 0   &&
+                        <CardAdcionais 
+                            adicionais='MilkShake: '
+                            arrMap={Global.milkSHAKEpronto}
+                        />
+                    }
                     <form className='formContainer flex-class'>
                         {/* Nome e Obs Pedido */}
                         <InfoCliente />

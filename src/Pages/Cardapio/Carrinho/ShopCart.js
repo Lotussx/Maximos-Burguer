@@ -117,7 +117,7 @@ export default function ShopCart(props) {
                             </div>
                             <div className='preco'>
                                 <p>R$ {itemsPrice.toFixed(2)}</p>
-                            </div>
+                                </div>
                         </div>
                     </>
                 }

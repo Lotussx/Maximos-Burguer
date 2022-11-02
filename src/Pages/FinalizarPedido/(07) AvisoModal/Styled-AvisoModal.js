@@ -61,7 +61,6 @@ export const AvisoModalContainer = styled.div`
                         background-color: white;
                         border-radius: 10px;
                         box-shadow: 1px 1px 10px black;
-                        border: 1px solid blue;
 
                         flex-direction: column;
                         justify-content: space-around;
