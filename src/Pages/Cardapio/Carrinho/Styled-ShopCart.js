@@ -104,7 +104,6 @@ export const ContainerShopCart = styled.div`
 
                     .itemName{
                         transition: .5s;
-                        font-weight: bold;
                         
                         h4{
                             font-size: 1em;
@@ -158,27 +157,23 @@ export const ContainerShopCart = styled.div`
             .precoTotalContainer{
                 position: relative;
                 bottom: 0;
-                margin-bottom: 12%;
+                margin-bottom: 8%;
                 width: 100%;
                 height: 5vh;
-                justify-content: flex-start;
+                justify-content: space-between;
                 transition: .8s ease;
-                position: absolute;
+                font-weight: 300;
+                font-size: 1.1em;
+                padding: 0 10px;
 
-                div{
-                    font-size: 1.2em;
-                    margin-left: 5%;
+                p{
+                    margin: 0 ;
+                    padding: 0;
                 }
 
                 .preco{
-                    margin: 0;
-                    text-align: center;
-                    color: lightgreen !important;
+                    color: lightgreen;
                     
-                    p{
-                        margin: 0 !important;
-                        padding: 0 !important;
-                    }
                 }
             }
 
@@ -276,12 +271,11 @@ export const ContainerShopCart = styled.div`
         }
     
         .carrinhoVazio{
-                margin: 0;
-                width: 80%;
-                height: 10vh;
-                font-size: 1.1em;
-                font-family: 'Oswald', sans-serif;  
-            
+            margin: 0;
+            width: 80%;
+            height: 10vh;
+            font-size: 1.1em;
+            font-family: 'Oswald', sans-serif;  
         }
 
         .precoTotalContainer{
@@ -294,14 +288,15 @@ export const ContainerShopCart = styled.div`
                 font-size: 1.1em !important;
                 margin: 0 10px 0 10px;
             }
+            
+            p{
+                margin: 0;
+            }
 
             .preco{
                 display: flex;
                 align-items: center;
 
-                p{
-                    margin: 0;
-                }
             }
             
         }
@@ -319,9 +314,13 @@ export const ContainerShopCart = styled.div`
                 margin-right: 5px !important;
             }
 
-            strong{
-                margin: 0;
-                padding: 0;
+            button{
+                background-color: red;
+                color: white;
+                height: 100%;
+                font-size:0.9em;
+                border: 0px solid red;
+                border-radius: 10px;
             }
         }
     }

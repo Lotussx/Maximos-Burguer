@@ -73,8 +73,8 @@ export const AvisoModalContainer = styled.div`
                                 justify-content: space-around;
 
                                 div{
-                                        width: 35px;
-                                        height: 35px;
+                                        width: 30px;
+                                        height: 30px;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
@@ -115,6 +115,7 @@ export const AvisoModalContainer = styled.div`
                         .btn{
                                 width: 100%;
                                 height: 20%;
+                                border: none;
 
                                 a{
                                         width: 90%;

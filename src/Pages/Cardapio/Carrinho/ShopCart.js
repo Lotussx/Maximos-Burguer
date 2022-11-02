@@ -10,14 +10,12 @@ import Global from '../../../Global.js';
 
 
 export default function ShopCart(props) {
-    
-    
+
+
     const { countCartItems } = props;
     const { cartItems, onADD, onREMOVE } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0) + Global.precoAdcionais;
-    
-    const totalPrice = itemsPrice;
-    
+
 
     //expandir o carrnho
     const [openCart, setOpenCart] = useState('false');
@@ -38,6 +36,14 @@ export default function ShopCart(props) {
             Global.precoTotal = document.querySelector('.precoTotalContainer .preco p').innerHTML;
         }
     }
+
+
+    const excluiADC = () => {
+        Global.precoAdcionais = 0;
+        setOpenCart(!openCart)
+    }
+
+
 
 
     return (
@@ -100,15 +106,17 @@ export default function ShopCart(props) {
                     <>
                         {Global.precoAdcionais !== 0 && openCart === false &&
                             <div className='precoAdcionais flex-class'>
-                                <strong>ADICIONAIS: </strong><p>R$ {Global.precoAdcionais.toFixed(2)}</p>
+                                <p>ADICIONAIS: </p>
+                                <button onClick={excluiADC}>Excluir adicionais</button>
+                                <p>R$ {Global.precoAdcionais.toFixed(2)}</p>
                             </div>
                         }
                         <div className='precoTotalContainer flex-class'>
                             <div className='precoTotal'>
-                                <strong>Preço Total:</strong>
+                                <p>Preço Total:</p>
                             </div>
                             <div className='preco'>
-                                <p>R$ {totalPrice.toFixed(2)}</p>
+                                <p>R$ {itemsPrice.toFixed(2)}</p>
                             </div>
                         </div>
                     </>

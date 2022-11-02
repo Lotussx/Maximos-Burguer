@@ -38,6 +38,7 @@ export default function Cardapio() {
         }
     }
 
+
     return (
         <CardapioStyle className='App'>
             <Header></Header>
@@ -52,6 +53,7 @@ export default function Cardapio() {
                 productsACAI={productsACAI}
                 countCartItems={cartItems.length}
                 onADD={onADD}
+
             />
             <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>
         </CardapioStyle>
