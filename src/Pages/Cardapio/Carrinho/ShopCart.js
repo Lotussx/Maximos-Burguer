@@ -39,7 +39,10 @@ export default function ShopCart(props) {
 
 
     const excluiADC = () => {
+        Global.infoAdcionais = [];
         Global.precoAdcionais = 0;
+        Global.milkSHAKEpronto = []
+        Global.acaiPRONTO = []
         setOpenCart(!openCart)
     }
 
@@ -117,7 +120,7 @@ export default function ShopCart(props) {
                             </div>
                             <div className='preco'>
                                 <p>R$ {itemsPrice.toFixed(2)}</p>
-                                </div>
+                            </div>
                         </div>
                     </>
                 }
