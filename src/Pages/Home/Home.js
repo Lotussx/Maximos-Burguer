@@ -8,12 +8,10 @@ import MainContainer from './MainContainer/MainContainer';
 
 export default function Home() {
     return (
-        <>
+        <HomeStyle >
             <Header />
-            <HomeStyle >
-                <MainContainer />
-            </HomeStyle>
+            <MainContainer />
             <Footer />
-        </>
+        </HomeStyle>
     )
 }

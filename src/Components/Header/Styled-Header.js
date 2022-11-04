@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     position: relative !important;
     justify-content: space-between;
-    height: 13vh;
+    height: 12vh;
     font-family: 'Oswald', sans-serif;
     background-color: black;
     color: white;

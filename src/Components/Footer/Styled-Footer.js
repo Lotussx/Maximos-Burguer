@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
     width: 100%;
-    position: relative;
-    height: 13vh;
+    position: absolute;
+    height: 12vh;
     background-color: black;
     font-family: 'Oswald', sans-serif;
-    bottom: 0;
+    bottom: 0 !important;
 
     nav{
         width: 60%;

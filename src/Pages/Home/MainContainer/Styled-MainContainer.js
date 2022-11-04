@@ -26,11 +26,9 @@ export const StyledMainContainer = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 80vh !important;
-    border: none !important;
+    height: 76% !important;
     color: white;
     flex-direction: column;
-    border: 1px solid red;
     font-family: 'Oswald', sans-serif;
 
 
@@ -76,8 +74,7 @@ export const StyledMainContainer = styled.div`
     }
 
 @media screen and (max-width: 450px) {
-    height: 100% !important;
-    border: 1px solid red;
+    height: 80% !important;
 }
 
 

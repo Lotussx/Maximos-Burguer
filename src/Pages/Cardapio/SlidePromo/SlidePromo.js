@@ -31,18 +31,3 @@ export default function SlidePromo(props) {
 };
 
 
-// <Carousel.Item className='itemCarousel flex-class'>
-//     {/* <img className='imgPromo' src={product.image} alt={product.name}></img> */}
-//     <img
-//         className="d-block w-100"
-//         src="holder.js/800x400?text=Third slide&bg=20232a"
-//         alt={product.name}
-//     />
-//     <Carousel.Caption>
-//         <h3>{product.name}</h3>
-//         <div>${product.price}</div>
-//         <div>
-//             <button onClick={() => onADD(product)}>Add To Cart</button>
-//         </div>
-//     </Carousel.Caption>
-// </Carousel.Item>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const HomeStyle = styled.div`
     overflow: hidden !important;
-    height: 75vh;
+    height: 100vh;
     width: 100%;
 
   

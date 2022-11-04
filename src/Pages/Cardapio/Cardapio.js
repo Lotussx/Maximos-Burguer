@@ -9,7 +9,6 @@ import ShopCart from './Carrinho/ShopCart';
 import Header from '../../Components/Header/Header.js';
 import SlidePromo from './SlidePromo/SlidePromo.js';
 import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
-import Global from '../../Global'
 
 export default function Cardapio() {
 
@@ -40,23 +39,25 @@ export default function Cardapio() {
 
 
     return (
-        <CardapioStyle className='App'>
+        <>
             <Header></Header>
-            <SlidePromo products={products} onADD={onADD}></SlidePromo>
-            <CardapioCategorias
-                productsHAMBU={productsHAMBU}
-                productsESPECIAL={productsESPECIAL}
-                productsHOTDOG={productsHOTDOG}
-                productsBEIRUTE={productsBEIRUTES}
-                productsBEBIDA={productsBEBIDA}
-                productsBATATA={productsBATATA}
-                productsACAI={productsACAI}
-                productsMILKSHAKE={productsMILKSHAKE}
-                countCartItems={cartItems.length}
-                onADD={onADD}
+            <CardapioStyle>
+                <SlidePromo products={products} onADD={onADD}></SlidePromo>
+                <CardapioCategorias
+                    productsHAMBU={productsHAMBU}
+                    productsESPECIAL={productsESPECIAL}
+                    productsHOTDOG={productsHOTDOG}
+                    productsBEIRUTE={productsBEIRUTES}
+                    productsBEBIDA={productsBEBIDA}
+                    productsBATATA={productsBATATA}
+                    productsACAI={productsACAI}
+                    productsMILKSHAKE={productsMILKSHAKE}
+                    countCartItems={cartItems.length}
+                    onADD={onADD}
 
-            />
-            <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>
-        </CardapioStyle>
+                />
+                <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>
+            </CardapioStyle>
+        </>
     )
 };
