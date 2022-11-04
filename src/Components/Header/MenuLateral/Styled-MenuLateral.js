@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const MenuLateralContainer = styled.div`
-
-@media screen and (max-width: 500px) {
+    width: 25vw;
     position: fixed;
-    width: 50vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -12,7 +10,7 @@ export const MenuLateralContainer = styled.div`
     z-index: 3;
     right: 0;
     flex-direction: column;
-    margin-top: 13.5%;
+    margin-top: 5px;
     background-image: linear-gradient(rgba(0, 0, 0, .70), rgba(0, 0, 0, .70));
 
 
@@ -44,13 +42,15 @@ export const MenuLateralContainer = styled.div`
            
 
         }
+
         #menu-solid-line2-on{
             transition: all .5s;
             margin: 0;
-            margin-right: -400px;
+            margin-right: -650px;
 
            
         }
+
         #menu-solid-line3-on{
            margin: 0;
            margin: 5px;
@@ -61,11 +61,12 @@ export const MenuLateralContainer = styled.div`
     }
 
     &.menuLateral-off{
-        margin-right: -210px;
-        transition: 0.5s;
+        margin-right: -400px;
+        transition: 0.8s;
     }
+
     &.menuLateral-on{
-        transition: 0.5s;
+        transition: 0.8s;
 
         .line-wrapper{
             margin-left: -60%;
@@ -83,7 +84,7 @@ export const MenuLateralContainer = styled.div`
             color: white;
             
             h3{
-                font-size: 1.1em;
+                font-size: 1em;
                 height: 30px;
             }
         }
@@ -94,11 +95,180 @@ export const MenuLateralContainer = styled.div`
         }
 
     }
+
     .credits{
         font-family: 'Oswald', sans-serif;  
         color: white;
     }
+
+
+
+@media screen and (max-width: 1440px) {
+    &.menuLateral-off{
+        margin-right: -385px;
+    }
 }
+
+@media screen and (max-width: 1350px) {
+    width: 30vw;
+    height: 100vh;
+    margin-top: 4px;
+
+    &.menuLateral-off{
+        margin-right: -420px;
+    }
+    
+}
+
+@media screen and (max-width: 1220px) {
+    width: 30vw;
+    height: 100vh;
+    margin-top: 4px;
+
+    &.menuLateral-off{
+        margin-right: -380px;
+    }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    width: 30vw;
+    height: 100vh;
+    margin-top: 4px;
+
+    &.menuLateral-off{
+        margin-right: -360px;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    width: 30vw;
+    height: 100vh;
+    margin-top: 4px;
+
+    &.menuLateral-off{
+        margin-right: -310px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    &.menuLateral-off{
+        margin-right: -280px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    &.menuLateral-off{
+        margin-right: -230px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    &.menuLateral-off{
+        margin-right: -230px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    &.menuLateral-off{
+        margin-right: -210px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    &.menuLateral-off{
+        margin-right: -200px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    &.menuLateral-off{
+        margin-right: -200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    &.menuLateral-off{
+        margin-right: -180px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    &.menuLateral-off{
+        margin-right: -165px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    width: 50vw;
+    margin-top: 55px;
+
+    &.menuLateral-off{
+        margin-right: -250px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    width: 40vw;
+    margin-top: 55px;
+
+    &.menuLateral-off{
+        margin-right: -170px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    width: 40vw;
+    margin-top: 55px;
+    
+    &.menuLateral-off{
+        margin-right: -50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    width: 45vw;
+    margin-top: 55px;
+    
+    &.menuLateral-off{
+        margin-right: -170px;
+    }
+
+    .line-wrapper{
+        
+        .menu-solid-line{
+            height: 2px;
+            width: 30px;
+            margin: 4px 0;
+        }
+    }
+
+    .botoes{
+        width: 70%;
+        height: 60%;
+        font-family: 'Oswald', sans-serif;  
+
+        a{
+
+            h3{
+                font-size: 0.9em;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    width: 40vw;
+    margin-top: 55px;
+    
+    &.menuLateral-off{
+        margin-right: -130px;
+    }
+}
+
 
 
 `;

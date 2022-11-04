@@ -109,6 +109,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
             Global.milkSHAKEpronto = []
             Global.acaiPRONTO = []
         }
+
         setabrirModalAdicionais(!abrirModalAdicionais)
         let inputs = document.querySelectorAll('.selectAdcionais input[name="selectADC01"]');
         for (let i = 0; i < inputs.length; i++) {
@@ -453,10 +454,11 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         Global.descriMilkShake = product.description
         Global.milkShake = product.name
 
-
         if (countCartItems === 0) {
             Global.infoAdcionais = [];
             Global.precoAdcionais = 0;
+            Global.milkSHAKEpronto = []
+            Global.acaiPRONTO = []
         }
 
         // Desmarcar todos os inputs ao abrir
@@ -523,7 +525,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     }
 
     const confirmaMILKSHAKE = () => {
-       
+
 
         let sabor = 'SABOR: ';
         let saborx = []

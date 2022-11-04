@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../index.css';
 import MenuLateral from './MenuLateral/MenuLateral';
 import { HeaderContainer } from './Styled-Header';
@@ -8,13 +9,11 @@ export default function Header() {
     return (
 
         <HeaderContainer className='flex-class'>
-            <div className='logo-title flex-class'>
-                <div>
-
-                </div>
-                <span className='title flex-class'>
-                    <h3>Maximos Burguer</h3>
-                </span>
+            <div className='logo-title'>
+                <Link to='/' className='flex-class'>
+                    <div></div>
+                    <h3 className='flex-class' >Maximos Burguer</h3>
+                </Link>
             </div>
             <div className='menuLateral'>
                 <MenuLateral />

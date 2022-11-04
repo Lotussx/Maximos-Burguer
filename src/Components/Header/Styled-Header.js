@@ -2,56 +2,123 @@ import styled from "styled-components";
 import logomarca from '../../Images/logomarca.png'
 
 export const HeaderContainer = styled.header`
+    overflow: hidden !important;
+    width: 100vw;
+    justify-content: space-between;
+    height: 12vh;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    color: white;
+
+
+    .logo-title{
+        height: 100%;
+        width: 55%;
+        
+        a{
+            justify-content: left;
+            padding-left: 20px;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;   
+
+            div{
+                height: 70px;
+                width: 70px;
+                background-image: url(${logomarca});
+                background-size: cover;
+                border-radius: 50%;
+            }
+    
+            h3{
+                margin: 0;
+                margin-left: 10px;          
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    .menuLateral{
+        width: 45%;
+        height: 100%;
+    }
+
+
+
+@media screen and (max-width: 769px) {
+
+    .logo-title{
+        
+        div{
+            width: 60px !important;
+            height: 60px !important;
+        }
+
+        h3{
+            font-size: 1.1em !important;
+        }
+    }
+}
 
 @media screen and (max-width: 500px) {
-    overflow-y: hidden !important;
     height: 80px;
-    width: 100vw;
-    overflow-x: hidden !important;
-    background-color: black;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 3 !important;
-    
-        .logo-title{
-            height: 100%;
-            width: 60%;
-            justify-content: left;
-            
+
+    .logo-title{
+        height: 100%;
+        width: 55%;
+        
+        a{
             
             div{
-                background-color: white;
                 height: 60px;
                 width: 60px;
-                border-radius: 50%;
-                margin-left: 15px;
-                background-image: url(${logomarca});
-                background-size: cover;
             }
-            
-            span{
-                color: white;
-                margin: 0;
-                padding: 0;
-                margin-left: 10px;
-                font-family: 'Oswald', sans-serif;
-                
-                h3{
-                    text-align: center;
-                    font-size: 1.2em;
-                }
-            }
-         }
-        
     
-        .menuLateral{
-            width: 200px;
-            height: 200px;
-            position: absolute;
-
+            h3{
+                font-size: 1.2em;
+            }
         }
+       
+    }
+    
+    .menuLateral{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+    }
 }
+
+@media screen and (max-width: 376px) {
+
+    .logo-title{
+        
+        div{
+            width: 50px !important;
+            height: 50px !important;
+        }
+
+        h3{
+            font-size: 1em !important;
+        }
+    }
+}
+
+@media screen and (max-width: 321px) {
+
+    .logo-title{
+
+        h3{
+            font-size: 0.9em !important;
+        }
+    }
+}
+
+
+
 
 `;
 
