@@ -1,62 +1,78 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-
-@media screen and (max-width: 500px) {
-
-    bottom: 0;
-    width: 100vw;
-    height: 10vh;
+    width: 100%;
+    height: 12vh;
     background-color: black;
     font-family: 'Oswald', sans-serif;
 
-
     nav{
-        height: 70px;
-        width: 100%;
+        width: 60%;
+        height: 100%;
         justify-content: space-around;
 
-        .link{
+        a{
             text-decoration: none;
-
-           div{
             color: white;
-            list-style: none;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 100px;
-            margin-top: 20px;
-            
-            &:hover .icons-footer{
-                color: yellow;
-                transition: 0.5s;
-            }
-            
-            p{
-                font-size: .9em;
-                padding-top: 5px;
-             }
-           }
-        }
-        
-        div{
+            width: 20%;
+            cursor: pointer;
 
-            &:hover p{
-                color: yellow;
-                transition: 0.5s;
-            }
-    
-            .icons-footer{
-                font-size: 25px;
-                margin-bottom: -5px;
-            }
-       
-        }
+            div{
+                width: 100%;
+                flex-direction: column;
 
+                svg{
+                    font-size: 1.6em;
+                }
+
+                p{
+                    font-size: 1.2em;
+                    margin: 0;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+@media screen and (max-width: 1024px) {
+    p{
+        font-size: 1.1em !important;
     }
 }
 
+@media screen and (max-width: 768px) {
+    nav{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    p{
+        font-size: 0.9em !important;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    a{
+        width: 30% !important;
     
+        svg{
+            font-size: 1.5em !important;
+        }
+    
+        p{
+            font-size: 0.85em !important;
+        }
+    }
+}
+
+@media screen and (max-width: 321px) {
+        svg{
+            font-size: 1.4em !important;
+        }
+    
+        p{
+            font-size: 0.8em !important;
+        }
+    }
 `;

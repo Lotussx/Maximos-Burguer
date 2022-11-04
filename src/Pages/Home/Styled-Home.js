@@ -21,26 +21,23 @@ const animaButton = keyframes`
 `;
 
 export const HomeStyle = styled.div`
+    overflow: hidden !important;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    .mainContainer{
+        border: 1px solid blue;
+        width: 100%;
+        height: 76%;
+    }
 
-@media screen and (max-height: 665px) {
 
-     & .mainContainer{          
-          background-position-x: -300px !important;
-     }
-}
 
      
 @media screen and (max-width: 500px) {
 
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     overflow-x: hidden !important;
-     overflow-y: hidden !important;
-     display:  flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-between;
 
           & .mainContainer{
           color: white;

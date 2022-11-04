@@ -8,7 +8,7 @@ import { HomeStyle } from './Styled-Home'
 
 export default function Home() {
     return (
-        <HomeStyle>
+        <HomeStyle className='flex-class'>
             <Header />
             <div className='mainContainer'>
                 <div className='mainContent flex-class'>

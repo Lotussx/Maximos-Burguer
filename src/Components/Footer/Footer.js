@@ -15,19 +15,19 @@ export default function Footer() {
     return (
         <FooterContainer className='flex-class'>
             <nav className='flex-class'>
-                <Link to='/' className='link'>
-                    <div className='flex-class' to='/'>
+                <Link to='/'>
+                    <div className='flex-class'>
                         <FaHome className='icons-footer'></FaHome>
                         <p>Home</p>
                     </div>
                 </Link>
-                <Link to='/Cardapio' className='link'>
+                <Link to='/Cardapio'>
                     <div className='flex-class'>
                         <IoRestaurant className='icons-footer'></IoRestaurant>
                         <p>Cardápio</p>
                     </div>
                 </Link>
-                <Link to='/Contato' className='link'>
+                <Link to='/Contato'>
                     <div className='flex-class'>
                         <BsTelephoneFill className='icons-footer'></BsTelephoneFill>
                         <p>Contato</p>
