@@ -77,6 +77,7 @@ export const MenuLateralContainer = styled.div`
     .botoes{
         width: 70%;
         height: 60%;
+        margin-top: 45  px;
         font-family: 'Oswald', sans-serif;  
 
         a{
@@ -189,12 +190,6 @@ export const MenuLateralContainer = styled.div`
     }
 }
 
-@media screen and (max-width: 600px) {
-    &.menuLateral-off{
-        margin-right: -180px;
-    }
-}
-
 @media screen and (max-width: 550px) {
     &.menuLateral-off{
         margin-right: -165px;
@@ -219,12 +214,12 @@ export const MenuLateralContainer = styled.div`
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     width: 40vw;
     margin-top: 55px;
     
     &.menuLateral-off{
-        margin-right: -50px;
+        margin-right: -170px;
     }
 }
 

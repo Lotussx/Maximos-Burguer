@@ -3,9 +3,10 @@ import logomarca from '../../Images/logomarca.png'
 
 export const HeaderContainer = styled.header`
     overflow: hidden !important;
-    width: 100vw;
+    width: 100%;
+    position: relative !important;
     justify-content: space-between;
-    height: 12vh;
+    height: 13vh;
     font-family: 'Oswald', sans-serif;
     background-color: black;
     color: white;
@@ -62,9 +63,8 @@ export const HeaderContainer = styled.header`
 }
 
 @media screen and (max-width: 500px) {
-    height: 80px;
-    position: fixed;
-    top: 0;
+    height: 90px;
+    margin: 0 !important;
     z-index: 3 !important;
 
     .logo-title{

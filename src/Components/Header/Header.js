@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../index.css';
 import MenuLateral from './MenuLateral/MenuLateral';
 import { HeaderContainer } from './Styled-Header';
 

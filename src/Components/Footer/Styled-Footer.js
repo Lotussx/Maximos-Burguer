@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
     width: 100%;
-    height: 12vh;
+    position: relative;
+    height: 13vh;
     background-color: black;
     font-family: 'Oswald', sans-serif;
+    bottom: 0;
 
     nav{
         width: 60%;
@@ -26,7 +28,7 @@ export const FooterContainer = styled.footer`
                 }
 
                 p{
-                    font-size: 1.2em;
+                    font-size: 1em;
                     margin: 0;
                     margin-top: 2px;
                 }
@@ -47,6 +49,10 @@ export const FooterContainer = styled.footer`
 }
 
 @media screen and (max-width: 426px) {
+    position: absolute;
+    bottom: 0 !important;
+    height: 90px !important;
+
     p{
         font-size: 0.9em !important;
     }
