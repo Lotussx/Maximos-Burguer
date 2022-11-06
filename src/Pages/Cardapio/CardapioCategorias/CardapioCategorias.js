@@ -18,26 +18,26 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     const [modalAdicionaisAcai, setmodalAdicionaisAcai] = useState(false)
 
     const [allContainer, setAllContainer] = useState(true);
-    const [hambuContainer, setHambuContainer] = useState(true);
-    const [especialContainer, setEspecialContainer] = useState(true);
-    const [hotdogContainer, setHotdogContainer] = useState(true);
-    const [beiruteContainer, setBeiruteContainer] = useState(true);
-    const [batataContainer, setBatataContainer] = useState(true);
-    const [acaiContainer, setAcaiContainer] = useState(true);
-    const [milkShakeContainer, setMilkShakeContainer] = useState(true);
-    const [bebidaContainer, setBebidaContainer] = useState(true);
+    const [hambuContainer, setHambuContainer] = useState(undefined);
+    const [especialContainer, setEspecialContainer] = useState(undefined);
+    const [hotdogContainer, setHotdogContainer] = useState(undefined);
+    const [beiruteContainer, setBeiruteContainer] = useState(undefined);
+    const [batataContainer, setBatataContainer] = useState(undefined);
+    const [acaiContainer, setAcaiContainer] = useState(undefined);
+    const [milkShakeContainer, setMilkShakeContainer] = useState(undefined);
+    const [bebidaContainer, setBebidaContainer] = useState(undefined);
 
 
     const ChangeALL = () => {
-        setAllContainer(true);
-        setEspecialContainer(true);
-        setHotdogContainer(true);
-        setHambuContainer(true);
-        setBatataContainer(true);
-        setBebidaContainer(true);
-        setBeiruteContainer(true);
-        setAcaiContainer(true);
-        setMilkShakeContainer(true);
+        setAllContainer(false);
+        setEspecialContainer(false);
+        setHotdogContainer(false);
+        setHambuContainer(false);
+        setBatataContainer(false);
+        setBebidaContainer(false);
+        setBeiruteContainer(false);
+        setAcaiContainer(false);
+        setMilkShakeContainer(false);
     }
     const desativa = () => {
         setAllContainer(!true);
@@ -448,7 +448,6 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
         setAbrirModalAcai(false)
         setmodalAdicionaisAcai(false)
     }
-
 
     const modalMilkSHAKE = (product) => {
         Global.descriMilkShake = product.description

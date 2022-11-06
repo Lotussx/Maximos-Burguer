@@ -10,7 +10,7 @@ export const MenuLateralContainer = styled.div`
     z-index: 3;
     right: 0;
     flex-direction: column;
-    margin-top: 5px;
+    margin-top: 1px;
     background-image: linear-gradient(rgba(0, 0, 0, .70), rgba(0, 0, 0, .70));
 
 

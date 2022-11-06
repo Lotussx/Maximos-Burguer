@@ -4,9 +4,10 @@ import logomarca from '../../Images/logomarca.png'
 export const HeaderContainer = styled.header`
     overflow: hidden !important;
     width: 100%;
-    position: relative !important;
+    position: fixed !important;
     justify-content: space-between;
     height: 12vh;
+    z-index: 3;
     font-family: 'Oswald', sans-serif;
     background-color: black;
     color: white;

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const CardapioCategoriasContainer = styled.div`
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    flex-direction: column;
 
     @media screen and (max-width: 500px) {
-        width: 100%;
-        font-family: 'Oswald', sans-serif;
         box-sizing: content-box;
-        flex-direction: column;
         
 
     .modalAdicionaisOFF{

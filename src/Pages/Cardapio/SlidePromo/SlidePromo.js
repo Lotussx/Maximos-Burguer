@@ -14,13 +14,10 @@ export default function SlidePromo(props) {
                 {products.map((product) => (
                     <Carousel.Item className='itemCarousel'>
                         <div key={product.id} className='itemSlide flex-class' style={{ background: `linear-gradient(rgba(0, 0, 0, .3)0%, rgba(0, 0, 0, .3)100%), url(${product.image})` }}>
-                            <div className='carousel-caption'>
-                                <h3>{product.name}</h3>
+                            <div className='carousel-caption flex-class'>
+                                <h3>{product.name} - {product.price}</h3>
                                 <p className='description'>{product.description}</p>
-                                <div className='precoProduto'>R$ {product.price}</div>
-                                <div className='btnADD flex-class'>
-                                    <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
-                                </div>
+                                <button onClick={() => onADD(product)}>Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </Carousel.Item>

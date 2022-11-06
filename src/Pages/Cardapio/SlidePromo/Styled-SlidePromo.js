@@ -1,93 +1,56 @@
 import styled from "styled-components";
 
 export const SlideContainer = styled.div`
-        
-        @media screen and (max-height: 665px) {
-            height: 40% !important; 
-            margin-bottom: 19px !important;
-
-            .itemSlide{
-                height: 280px !important;
-            }
-
-            .carousel-caption{
-                h3{
-                    padding-bottom: 2px !important;
-                }
-                
-                p{
-                    margin-bottom: 7px !important;
-                }
-            }
-        }
+        width: 100%;
+        height: 400px !important; 
+        margin: 12vh auto 0 auto;
+        font-family: 'Oswald', sans-serif;
+        text-shadow: 3px 3px 2px black;
 
 
-        @media screen and (max-width: 500px) {
-            width: 100%;
-            margin: 0 auto;
-            height: 260px;
-            color: red;
-            margin-top: 09vh;
-
-            .carousel-indicators{
-                margin: 0 !important;
-            }
+        .itemCarousel{
+            height: 400px;
             
             .itemSlide{
                 background-repeat: no-repeat !important;
                 background-size: cover !important;
-                height: 260px;
+                height: 100%;
                 flex-direction: column;
+                
 
                 .carousel-caption{
-                    padding: 0 !important;
-                    padding-bottom: 5px !important;
-                    text-shadow: 3px 3px 2px black;
-                    
+                    flex-direction: column;
                     
                     h3{
-                        font-weight: bold;
-                        font-size: 1.2em;
-                        font-family: 'Oswald', sans-serif;
+                        font-size: 1.7em;
                         margin: 0;
-                        margin-bottom: 10px;
+                        margin-bottom: 1.5%;
                     }
 
                     p{
                         font-family: 'Oswald', sans-serif;  
                         padding: 0;
                         margin: 0;
+                        margin-bottom: 1.5%;
                     }
 
-                    .precoProduto{
-                        font-family: 'Oswald', sans-serif;  
-                        font-size: 1.2em;
-                        margin: 0;
+                    button{ 
+                        height: 25px;
+                        font-size: .9em;
+                        text-align: center;
+                        font-weight: bold;
+                        width: 25%;
+                        border: 0px solid red;
+                        border-radius: 15px;
+                        box-shadow: 1px 1px 10px;
                         margin-bottom: 5px;
                     }
-
-                    .btnADD{
-                        z-index: 3 !important;
-                        height: 25px;
-                        
-
-                        button{ 
-                            height: 100%;
-                            font-size: .9em;
-                            text-align: center;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-family: 'Oswald', sans-serif;  
-                            font-weight: bold;
-                            width: 70%;
-                            border: 0px solid red;
-                            border-radius: 15px;
-                            box-shadow: 1px 1px 10px;
-                        }
-                    }
                 }
-            }    
+            }
+        }
+      
+        @media screen and (max-width: 500px) {
+
         }
 
 `;
