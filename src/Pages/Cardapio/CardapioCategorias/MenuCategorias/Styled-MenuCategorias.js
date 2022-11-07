@@ -9,10 +9,11 @@ export const MenuCategoriasConteiner = styled.ul`
     border-bottom: 4px solid black; 
     background-color: black;
     color: white;
+    margin: 0;
 
     li{
         width: 100%;
-        height: 80%;
+        height: 100%;
         list-style: none;
         display: flex;
         align-items: center !important;
@@ -20,8 +21,9 @@ export const MenuCategoriasConteiner = styled.ul`
         margin: 0;
         text-align: center;
         padding: 5px 10px;
-        border-right: 1px solid #212529;
-        border-left: 1px solid #212529;
+        height: 70%;
+        border-right: 1px solid #1f1f1f;
+        border-left: 1px solid #1f1f1f;
 
         h4{
             margin: 0;
@@ -38,7 +40,9 @@ export const MenuCategoriasConteiner = styled.ul`
    .categoriaON{
         background-color: white;
         color: black;
+        border-radius: 15px;
         transition: 0.8s;
+
     }
     
 

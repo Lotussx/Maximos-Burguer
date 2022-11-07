@@ -17,7 +17,7 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
     const [abrirModalMilkShake, setAbrirModalMilkShake] = useState(false)
     const [modalAdicionaisAcai, setmodalAdicionaisAcai] = useState(false)
 
-    const [allContainer, setAllContainer] = useState(true);
+    const [allContainer, setAllContainer] = useState(undefined);
     const [hambuContainer, setHambuContainer] = useState(undefined);
     const [especialContainer, setEspecialContainer] = useState(undefined);
     const [hotdogContainer, setHotdogContainer] = useState(undefined);
@@ -29,15 +29,15 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
 
     const ChangeALL = () => {
-        setAllContainer(false);
-        setEspecialContainer(false);
-        setHotdogContainer(false);
-        setHambuContainer(false);
-        setBatataContainer(false);
-        setBebidaContainer(false);
-        setBeiruteContainer(false);
-        setAcaiContainer(false);
-        setMilkShakeContainer(false);
+        setAllContainer(undefined);
+        setEspecialContainer(undefined);
+        setHotdogContainer(undefined);
+        setHambuContainer(undefined);
+        setBatataContainer(undefined);
+        setBebidaContainer(undefined);
+        setBeiruteContainer(undefined);
+        setAcaiContainer(undefined);
+        setMilkShakeContainer(undefined);
     }
     const desativa = () => {
         setAllContainer(!true);
@@ -601,49 +601,49 @@ export default function CardapioCategorias({ onADD, countCartItems, productsESPE
 
             {/* Categorias */}
             <>
-                <Categoria className={hambuContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={hambuContainer === undefined || hambuContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hamburguer'
                     modalAdicionais={modalAdicionais}
                     products={productsHAMBU}
                     btnText='Adicionar ao carrinho'
                 />
 
-                <Categoria className={especialContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={especialContainer === undefined || especialContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hamburguers Especiais'
                     modalAdicionais={modalAdicionais}
                     products={productsESPECIAL}
                     btnText='Adicionar ao carrinho'
                 />
 
-                <Categoria className={hotdogContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={hotdogContainer === undefined || hotdogContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hot Dog'
                     modalAdicionais={modalAdicionais}
                     products={productsHOTDOG}
                     btnText='Adicionar ao carrinho'
                 />
 
-                <Categoria className={beiruteContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={beiruteContainer === undefined || beiruteContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Beirutes'
                     modalAdicionais={modalAdicionais}
                     products={productsBEIRUTE}
                     btnText='Adicionar ao carrinho'
                 />
 
-                <Categoria className={batataContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={batataContainer === undefined || batataContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Batata Frita'
                     modalAdicionais={onADD}
                     products={productsBATATA}
                     btnText='Adicionar ao carrinho'
                 />
 
-                <Categoria className={acaiContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={acaiContainer === undefined || acaiContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Açaí'
                     modalAdicionais={modalAcai}
                     products={productsACAI}
                     btnText='Monte seu açaí'
                 />
 
-                <Categoria className={milkShakeContainer ? 'categoryON' : 'categoryOFF'}
+                <Categoria className={milkShakeContainer === undefined || milkShakeContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='MilkShake'
                     modalAdicionais={modalMilkSHAKE}
                     products={productsMILKSHAKE}

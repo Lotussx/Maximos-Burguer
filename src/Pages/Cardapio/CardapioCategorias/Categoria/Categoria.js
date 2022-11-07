@@ -5,7 +5,7 @@ export default function Categoria({ products, modalAdicionais, className, nomeCa
     return (
         <CategoriaContainer className={className}>
             <h3>{nomeCategoria}</h3>
-            <>
+            <div className='wrapper'>
                 {products.map((product) => (
                     <div className='produto flex-class'>
                         <div className='produtoIMG' style={{ background: `url(${product.image})` }}></div>
@@ -18,7 +18,7 @@ export default function Categoria({ products, modalAdicionais, className, nomeCa
                         </div>
                     </div>
                 ))}
-            </>
+            </div>
 
         </CategoriaContainer>
     )

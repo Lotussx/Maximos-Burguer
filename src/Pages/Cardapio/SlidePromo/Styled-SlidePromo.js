@@ -49,8 +49,88 @@ export const SlideContainer = styled.div`
             }
         }
       
-        @media screen and (max-width: 500px) {
+@media screen and (max-width: 769px) {
+    height: 300px !important;
+
+    .itemCarousel{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    margin-top: 10vh;
+    height: 250px !important;
+    
+    .carousel{
+
+        .carousel-indicators{
+            margin: 0 !important;
+        }
+    }
+
+    .itemCarousel{
+        height: 250px;
+
+        .carousel-caption{
+            margin: 0 !important;
+            margin-bottom: 5px !important;
+            padding: 0 !important;
+            height: 115px !important;
+            justify-content: space-between !important;
+        }
+
+        h3{
+            font-size: 1.4em !important;
+        }
+
+        p{
 
         }
+
+        button{
+            width: 200px !important;
+            margin: 0 !important;
+        }   
+    }
+}
+
+@media screen and (max-width: 376px) {
+    margin-top: 10vh;
+    height: 220px !important;
+    
+    .carousel{
+
+        .carousel-indicators{
+            margin: 0 !important;
+        }
+    }
+
+    .itemCarousel{
+        height: 220px;
+
+        .carousel-caption{
+            margin: 0 !important;
+            margin-bottom: 5px !important;
+            padding: 0 !important;
+            height: 95px !important;
+            justify-content: space-between !important;
+        }
+
+        h3{
+            font-size: 1.2em !important;
+        }
+
+        p{
+            font-size: 0.9em !important;
+        }
+
+        button{
+            width: 180px !important;
+            height: 20px !important;
+            font-size: 0.8em !important;
+            margin: 0 !important;
+        }   
+    }
+}
 
 `;
