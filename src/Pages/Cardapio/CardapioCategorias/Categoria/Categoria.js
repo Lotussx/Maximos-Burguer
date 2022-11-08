@@ -8,11 +8,9 @@ export default function Categoria({ products, modalAdicionais, className, nomeCa
             <div className='wrapper'>
                 {products.map((product) => (
                     <div className='produto flex-class'>
-                        <div className='produtoIMG' style={{ background: `url(${product.image})` }}></div>
-                        <div className='produtoINFO flex-class'>
-                            <div className='nomeEpreco'>
-                                {product.name} | R$ {product.price.toFixed(2)}
-                            </div>
+                        <div className='img' style={{ background: `url(${product.image})` }}></div>
+                        <div className='info flex-class'>
+                            <h3>{product.name} | R$ {product.price.toFixed(2)}</h3>
                             <p>{product.description}</p>
                             <button onClick={() => modalAdicionais(product)}>{btnText}</button>
                         </div>

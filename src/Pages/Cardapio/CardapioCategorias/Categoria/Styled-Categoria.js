@@ -55,34 +55,40 @@ export const CategoriaContainer = styled.div`
                 border-radius: 15px;
                 box-shadow: 1px 1px 5px black;
                 background-color: white;
-                justify-content: space-between;
-                padding: 8px;
+                padding: 10px;
+                align-items: flex-start;
+
     
-    
-                .produtoIMG{
-                    width: 125px;
-                    max-height: 125px;
+                .img{
+                    width: 40%;
+                    height: 125px;
                     background-position: center !important;
                     background-size: 180% !important;
                     border-radius: 10px; 
                     box-shadow: 1px 1px 5px black;
-                }
+                }   
     
-                .produtoINFO{
+                .info{
+                    margin-left: 10px;
                     width: 100%;
                     height: 100%;
                     flex-direction: column;
-                    justify-content: space-betweenx;
-    
-                    .nomeEpreco{
-                        font-weight: 600;
-                        font-size: .9em;
-                    }
-    
-                    p{
-                        font-size: 0.75em;
+                    justify-content: space-between;
+                  
+                    h3{
+                        margin: 0;
+                        width: 100%;
                         text-align: center;
-                        margin: auto 5px;
+                        font-size: 1.1em;
+                        font-weight: bold;
+                    }
+                    
+                    p{
+                        width: 100%;
+                        margin: 0;
+                        font-size: 0.8em;
+                        text-align: center;
+                    
                     }
     
                     button{
@@ -100,12 +106,67 @@ export const CategoriaContainer = styled.div`
     }
 
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1280px) {
 
     .produto{
         width: 47% !important;
         margin: 15px 1.5% !important;
         min-height: 120px;
+
+        .img{
+            width: 32% !important;
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+
+    .produto{
+        width: 47% !important;
+        margin: 15px 1.5% !important;
+
+        .img{
+            width: 37% !important;
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+
+    .produto{
+        width: 48% !important;
+        margin: 8px 1% !important;
+
+        .img{
+            width: 45% !important;
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    h3{
+        padding-left: 10px !important;
+    }
+
+    .produto{
+        width: 95% !important;
+        margin: 8px auto !important;
+        
+        h3{
+            padding: 0 !important;
+        }
+
+        .img{
+            width: 42% !important;
+            height: 115px !important;
+        }
         
     }
 
