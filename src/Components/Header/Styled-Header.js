@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     height: 12vh;
     z-index: 3;
+    top: 0;
     font-family: 'Oswald', sans-serif;
     background-color: black;
     color: white;
