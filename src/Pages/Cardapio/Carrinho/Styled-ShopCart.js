@@ -1,33 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from 'styled-components';
 
-const abrirCarrinho = keyframes`
-    0%{
-
-    
-    }
-
-    100%{
-
-        width: 40%;
-        min-height: 40vh;
-
-
-    }
-`;
-
-const fecharCarrinho = keyframes`
-    0%{
-        width: 40%;
-        min-height: 40vh;
-    }
-
-    100%{
-        height: 100px;
-        width: 100px;
-    }
-
-
-`;
 
 export const ContainerShopCart = styled.div`
 
@@ -36,9 +8,10 @@ export const ContainerShopCart = styled.div`
     bottom: 0;
     color: white;
     z-index: 3;
-    transition: .6s;
+    transition: .8s !important;
     margin: 0 0 20px 20px;
     font-family: 'Oswald',sans-serif;
+    box-shadow: 1px 1px 5px black;
 
     .iconCart{
         cursor: pointer;
@@ -271,9 +244,115 @@ export const ContainerShopCart = styled.div`
                 }
             }
         }
-
-
     }
+
+
+@media screen and (max-width: 1100px) {
+
+    &.carrinhoAberto{
+
+        .iconCart{
+            font-size: 2.5em !important;
+        }
+
+        .contador{
+            margin-left: 20px !important;
+        }
+
+        .cartContent{
+
+            .containerItensCart{
+
+                .item{
+
+                    h4{
+                        font-size: 1em;
+                    }
+
+                    .buttonDiv{
+                        width: 50% !important;
+
+                        button{
+                            width: 20px !important;
+                            height: 20px !important;
+                        }
+                     
+                        p{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .precoAdcionais{
+                width: 95%;
+                justify-content: space-between;
+
+                h4{
+                    font-size: 1em;
+                    margin: 0;
+                }
+
+                p{
+                    margin: 0;
+                    font-size: 1em;
+                }
+
+                button{
+                    border: 0;
+                    background-color: red;
+                    color: white;
+                    font-size: 0.9em;
+                    border-radius: 5px;
+                    margin-left: 28% !important;
+                }
+        }
+
+        .precoTotalContainer{
+                width: 95%;
+                margin-top: 10px;
+                justify-content: space-between;
+
+                h4{
+                    font-size: 1.2em !important;
+                    margin: 0;
+                }
+
+                p{
+                    color: lightgreen;
+                    font-size: 1.2em !important;
+                    margin: 0;
+                }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    &.carrinhoAberto{
+        width: 50%;
+        margin: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    &.carrinhoAberto{
+        width: 100%;
+        
+        .containerItensCart{
+            border: 1px solid red;
+        }
+    }
+
+
+}
+
 
     
 `;
