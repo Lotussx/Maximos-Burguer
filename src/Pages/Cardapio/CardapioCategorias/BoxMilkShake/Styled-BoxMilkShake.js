@@ -11,15 +11,12 @@ const animaModaladd = keyframes`
 
 
 export const BoxMilkShakeContainer = styled.div`
-  
-@media screen and (max-width: 500px) {
-
-
 
     .montarMilkSHAKE{ 
         opacity: 0;
         margin-top: 300px;
-        width: 90%;
+        width: 45%;
+        padding: 10px 20px 15px 20px;
         background-color: white;
         border-radius: 15px;
         flex-direction: column;
@@ -28,29 +25,30 @@ export const BoxMilkShakeContainer = styled.div`
         animation-duration: 1s;
         animation-fill-mode: forwards;
         transition: .8s;
+        box-shadow: 1px 1px 5px black;
         z-index: 3 !important;
 
 
         .nomeProduto{
-            width: 90%;
+            width: 95%;
             height: 40px;
             justify-content: space-between;
             padding-top: 10px;
 
             .space{
-                width: 30px;
-                height: 30px;
-                font-size: 1.8em;
+                width: 35px;
+                height: 35px;
+                font-size: 2.2em;
             }
 
             .nome{
                 font-weight: bold;
-                font-size: 1.3em;
+                font-size: 1.2em;
             }
         }
 
         .aviso{
-            width: 90%;
+            width: 95%;
             text-align: center;
             font-size: .9em;
         }
@@ -58,7 +56,7 @@ export const BoxMilkShakeContainer = styled.div`
         .selectMILKSHAKE{
             flex-direction: column;
             justify-content: flex-start;
-            width: 90%;
+            width: 95%;
 
            
 
@@ -88,8 +86,8 @@ export const BoxMilkShakeContainer = styled.div`
         }
 
         .btnConfirma{
-            width: 90%;
-            padding: 10px 0 15px 0;
+            width: 100%;
+            margin-top: 20px;
 
             button{
                 width: 100%;
@@ -102,8 +100,34 @@ export const BoxMilkShakeContainer = styled.div`
             }
         }
     }
-    
+
+@media screen and (max-width: 1100px) {
+    .montarMilkSHAKE{ 
+        width: 55%;
+    }   
 }
+
+@media screen and (max-width: 800px) {
+    .montarMilkSHAKE{ 
+        width: 65%;
+
+        .selectMILKSHAKE{
+            font-size: 0.9em;
+        }
+    }   
+}
+
+@media screen and (max-width: 500px) {
+    .montarMilkSHAKE{ 
+        width: 90%;
+
+        .selectMILKSHAKE{
+            font-size: 0.9em;
+        }
+    }   
+}
+
+    
 
 
 `;

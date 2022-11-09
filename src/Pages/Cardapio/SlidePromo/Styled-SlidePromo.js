@@ -57,7 +57,7 @@ export const SlideContainer = styled.div`
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
     margin-top: 10vh;
     height: 250px !important;
     
@@ -75,19 +75,20 @@ export const SlideContainer = styled.div`
             margin: 0 !important;
             margin-bottom: 5px !important;
             padding: 0 !important;
-            height: 115px !important;
+            height: 110px !important;
             justify-content: space-between !important;
         }
 
         h3{
-            font-size: 1.4em !important;
+            font-size: 1.2em !important;
         }
 
         p{
-
+            font-size: .9em !important;
         }
 
         button{
+            font-size: .9em !important;
             width: 200px !important;
             margin: 0 !important;
         }   

@@ -10,52 +10,54 @@ const animaModaladd = keyframes`
 `;
 
 export const AdicionaisContainer = styled.div`
-@media screen and (max-width: 500px) {
     .modalAdicionaisContent{
         opacity: 0;
         margin-top: 300px;
-        width: 90%;
+        width: 45%;
+        padding: 20px;
+        padding-top: 10px;
         background-color: white;
         border-radius: 15px;
         flex-direction: column;
+        box-shadow: 1px 1px 5px black;
         justify-content: flex-start;
         animation: ${animaModaladd};
         animation-duration: 1s;
         animation-fill-mode: forwards;
     
         .nomeProduto{
-            width: 90%;
+            width: 95%;
             height: 40px;
+            margin-bottom: 2px;
             justify-content: space-between;
-            padding-top: 10px;
 
             .space{
-                width: 30px;
-                height: 30px;
-                font-size: 1.8em;
+                width: 40px;
+                height: 40px;
+                font-size: 2.3em;
             }
 
             .nome{
-                font-weight: bold;
-                font-size: 1.3em;
+                font-weight: 600;
+                font-size: 1.4em;
             }
         }
 
         .aviso{
-            width: 90%;
+            width: 95%;
             text-align: center;
-            font-size: .9em;
+            font-size: .8em;
         }
 
         .selectAdcionais{
             flex-direction: column;
             justify-content: flex-start;
-            width: 90%;
+            width: 95%;
         }
 
         .btnConfirma{
-            width: 90%;
-            padding: 10px 0 15px 0;
+            margin-top: 20px;
+            width: 100%;
 
             button{
                 width: 100%;
@@ -68,6 +70,15 @@ export const AdicionaisContainer = styled.div`
             }
         }
     }
+@media screen and (max-width: 769px) {
+    .modalAdicionaisContent{
+        width: 75%;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .modalAdicionaisContent{
+        width: 90%;
+    }
 }
 `;

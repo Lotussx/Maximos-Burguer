@@ -18,7 +18,7 @@ export default function ShopCart(props) {
 
 
     //expandir o carrnho
-    const [openCart, setOpenCart] = useState('false');
+    const [openCart, setOpenCart] = useState(false);
     const expandCart = () => {
         setOpenCart(!openCart)
     }
@@ -50,20 +50,22 @@ export default function ShopCart(props) {
 
 
     return (
-        <ContainerShopCart className={`flex-class ${openCart ? '' : 'carrinhoAberto'}`}>
+        <ContainerShopCart className={openCart === true ? 'carrinhoAberto' : 'carrinhoFechado'}>
+
+
             <div className='cartContent flex-class'>
                 <div className='cartIcon flex-class'>
-                    <MdShoppingCart className='iconCart'></MdShoppingCart>
-                    <button className='flex-class'>
+                    <MdShoppingCart onClick={expandCart} className='iconCart'></MdShoppingCart>
+                    <button className='contador' onClick={expandCart}>
                         {countCartItems}
                     </button>
                     <div className='arrowContainer flex-class' onClick={expandCart}>
-                        <div><img src={seta} alt='' /></div>
+                        <img src={seta} alt='' />
                     </div>
                 </div>
 
-                {!openCart &&
-                    <hr className='barraDivisora1'></hr>
+                {openCart &&
+                    <hr className='barraDivisora'></hr>
                 }
 
                 {cartItems.length === 0 &&
@@ -78,54 +80,50 @@ export default function ShopCart(props) {
                     </div>
                 }
 
-                {!openCart &&
-                    <>
+                <>
+                    {openCart &&
                         <div className='containerItensCart'>
                             {cartItems.map((item) => (
                                 <div key={item.id} className="item flex-class">
-                                    <div className='itemName'><h4>{item.name}</h4></div>
+                                    <h4 className='itemName'>{item.name}</h4>
                                     <div className='buttonDiv flex-class'>
                                         <div className='addREMOVE flex-class'>
                                             <button onClick={() => onADD(item)}> + </button>
                                             <button onClick={() => onREMOVE(item)}> - </button>
                                         </div>
                                         <div className='itemPrice flex-class'>
-                                            <p>{item.qty} </p>  x R$ {item.price.toFixed(2)}
+                                            <p>{item.qty} x R$ {item.price.toFixed(2)} </p>
                                         </div>
                                     </div>
                                 </div>
                             ))}
 
                         </div>
+                    }
+                </>
 
-
-
-                    </>
+                {openCart &&
+                    <hr className='barraDivisora'></hr>
                 }
-
 
 
                 {cartItems.length !== 0 &&
                     <>
-                        {Global.precoAdcionais !== 0 && openCart === false &&
+                        {Global.precoAdcionais !== 0 && openCart === true &&
                             <div className='precoAdcionais flex-class'>
-                                <p>ADICIONAIS: </p>
+                                <h4>ADICIONAIS: </h4>
                                 <button onClick={excluiADC}>Excluir adicionais</button>
                                 <p>R$ {Global.precoAdcionais.toFixed(2)}</p>
                             </div>
                         }
                         <div className='precoTotalContainer flex-class'>
-                            <div className='precoTotal'>
-                                <p>Preço Total:</p>
-                            </div>
-                            <div className='preco'>
-                                <p>R$ {itemsPrice.toFixed(2)}</p>
-                            </div>
+                            <h4>Preço Total:</h4>
+                            <p>R$ {itemsPrice.toFixed(2)}</p>
                         </div>
                     </>
                 }
 
-                {!openCart &&
+                {openCart && countCartItems !== 0 &&
                     <div className='finalizarPedido flex-class' onClick={finalizarPedido}>
                         <Link to='/FinalizarPedido' className='flex-class'> <button>Finalizar Pedido</button> </Link>
                     </div>
@@ -134,6 +132,6 @@ export default function ShopCart(props) {
 
 
 
-        </ContainerShopCart>
+        </ContainerShopCart >
     )
 }

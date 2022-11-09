@@ -1,332 +1,279 @@
-    import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const animaButton = keyframes`
-     0%{
-          box-shadow: 1px 1px 15px red;  
-          transition: 0.5s all;
- 
-     }
-     50%{
-          box-shadow: 1px 1px 15px white;
-          transition: 0.5s all;
-     }
+const abrirCarrinho = keyframes`
+    0%{
 
-     100%{
-          box-shadow: 1px 1px 15px red;  
-          transition: 0.5s all;
-     }
+    
+    }
+
+    100%{
+
+        width: 40%;
+        min-height: 40vh;
+
+
+    }
+`;
+
+const fecharCarrinho = keyframes`
+    0%{
+        width: 40%;
+        min-height: 40vh;
+    }
+
+    100%{
+        height: 100px;
+        width: 100px;
+    }
+
 
 `;
 
 export const ContainerShopCart = styled.div`
 
-@media screen and (max-width: 500px) {
     position: fixed;
-    height: 8vh;
-    width: 100%;
-    bottom: 0;
-    border-radius: 25px 25px 0 0;
     background-color: black;
+    bottom: 0;
     color: white;
     z-index: 3;
-    transition: .5s;
+    transition: .6s;
+    margin: 0 0 20px 20px;
+    font-family: 'Oswald',sans-serif;
 
+    .iconCart{
+        cursor: pointer;
+    }
 
+    &.carrinhoFechado{
+        height: 100px;
+        width: 100px;
+        box-shadow: 1px 1px 5px black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    &.carrinhoAberto{
-        height: 42vh !important;
-        width: 100%;
-        transition: .5s;
-        border-radius: 25px 25px 0 0;
-        
         .cartContent{
-            flex-direction: column !important;
-            transition: .5s;
-            
-            .cartIcon{
-                position: relative;
-                width: 100%;
-                transition: .5s;
-                height: 8vh;
-                justify-content: flex-start;
-                margin-top: -2%;
 
-                .iconCart{
-                    margin-left: 5%;
-                }
-
-                .arrowContainer{
-                    display: block;
-                    transition: .5s;
-                    margin-top: -10px;
-                    width: 100%;
-                    height: 40px;
-                    position: absolute;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-    
-                    div{
-                        height: 30px;
-                        width: 35px;
-                        margin-top: 10px;
-                        
-                        img{
-                            height: 100%;
-                            width: 100%;
-    
-                        }
-                    }
-                }
+            .arrowContainer{
+                display: none;
             }
-
+    
             .barraDivisora1{
-                width: 100%;
-                background-color: gray;
-                border: 0.5px solid gray;
-                margin: 0 !important;
-                margin-bottom: 10px !important;
-                
+                display: none;
             }
-
+    
+            .carrinhoVazio{
+                display: none;
+            }
+    
+            .buttonExpandCart{
+                display: none;
+            }
+    
             .containerItensCart{
-                position: relative;
-                width: 100%;
-                height: 45%;
-                overflow-y: scroll;
-
-                .item{
-                    transition: .5s;
-                    margin: 5px auto;
-                    width: 90%;
-                    justify-content: space-between;
-                    font-family: 'Oswald', sans-serif;
-
-                    .itemName{
-                        transition: .5s;
-                        
-                        h4{
-                            font-size: 1em;
-                            margin: 3px 0 3px 0;
-                        }
-                    }
-
-                    .buttonDiv{
-                        transition: .5s;
-                        width: 45%;
-                        justify-content: space-around;
-
-                        .addREMOVE{
-                            width: 40%;
-                            justify-content: space-around;
-
-                            button{
-                                transition: .5s;
-                                width: 25px;
-                                height: 25px;
-                                font-size: 1.2em;
-                                font-weight: bold;
-                                border-radius: 10px;
-                                border: 0px solid red;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
-                        }
-
-                        .itemPrice{
-                            transition: .5s;
-                            margin-left: 10px;
-                            margin: 0;
-                            width: 50%;
-                            justify-content: flex-end;
-
-                            p{
-                                margin: 2px 5px 0 0;
-                                margin: 0;
-                            }
-                            span{
-                                margin-left: 5px;
-                            }
-                        }
-                    }
-                }
-
+                display: none;
+            }
+    
+            .precoAdcionais{
+                display: none;
             }
 
             .precoTotalContainer{
-                position: relative;
-                bottom: 0;
-                margin-bottom: 8%;
-                width: 100%;
-                height: 5vh;
-                justify-content: space-between;
-                transition: .8s ease;
-                font-weight: 300;
-                font-size: 1.1em;
-                padding: 0 10px;
+                display: none;
+            }
+    
+            .finalizarPedido{
+                display: none;
+            }
 
-                p{
-                    margin: 0 ;
-                    padding: 0;
+
+            .iconCart{
+                font-size: 2.5em;
+            }
+
+            .contador{
+                position: absolute;
+                border-radius: 50%;
+                background-color: red;
+                width: 27px;
+                height: 27px;
+                border: none;
+                margin-bottom: 30px;
+                margin-left: 30px;
+                color: white;
+            }
+        }
+    }
+    
+    
+    &.carrinhoAberto{
+        width: 40%;
+        min-height: 40vh;
+        border-radius: 20px;
+        padding: 15px;
+
+        .buttonExpandCart{
+            display: none;
+        }
+
+        .cartContent{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            .cartIcon{
+                width: 95%;
+                justify-content: space-between;
+
+                .iconCart{
+                    font-size: 3em;
                 }
 
-                .preco{
+                .contador{
+                    position: absolute;
+                    border-radius: 50%;
+                    background-color: red;
+                    width: 27px;
+                    height: 27px;
+                    border: none;
+                    margin-bottom: 28px;
+                    margin-left: 25px;
+                    color: white;
+                }
+
+                .arrowContainer{
+                        width: 50px;
+                    height: 40px;
+                    margin-right: 45%;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .barraDivisora{
+                display: block;
+                width: 95%;
+            }
+
+            .containerItensCart{
+                width: 95%;
+
+                .item{
+                    width: 100%;
+                    justify-content: space-between;
+                    margin: 3px 0;
+
+                    h4{
+                        margin: 0;
+                        font-size: 1.1em;
+                    }
+
+                    .buttonDiv{
+                        width: 35%;
+
+                        button{
+                            margin: 0 3px;
+                            border-radius: 7px;
+                            width: 25px;
+                            height: 25px;
+                            border: none;
+                            font-weight: bold;
+                            background-color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: bold;
+                            font-size: 1.5em;
+                        }
+
+                        div{
+                            width: 100%;
+                        }
+
+                        .itemPrice{
+                            justify-content: flex-end;
+                        }
+
+                        p{
+                            margin: 0;
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+            }
+
+            .precoAdcionais{
+                width: 95%;
+                justify-content: space-between;
+
+                h4{
+                    font-size: 1.1em;
+                    margin: 0;
+                }
+
+                p{
+                    margin: 0;
+                    font-size: 1.1em;
+                }
+
+                button{
+                    border: 0;
+                    background-color: red;
+                    color: white;
+                    border-radius: 5px;
+                    margin-left: 48%;
+                }
+            }
+
+            .precoTotalContainer{
+                width: 95%;
+                margin-top: 10px;
+                justify-content: space-between;
+
+                h4{
+                    font-size: 1.4em;
+                    margin: 0;
+                }
+
+                p{
                     color: lightgreen;
-                    
+                    font-size: 1.4em;
+                    margin: 0;
                 }
             }
 
             .finalizarPedido{
-                width: 100%;
-                position: absolute;
-                bottom: 0;
-                margin-bottom: 3%;
-                height: 32px;
-                transition: .5s;
-
+                width: 97%;
+                height: 30px;
+                margin: 10px 0 5px 0;
+                
                 a{
-                    width: 95%;
+                    width: 100%;
                     height: 100%;
                     text-decoration: none;
                     
                     button{
-                        transition: .5s;
-                        font-weight: 600;
-                        font-family: 'Oswald', sans-serif;
-                        height: 100%;
+                        color: white;
                         width: 100%;
-                        border-radius: 15px;
+                        height: 100%;
                         border: none;
-                        font-size: 1em;
+                        border-radius: 10px;
+                        text-shadow: 1px 1px 2px black;
+                        background-color: #198754;
                     }
                 }
-                
-            }
-
-            .buttonExpandCart{
-                transition: .5s;
-                display: none;
             }
         }
+
+
     }
 
-    .cartContent{
-        transition: .5s;
-        width: 100%;
-        height: 90%;
-        justify-content: flex-start;
-
-        
-        .arrowContainer{
-            transition: .5s;
-            display: none;
-        }
-
-        .buttonExpandCart{
-            height: 100%;
-            width: 150px;
-
-            button{
-                transition: .5s;
-                background-color: white;
-                border: 0px solid white;
-                font-weight: bold;
-                height: 45%;
-                width: 100%;
-                border-radius: 15px;
-                font-family: 'Oswald', sans-serif;
-                font-size: .9em;
-                animation: ${animaButton};
-                box-shadow: 1px 1px 20px white;
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-                animation-duration: 3s;
-                transition: 0.5s all;
-            }
-        }
-
-        .cartIcon{
-            transition: .5s;
-            width: 35%;
-            height: 100%;
-            margin-top: 3px;
-        
-
-        .iconCart{
-            font-size: 2.4em;
-        }
-
-        button{
-            width: 23px;
-            height: 23px;
-            margin-left: -20px;
-            margin-top: -30px;
-            border-radius: 50%;
-            border: 0px solid red;
-            background-color: red;
-            color: white;
-            font-size: .8em;
-            }
-        }
-    
-        .carrinhoVazio{
-            margin: 0;
-            width: 80%;
-            height: 10vh;
-            font-size: 1.1em;
-            font-family: 'Oswald', sans-serif;  
-        }
-
-        .precoTotalContainer{
-            transition: .8s ease;
-            font-family: 'Oswald', sans-serif;
-            width: 80%;
-            height: 100%;
-            
-            div{
-                font-size: 1.1em !important;
-                margin: 0 10px 0 10px;
-            }
-            
-            p{
-                margin: 0;
-            }
-
-            .preco{
-                display: flex;
-                align-items: center;
-
-            }
-            
-        }
-
-        .precoAdcionais{
-            width: 100%;
-            justify-content: space-between;
-            font-family: 'Oswald', sans-serif;
-            padding: 0 5%;
-            margin-top: 5px;
-
-            p{
-                margin: 0;
-                padding: 0;
-                margin-right: 5px !important;
-            }
-
-            button{
-                background-color: red;
-                color: white;
-                height: 100%;
-                font-size:0.9em;
-                border: 0px solid red;
-                border-radius: 10px;
-            }
-        }
-    }
-
-
-
-}
     
 `;

@@ -11,18 +11,16 @@ const animaModaladd = keyframes`
 
 export const BoxAcaiContainer = styled.div`
 
-@media screen and (max-width: 500px) {
-
-
     .marginModal{
-        margin-left: -800px !important;
+        margin-left: -3000px !important;
         position: absolute;
     }
     
     .montarAcai{ 
         opacity: 0;
         margin-top: 300px;
-        width: 90%;
+        width: 40%;
+        padding: 10px 20px 15px 20px;
         background-color: white;
         border-radius: 15px;
         flex-direction: column;
@@ -31,19 +29,20 @@ export const BoxAcaiContainer = styled.div`
         animation-duration: 1s;
         animation-fill-mode: forwards;
         transition: .8s;
+        box-shadow: 1px 1px 5px black;
         z-index: 3 !important;
 
     
         .nomeProduto{
-            width: 90%;
+            width: 95%;
             height: 40px;
             justify-content: space-between;
             padding-top: 10px;
 
             .space{
-                width: 30px;
-                height: 30px;
-                font-size: 1.8em;
+                width: 35px;
+                height: 35px;
+                font-size: 2.3em;
             }
 
             .nome{
@@ -61,7 +60,7 @@ export const BoxAcaiContainer = styled.div`
         .selectAdcionais{
             flex-direction: column;
             justify-content: flex-start;
-            width: 90%;
+            width: 95%;
 
             h4{
                 margin: 0;
@@ -101,8 +100,8 @@ export const BoxAcaiContainer = styled.div`
         }
 
         .btnConfirma{
-            width: 90%;
-            padding: 10px 0 15px 0;
+            width: 100%;
+            margin-top: 20px;
 
             button{
                 width: 100%;
@@ -121,7 +120,7 @@ export const BoxAcaiContainer = styled.div`
     }
 
     .adicionaisAcai{
-        width: 90%;
+        width: 40%;
         background-color: white;
         border-radius: 15px;
         flex-direction: column;
@@ -152,7 +151,7 @@ export const BoxAcaiContainer = styled.div`
         }
 
         .aviso{
-            width: 100%;
+            width: 95%;
             text-align: center;
             font-size: .8em;
         }
@@ -167,12 +166,12 @@ export const BoxAcaiContainer = styled.div`
         
 
         .adicionaisFRUTAS{
-            width: 100%;
+            width: 95%;
             padding-bottom: 10px;
         }
 
         .adicionaisACOMPANHAMENTOS{
-            width: 100%;
+            width: 95%;
             padding-bottom: 10px;
 
             .wrapper{
@@ -191,7 +190,7 @@ export const BoxAcaiContainer = styled.div`
         }
 
         .adicionaisCALDAS{
-            width: 100%;
+            width: 95%;
             padding-bottom: 10px;
         }
 
@@ -210,6 +209,40 @@ export const BoxAcaiContainer = styled.div`
             }
         }
     }
+
+@media screen and (max-width: 1100px) {
+    .montarAcai{ 
+        width: 55%;
+    }
+
+    .adicionaisAcai{
+        width: 55%;
+    }
 }
+
+@media screen and (max-width: 800px) {
+    .montarAcai{ 
+        width: 70%;
+    }
+
+    .adicionaisAcai{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .montarAcai{ 
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .adicionaisAcai{
+        font-size: 0.9em;
+        width: 90%;
+    }
+}
+        
+
+       
 
 `;

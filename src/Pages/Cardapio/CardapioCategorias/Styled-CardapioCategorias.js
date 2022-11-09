@@ -5,10 +5,6 @@ export const CardapioCategoriasContainer = styled.div`
     font-family: 'Oswald', sans-serif;
     flex-direction: column;
 
-    @media screen and (max-width: 500px) {
-        box-sizing: content-box;
-        
-
     .modalAdicionaisOFF{
         display: none;
     }
@@ -29,8 +25,8 @@ export const CardapioCategoriasContainer = styled.div`
         width: 100%;
         height: 10vh;
     }
-       
-}
+
+    
 
 
 `;

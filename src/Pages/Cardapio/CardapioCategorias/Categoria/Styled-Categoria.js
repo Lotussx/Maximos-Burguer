@@ -37,7 +37,8 @@ export const CategoriaContainer = styled.div`
             justify-content: flex-start;
             margin-top: 15px;
             width: 100%;
-            font-size: 1.4em;
+            font-size: 1.3em;
+            font-weight: bold;
             padding-left: 1.6%;
         }
 
@@ -79,14 +80,14 @@ export const CategoriaContainer = styled.div`
                         margin: 0;
                         width: 100%;
                         text-align: center;
-                        font-size: 1.1em;
-                        font-weight: bold;
+                        font-size: 1em;
+                        font-weight: 600;
                     }
                     
                     p{
                         width: 100%;
                         margin: 0;
-                        font-size: 0.8em;
+                        font-size: 0.75em;
                         text-align: center;
                     
                     }
@@ -95,7 +96,7 @@ export const CategoriaContainer = styled.div`
                         width: 80%;
                         height: 25px;
                         border-radius: 20px;
-                        font-size: .8em;
+                        font-size: .75em;
                         text-align: center;
                         box-shadow: 1px 1px 3px black;
                         font-weight: bold;

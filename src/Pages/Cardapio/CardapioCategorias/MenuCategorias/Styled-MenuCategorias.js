@@ -4,9 +4,7 @@ import styled from "styled-components";
 export const MenuCategoriasConteiner = styled.ul`
     width: 100%;
     height: 80px;
-    padding: 0;
-    border-top: 4px solid black;
-    border-bottom: 4px solid black; 
+    padding: 0 !important;
     background-color: black;
     color: white;
     margin: 0;
@@ -27,7 +25,7 @@ export const MenuCategoriasConteiner = styled.ul`
 
         h4{
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1em;
             text-align: center;
         }
     }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CheckboxContainer = styled.div`
-@media screen and (max-width: 500px) {
     width: 100%;
     justify-content: space-between; 
      
@@ -21,7 +20,7 @@ export const CheckboxContainer = styled.div`
             margin: 0;
             padding: 0;
             padding-right: 4px;
-            font-size: 1em;
+            font-size: 0.9em;
             flex-wrap: nowrap;
         }
     }
@@ -37,11 +36,10 @@ export const CheckboxContainer = styled.div`
     }
 
     .preco{
-        font-size: .9em;
+        font-size: 0.9em;
         
         p{
             margin: 0;
-            padding: 0;
             margin-left: 4px;
         }
 
@@ -49,5 +47,6 @@ export const CheckboxContainer = styled.div`
             margin-left: 2px;
         }
     }
+@media screen and (max-width: 500px) {
 }
 `;
