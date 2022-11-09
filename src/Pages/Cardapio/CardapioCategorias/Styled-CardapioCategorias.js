@@ -23,7 +23,7 @@ export const CardapioCategoriasContainer = styled.div`
 
     .espacoBotton{
         width: 100%;
-        height: 10vh;
+        height: 15vh;
     }
 
     

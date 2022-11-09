@@ -342,11 +342,27 @@ export const ContainerShopCart = styled.div`
 
 @media screen and (max-width: 500px) {
 
+    &.carrinhoFechado{
+        width: 90px;
+        height: 90px;
+
+        .iconCart{
+            font-size: 2.3em !important;
+        }
+
+        .contador{
+            width: 23px !important;
+            height: 23px !important;
+            font-size: 0.8em !important;
+        }
+    }
+    
     &.carrinhoAberto{
         width: 100%;
         
         .containerItensCart{
-            border: 1px solid red;
+            height: 15vh;
+            overflow-y: scroll;
         }
     }
 
