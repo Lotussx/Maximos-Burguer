@@ -69,25 +69,28 @@ export default function FinalizarPedido() {
             <Header></Header>
             {Global.newMsg !== '' ? (
                 <div className='mainContainer flex-class'>
-                    <CardPedido />
-                    {Global.infoAdcionais.length !== 0   &&
-                        <CardAdcionais 
-                            adicionais='Adicionais: '
-                            arrMap={Global.infoAdcionais}
-                        />
-                    }
-                    {Global.acaiPRONTO.length !== 0   &&
-                        <CardAdcionais 
-                            adicionais='Açaí: '
-                            arrMap={Global.acaiPRONTO}
-                        />
-                    }
-                    {Global.milkSHAKEpronto.length !== 0   &&
-                        <CardAdcionais 
-                            adicionais='MilkShake: '
-                            arrMap={Global.milkSHAKEpronto}
-                        />
-                    }
+                    <div className='wrapperPedido flex-class'>
+                        <CardPedido />
+                        {Global.infoAdcionais.length !== 0 &&
+                            <CardAdcionais
+                                adicionais='Adicionais: '
+                                arrMap={Global.infoAdcionais}
+                            />
+                        }
+                        {Global.acaiPRONTO.length !== 0 &&
+                            <CardAdcionais
+                                adicionais='Açaí: '
+                                arrMap={Global.acaiPRONTO}
+                            />
+                        }
+                        {Global.milkSHAKEpronto.length !== 0 &&
+                            <CardAdcionais
+                                adicionais='MilkShake: '
+                                arrMap={Global.milkSHAKEpronto}
+                            />
+                        }
+                    </div>
+
                     <form className='formContainer flex-class'>
                         {/* Nome e Obs Pedido */}
                         <InfoCliente />
@@ -105,7 +108,6 @@ export default function FinalizarPedido() {
             ) : (
                 <VoltarCardapio />
             )}
-
             <AvisoModal class={modalAviso === true ? 'avisoModalOn' : 'avisoModalOff'} click={fechaMODALaviso}></AvisoModal>
         </FinalizarPedidoContainer>
     )

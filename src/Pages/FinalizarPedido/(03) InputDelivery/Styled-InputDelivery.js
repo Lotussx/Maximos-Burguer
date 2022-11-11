@@ -11,97 +11,97 @@ const animaEnd = keyframes`
 
 export const InputDeliveryContainer = styled.div`
 
-@media screen and (max-width: 500px) {
-    margin: 10px auto 15px auto;
-    width: 92%;
-    font-size: 1em;
-    
-    
-    input[name='opcao']{
-        width: 15px;
-        height: 15px;
-        padding: 0;   
-    }
+margin: 10px auto 15px auto;
+width: 92%;
+font-size: 1em;
 
-    label{
-        padding: 0 !important;
-        padding: 0 10px !important;
-        font-size: 1em !important;
-    }
 
+input[name='opcao']{
+    width: 15px;
+    height: 15px;
+    padding: 0;   
+}
+
+label{
+    padding: 0 !important;
+    padding: 0 10px !important;
+    font-size: 1em !important;
+}
+
+.enderecoContainer{
+    display: none;
+}
+
+
+
+&.inputRadioDeliveryOpen{
+    transition: 1s;
+    
     .enderecoContainer{
-        display: none;
-    }
+        font-size: .8em;
+        font-family: sans-serif;
+        opacity: 0;
+        display: block;
 
-
-
-    &.inputRadioDeliveryOpen{
-        transition: 1s;
+        animation: ${animaEnd};
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
         
-        .enderecoContainer{
-            font-size: .8em;
-            font-family: sans-serif;
-            opacity: 0;
-            display: block;
-
-            animation: ${animaEnd};
-            animation-duration: .5s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
+        .inputText{
+            border-radius: 10px;
+            border-color: black;
+            height: 25px;
+            margin-top: 8px;
             
-            .inputText{
-                border-radius: 10px;
-                border-color: black;
-                height: 25px;
-                margin-top: 8px;
-                
-            }
-            
-            input[name='CEP']{
-                width: 100% !important;
-            }
-            
-            .ruaNum{
-                justify-content: space-between;
-                padding: 0 !important;
+        }
+        
+        input[name='CEP']{
+            width: 100% !important;
+        }
+        
+        .ruaNum{
+            justify-content: space-between;
+            padding: 0 !important;
 
-                input[name='RUA']{
-                    width: 82% !important;
-                    margin: 0 !important;
-                    margin-top: 8px !important;
-                }
-
-                input[name='NUMERO']{
-                    margin: 0 !important;
-                    margin-top: 8px !important;
-                    width: 15% !important;
-                }
+            input[name='RUA']{
+                width: 82% !important;
+                margin: 0 !important;
+                margin-top: 8px !important;
             }
 
-            .bairroCidade{
-                justify-content: space-between;
-                padding: 0 !important;
-
-                input[name='CIDADE']{
-                    width: 49% !important;
-                    margin: 0 !important;
-                    margin-top: 8px !important;
-                }
-
-                input[name='BAIRRO']{
-                    margin: 0 !important;
-                    margin-top: 8px !important;
-                    width: 49% !important;
-                }
-            }
-
-            input[name='COMPLEMENTO']{
-                width: 100%;
+            input[name='NUMERO']{
+                margin: 0 !important;
+                margin-top: 8px !important;
+                width: 15% !important;
             }
         }
 
-    
+        .bairroCidade{
+            justify-content: space-between;
+            padding: 0 !important;
+
+            input[name='CIDADE']{
+                width: 49% !important;
+                margin: 0 !important;
+                margin-top: 8px !important;
+            }
+
+            input[name='BAIRRO']{
+                margin: 0 !important;
+                margin-top: 8px !important;
+                width: 49% !important;
+            }
+        }
+
+        input[name='COMPLEMENTO']{
+            width: 100%;
+        }
     }
+
+
+}
+@media screen and (max-width: 500px) {
 
 
 }

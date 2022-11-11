@@ -210,14 +210,23 @@ export const ContainerShopCart = styled.div`
                 margin-top: 10px;
                 justify-content: space-between;
 
+                .preco{
+                    color: lightgreen;
+                }
+
                 h4{
                     font-size: 1.4em;
                     margin: 0;
                 }
 
+                span{
+                    margin: 0;
+                    margin-right: 10px;
+                    font-size: 1.2em;
+                }
+
                 p{
-                    color: lightgreen;
-                    font-size: 1.4em;
+                    font-size: 1.2em;
                     margin: 0;
                 }
             }

@@ -25,7 +25,6 @@ const AnimaBox = keyframes`
 
 export const AvisoModalContainer = styled.div`
        
-       @media screen and (max-width: 500px) {
         &.avisoModalOff{
                 display: none;
                 transition: .5s;
@@ -37,9 +36,13 @@ export const AvisoModalContainer = styled.div`
                 animation-duration: 1s;
 
                 position: fixed;
-                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
                 width: 100vw;
-                height: 130%;
+                height: 130vh;
+                margin-top: 15vh !important;
                 padding: 0;
                 background-image: linear-gradient(rgba(0, 0, 0, .8) 100%, black 0%);
                 z-index: 3;
@@ -49,22 +52,22 @@ export const AvisoModalContainer = styled.div`
                 align-items: center;
 
                 .modalAviso{
-                        opacity: 0;
-                        animation: ${AnimaBox};
-                        animation-fill-mode: forwards;
-                        animation-duration: 1s;
-                        animation-delay: .5s;
+                    opacity: 0;
+                    animation: ${AnimaBox};
+                    animation-fill-mode: forwards;
+                    animation-duration: 1s;
+                    animation-delay: .5s;
 
-                        transition: .5s;
-                        width: 300px;
-                        height: 300px;
-                        background-color: white;
-                        border-radius: 10px;
-                        box-shadow: 1px 1px 10px black;
+                    transition: .5s;
+                    width: 300px;
+                    height: 300px;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 10px black;
 
-                        flex-direction: column;
-                        justify-content: space-around;
-                        font-family: 'Oswald', sans-serif;  
+                    flex-direction: column;
+                    justify-content: space-around;
+                    font-family: 'Oswald', sans-serif;  
 
                         .title{
                                 width: 100%;
@@ -140,7 +143,14 @@ export const AvisoModalContainer = styled.div`
                 }
         }
 
-       }
+@media screen and (max-width: 500px) {
+    &.avisoModalOn{
+
+       height: 100vh !important;
+       margin-top: -18vh !important;
+    }
+
+}
 
        
         

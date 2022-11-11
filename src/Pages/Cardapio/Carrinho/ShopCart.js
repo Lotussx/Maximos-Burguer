@@ -26,16 +26,19 @@ export default function ShopCart(props) {
     //finalizar o pedido
     const finalizarPedido = () => {
         Global.msg = [];
-        let itensCarrinho = document.querySelectorAll('.item .itemName h4');
+        let itensCarrinho = document.querySelectorAll('.item .itemName');
         let QTYitensCarrinho = document.querySelectorAll('.itemPrice p');
 
         for (let i = 0; i < itensCarrinho.length; i++) {
             let cartInfo = QTYitensCarrinho[i].innerHTML + 'x - ' + itensCarrinho[i].innerHTML;
             Global.msg.push(cartInfo);
             Global.newMsg = Global.msg.join(' | ');
-            Global.precoTotal = document.querySelector('.precoTotalContainer .preco p').innerHTML;
+            Global.precoTotal = document.getElementById("preco").innerHTML
         }
+
+        console.log(Global.precoTotal)
     }
+
 
 
     const excluiADC = () => {
@@ -92,7 +95,7 @@ export default function ShopCart(props) {
                                             <button onClick={() => onREMOVE(item)}> - </button>
                                         </div>
                                         <div className='itemPrice flex-class'>
-                                            <p>{item.qty} x R$ {item.price.toFixed(2)} </p>
+                                            <p>{item.qty}</p> x R$ <span>{item.price.toFixed(2)} </span>
                                         </div>
                                     </div>
                                 </div>
@@ -118,13 +121,16 @@ export default function ShopCart(props) {
                         }
                         <div className='precoTotalContainer flex-class'>
                             <h4>Preço Total:</h4>
-                            <p>R$ {itemsPrice.toFixed(2)}</p>
+                            <div className='preco flex-class'>
+                                <span>R$</span> 
+                                <p id='preco'>{itemsPrice.toFixed(2)}</p>
+                            </div>
                         </div>
                     </>
                 }
 
                 {openCart && countCartItems !== 0 &&
-                    <div className='finalizarPedido flex-class' onClick={finalizarPedido}>
+                    <div className='finalizarPedido flex-class' onClick={finalizarPedido} >
                         <Link to='/FinalizarPedido' className='flex-class'> <button>Finalizar Pedido</button> </Link>
                     </div>
                 }

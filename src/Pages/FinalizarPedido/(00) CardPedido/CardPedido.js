@@ -12,7 +12,7 @@ export default function CardPedido() {
                 <span>{Global.newMsg}</span>
             </div>
             <div className='precoPedido'>
-                <span>PREÇO TOTAL: {Global.precoTotal}</span>
+                <span>PREÇO TOTAL: R$ {Global.precoTotal}</span>
             </div>
         </CardPedidoContainer>
     )
