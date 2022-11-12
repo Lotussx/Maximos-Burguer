@@ -40,42 +40,42 @@ const data = {
             id: '02',
             name: 'X-BURGUER',
             price: 10.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1JWvqIC0lHiSkXLC5fgzSmv44ztbYQB8U/view?usp=share_link',
             description: 'Pão, carne (130g), queijo, salada c/cebola caramelizada, creme e barbecue.            '
         },
         {
             id: '03',
             name: 'X-EGG',
             price: 12.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1RRKhFq6VWFORgBfapbZ0MCH817I2WclC/view?usp=sharing',
             description: 'Pão, carne (130g), queijo, ovo, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '04',
             name: 'X-CHEDDAR',
             price: 13.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/10XxZCeTbdG6pEVva3oF1XrBaTzf9WLsr/view?usp=share_link',
             description: 'Pão, carne (130g), cheddar, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '05',
             name: 'X-BACON',
             price: 13.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1IN9DSUrVG15l64v_3R6zD24mbzXswq1X/view?usp=share_link',
             description: 'Pão, carne (130g), queijo, bacon, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '06',
             name: 'X-EGG BACON',
             price: 15.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1RoWlJwtTcY08R01AXKZqOYP-7URb2CRY/view?usp=share_link',
             description: 'Pão, carne (130g), queijo, ovo, bacon, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '07',
             name: 'X-CALABRESA',
             price: 13.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1x0nSW33HUb_MSxTfd9xoe_VFaz0vORy7/view?usp=share_link',
             description: 'Pão, carne (130g), queijo, calabresa, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
@@ -103,7 +103,7 @@ const data = {
             id: '11',
             name: 'X-TUDO',
             price: 18.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1N8YgkoPSS1VuuhoyiaICoXzMH-sWaZC0/view?usp=share_link',
             description: 'Pão, carne (130g), queijo, calabresa, bacon, salsicha, ovo, presunto, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
@@ -120,7 +120,7 @@ const data = {
             id: '13',
             name: 'CHEDDAR DUPLO',
             price: 17.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1SErO36EDsRcs2ZOFWYs9vktVc4u5NSKR/view?usp=share_link',
             description: 'Pão, 2 carnes (130g), queijo, cheddar, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
@@ -162,7 +162,7 @@ const data = {
             id: '19',
             name: 'X-DUPLO BACON',
             price: 17.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1QExVLTzM7VZ5zOix0phKlOWnFDaPm8gq/view?usp=share_link',
             description: 'Pão, 2 carne (130g), bacon, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
@@ -186,7 +186,7 @@ const data = {
             id: '22',
             name: 'HOT DOG TRADICIONAL',
             price: 8.00,
-            image: Promo01,
+            image: 'https://drive.google.com/file/d/1xZ4EBLfzZKDwgPlrlBktWiYAzZ0wluJG/view?usp=share_link',
             description: 'Pão, carne moída, salcicha, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, maionese da casa e barbecue.'
         },
         {
