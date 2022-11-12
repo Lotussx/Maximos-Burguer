@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import BackBuguer from '../../../Images/background-home.webp';
 import logomarca from '../../../Images/logomarca.png';
 
 
@@ -22,7 +21,6 @@ const animaButton = keyframes`
 `;
 
 export const StyledMainContainer = styled.div`
-    background-image: url(${BackBuguer});
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -82,8 +80,9 @@ export const StyledMainContainer = styled.div`
     }
 
 @media screen and (max-width: 450px) {
-    height: 80% !important;
-    margin-top: 10vh;
+    margin-top: 10vh !important;
+    height: 80vh !important;
+
     background-position-x: -350px !important;
 }
 
