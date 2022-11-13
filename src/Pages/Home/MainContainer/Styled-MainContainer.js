@@ -24,7 +24,7 @@ export const StyledMainContainer = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 76% !important;
+    height: 80vh !important;
     margin-top: 12vh;
     color: white;
     flex-direction: column;
