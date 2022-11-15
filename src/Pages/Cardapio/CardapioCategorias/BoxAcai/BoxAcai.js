@@ -74,8 +74,8 @@ export default function BoxAcai({ className, className2, className3, fecharModal
                                     <label htmlFor='Jujuba'>Jujuba</label>
                                 </div>
                                 <div className='checkbox flex-class'>
-                                    <input onChange={verificaACAI} type='checkbox' name='M&M' value='M&M'></input>
-                                    <label htmlFor='M&M'>M&M</label>
+                                    <input onChange={verificaACAI} type='checkbox' name='MM' value='MM'></input>
+                                    <label htmlFor='MM'>MM</label>
                                 </div>
                                 <div className='checkbox flex-class'>
                                     <input onChange={verificaACAI} type='checkbox' name='Sucrilhos' value='Sucrilhos'></input>
@@ -175,10 +175,9 @@ export default function BoxAcai({ className, className2, className3, fecharModal
                             <Checkbox preco='1,50' nomeAdicional='Leite em pó' />
                             <Checkbox preco='1,50' nomeAdicional='Granola' />
                             <Checkbox preco='1,50' nomeAdicional='Jujuba' />
-                            <Checkbox preco='1,50' nomeAdicional='M&M' />
+                            <Checkbox preco='1,50' nomeAdicional='MM' />
                             <Checkbox preco='1,50' nomeAdicional='Sucrilhos' />
                             <Checkbox preco='1,50' nomeAdicional='Kit-kat' />
-
                         </div>
                         <div className='content'>
                             <Checkbox preco='1,50' nomeAdicional='Farinha lacta' />

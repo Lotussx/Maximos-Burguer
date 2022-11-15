@@ -4,7 +4,7 @@ import Promo01 from './Images/Promo/Promo01.png'
 
 
 const data = {
-    products: [
+    slideSEMANA: [
         {
             id: '999',
             name: 'PROMO X-EGG 01',
@@ -22,6 +22,30 @@ const data = {
         {
             id: '777',
             name: 'PROMO X-EGG 03',
+            price: 25.99,
+            image: Promo01,
+            description: '1 X-EGG + 1 Batata P + Antarctica'
+        },
+    ],
+
+    slideFDS: [
+        {
+            id: '111',
+            name: 'FIM DE SEMANA 01',
+            price: 25.99,
+            image: Promo01,
+            description: '1 X-EGG + 1 Batata P + Antarctica'
+        },
+        {
+            id: '222',
+            name: 'FIM DE SEMANA 02',
+            price: 25.99,
+            image: Promo01,
+            description: '1 X-EGG + 1 Batata P + Antarctica'
+        },
+        {
+            id: '333',
+            name: 'FIM DE SEMANA 03',
             price: 25.99,
             image: Promo01,
             description: '1 X-EGG + 1 Batata P + Antarctica'

@@ -6,7 +6,42 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export default function SlidePromo(props) {
 
-    const { products, onADD } = props;
+    const { slideSEMANA, slideFDS, onADD } = props;
+    const date = new Date()
+    let diaSemana = date.getDay()
+
+    switch (diaSemana) {
+        case 0:
+            diaSemana = 'DOM'
+            break;
+        case 1:
+            diaSemana = 'SEG'
+            break;
+        case 2:
+            diaSemana = 'TER'
+            break;
+        case 3:
+            diaSemana = 'QUA'
+            break;
+        case 4:
+            diaSemana = 'QUI'
+            break;
+        case 5:
+            diaSemana = 'SEX'
+            break;
+        case 6:
+            diaSemana = 'SAB'
+            break;
+        default:
+            break;
+    }
+
+    let products = []
+    if (diaSemana === 'SEG' || diaSemana === 'TER' || diaSemana === 'QUA' || diaSemana === 'QUI' || diaSemana === 'SEX') {
+        products = slideSEMANA
+    } else {
+        products = slideFDS
+    }
 
     return (
         <SlideContainer>

@@ -12,7 +12,7 @@ import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
 
 export default function Cardapio() {
 
-    const { products, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
+    const { slideSEMANA, slideFDS, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
 
 
     const [cartItems, setCartItems] = useState([]);
@@ -41,7 +41,7 @@ export default function Cardapio() {
     return (
         <CardapioStyle>
             <Header />
-            <SlidePromo products={products} onADD={onADD}></SlidePromo>
+            <SlidePromo slideSEMANA={slideSEMANA} slideFDS={slideFDS} onADD={onADD}></SlidePromo>
             <CardapioCategorias
                 productsHAMBU={productsHAMBU}
                 productsESPECIAL={productsESPECIAL}

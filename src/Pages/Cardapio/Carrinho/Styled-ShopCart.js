@@ -274,7 +274,7 @@ export const ContainerShopCart = styled.div`
                     background-color: red;
                     color: white;
                     border-radius: 5px;
-                    margin-left: 48%;
+                    margin-left: 25%;
                 }
             }
 
