@@ -1,4 +1,61 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const cartClosed = keyframes`
+    from{
+        height: 400px;
+        width: 500px;
+        border-radius: 5%;
+    }
+
+    to{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+`;
+
+const cartOpened = keyframes`
+    from{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    to{
+        height: 400px;
+        width: 500px;
+        border-radius: 5%;
+    }
+`;
+
+const cartClosedMobile = keyframes`
+    from{
+        height: 350px;
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    to{
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+    }
+`;
+
+const cartOpenedMobile = keyframes`
+    from{
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+    }
+
+    to{
+        height: 350px;
+        width: 100%;
+        border-radius: 5% 5% 0 0;
+    }
+`;
+
 
 
 export const ContainerShopCart = styled.div`
@@ -18,10 +75,13 @@ export const ContainerShopCart = styled.div`
     }
 
     &.carrinhoFechado{
-        height: 100px;
-        width: 100px;
+        animation: ${cartClosed};
+        animation-fill-mode: forwards;
+        animation-duration: .8s;
+        animation-timing-function: ease-in-out;
+        transition: 0.6s;
+        
         box-shadow: 1px 1px 5px black;
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,9 +141,11 @@ export const ContainerShopCart = styled.div`
     
     
     &.carrinhoAberto{
-        width: 40%;
-        min-height: 40vh;
-        border-radius: 20px;
+        animation: ${cartOpened};
+        animation-fill-mode: forwards;
+        animation-duration: .6s;
+        animation-timing-function: ease-in-out;
+        transition: 0.8s;
         padding: 15px;
 
         .buttonExpandCart{
@@ -119,7 +181,8 @@ export const ContainerShopCart = styled.div`
                 }
 
                 .arrowContainer{
-                        width: 50px;
+                    cursor: pointer;
+                    width: 50px;
                     height: 40px;
                     margin-right: 45%;
 
@@ -137,6 +200,8 @@ export const ContainerShopCart = styled.div`
 
             .containerItensCart{
                 width: 95%;
+                height: 60% !important;
+                overflow-y: scroll;
 
                 .item{
                     width: 100%;
@@ -180,6 +245,14 @@ export const ContainerShopCart = styled.div`
                         }
                     }
                 }
+            }
+
+            .containerItensCart::-webkit-scrollbar{
+                width: 8px;
+            }
+
+            .containerItensCart::-webkit-scrollbar-thumb{
+                background-color: #efefef;
             }
 
             .precoAdcionais{
@@ -352,8 +425,11 @@ export const ContainerShopCart = styled.div`
 @media screen and (max-width: 500px) {
 
     &.carrinhoFechado{
-        width: 90px;
-        height: 90px;
+        animation: ${cartClosedMobile};
+        animation-fill-mode: forwards;
+        animation-duration: .8s;
+        animation-timing-function: ease-in-out;
+        transition: 0.6s;
 
         .iconCart{
             font-size: 2.3em !important;
@@ -367,11 +443,20 @@ export const ContainerShopCart = styled.div`
     }
     
     &.carrinhoAberto{
-        width: 100%;
+        animation: ${cartOpenedMobile};
+        animation-fill-mode: forwards;
+        animation-duration: .8s;
+        animation-timing-function: ease-in-out;
+        transition: 0.6s;
         
         .containerItensCart{
             height: 15vh;
             overflow-y: scroll;
+
+        }
+
+        .containerItensCart::-webkit-scrollbar{
+            width: 3px !important;
         }
     }
 

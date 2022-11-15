@@ -7,7 +7,7 @@ const AnimaModal = keyframes`
                 margin-top: 100vh;
         }
         100%{
-                margin-top: 0;
+                margin-top: 0vh;
                 opacity: 1;
                 display: flex;
         }
@@ -39,10 +39,8 @@ export const AvisoModalContainer = styled.div`
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 width: 100vw;
-                height: 130vh;
-                margin-top: 15vh !important;
+                height: 100%;
                 padding: 0;
                 background-image: linear-gradient(rgba(0, 0, 0, .8) 100%, black 0%);
                 z-index: 3;
@@ -144,11 +142,6 @@ export const AvisoModalContainer = styled.div`
         }
 
 @media screen and (max-width: 500px) {
-    &.avisoModalOn{
-
-       height: 100vh !important;
-       margin-top: -18vh !important;
-    }
 
 }
 

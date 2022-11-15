@@ -27,23 +27,23 @@ export default function AvisoModal(props) {
 
         function adicionais() {
             if (Global.infoAdcionais === []) {
-                return
+                return ''
             } else {
                 return ("%0A%0A=================================%0A%0A*ADCIONAIS:* " + Global.infoAdcionais + "%0A%0A=================================")
             }
         }
 
         function adicionaisACAI() {
-            if (Global.acaiPRONTO === []) {
-                return
+            if (Global.acaiPRONTO.length === 0) {
+                return ''
             } else {
                 return ("%0A%0A*AÇAÍ:* " + Global.acaiPRONTO + "%0A%0A=================================")
             }
         }
 
         function adicionaisMILKSHAKE() {
-            if (Global.acaiPRONTO === []) {
-                return
+            if (Global.milkSHAKEpronto.length === 0) {
+                return ''
             } else {
                 return ("%0A%0A*MILKSHAKE:* " + Global.milkSHAKEpronto + "%0A%0A=================================")
             }
@@ -85,7 +85,7 @@ export default function AvisoModal(props) {
 
 
     return (
-        <AvisoModalContainer className={props.class}>
+        <AvisoModalContainer className={props.class} >
             <div className='modalAviso flex-class'>
                 <div className='title flex-class'>
                     <div></div>
