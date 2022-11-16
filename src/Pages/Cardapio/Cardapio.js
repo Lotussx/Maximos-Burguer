@@ -9,10 +9,12 @@ import ShopCart from './Carrinho/ShopCart';
 import Header from '../../Components/Header/Header.js';
 import SlidePromo from './SlidePromo/SlidePromo.js';
 import CardapioCategorias from './CardapioCategorias/CardapioCategorias.js';
+import Promocao from './Promocao/Promocao.js';
+import Global from '../../Global';
 
 export default function Cardapio() {
 
-    const { slideSEMANA, slideFDS, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
+    const { promoINAU, slideSEMANA, slideFDS, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
 
 
     const [cartItems, setCartItems] = useState([]);
@@ -37,9 +39,39 @@ export default function Cardapio() {
         }
     }
 
+    let todayDate = new Date()
+    todayDate = todayDate.getDate()
+    console.log(todayDate)
+
+    const [promo, setPromo] = useState(false)
+
+
+    const promoFunc = () => {
+        if (todayDate === 16) {
+            setPromo(true)
+        } else {
+            setPromo(false)
+        }
+    }
+
+    const fecharPromo = () => {
+        setPromo(false)
+    }
+
+    const confirmaPROMO = (promocao) => {
+        if (cartItems.length === 0) {
+            Global.infoAdcionais = [];
+            Global.precoAdcionais = 0;
+            Global.milkSHAKEpronto = []
+            Global.acaiPRONTO = []
+        }
+
+        onADD(promocao)
+        setPromo(false)
+    }
 
     return (
-        <CardapioStyle>
+        <CardapioStyle onLoad={promoFunc}>
             <Header />
             <SlidePromo slideSEMANA={slideSEMANA} slideFDS={slideFDS} onADD={onADD}></SlidePromo>
             <CardapioCategorias
@@ -55,6 +87,16 @@ export default function Cardapio() {
                 onADD={onADD}
 
             />
+
+            <Promocao
+                onADD={onADD}
+                promoINAU={promoINAU}
+                fecharPromo={fecharPromo}
+                confirmaPROMO={confirmaPROMO}
+                className01={promo === false ? 'promoDesativada' : 'promoAtivada'}
+                className02={promo === false ? 'promoContainerOFF' : 'promoContainerON'}
+            />
+
             <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>
         </CardapioStyle>
     )

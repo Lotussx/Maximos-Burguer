@@ -24,7 +24,8 @@ export const HeaderContainer = styled.header`
             width: 100%;
             height: 100%;
             text-decoration: none;
-            color: white;   
+            color: white;  
+            z-index: 999 !important; 
 
             div{
                 height: 70px;
@@ -90,7 +91,6 @@ export const HeaderContainer = styled.header`
     .menuLateral{
         width: 200px;
         height: 200px;
-        position: absolute;
     }
 }
 

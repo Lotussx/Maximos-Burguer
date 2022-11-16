@@ -52,6 +52,16 @@ const data = {
         },
     ],
 
+    promoINAU: [
+        {
+            id: '10022',
+            name: 'PROMO INAUGURAÇÃO',
+            price: 25.99,
+            image: Promo01,
+            description: 'Pão, carne (130g), cheddar, salada c/cebola caramelizada, creme e barbecue.'
+        }
+    ],
+
     productsHAMBU: [
         {
             id: '01',

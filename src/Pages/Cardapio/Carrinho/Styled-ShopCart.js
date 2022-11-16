@@ -67,6 +67,9 @@ export const ContainerShopCart = styled.div`
     z-index: 3;
     transition: .8s !important;
     margin: 0 0 20px 20px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
     font-family: 'Oswald',sans-serif;
     box-shadow: 1px 1px 5px black;
 
@@ -77,7 +80,7 @@ export const ContainerShopCart = styled.div`
     &.carrinhoFechado{
         animation: ${cartClosed};
         animation-fill-mode: forwards;
-        animation-duration: .8s;
+        animation-duration: .5s;
         animation-timing-function: ease-in-out;
         transition: 0.6s;
         
@@ -143,9 +146,9 @@ export const ContainerShopCart = styled.div`
     &.carrinhoAberto{
         animation: ${cartOpened};
         animation-fill-mode: forwards;
-        animation-duration: .6s;
+        animation-duration: .5s;
         animation-timing-function: ease-in-out;
-        transition: 0.8s;
+        transition: 0.5s;
         padding: 15px;
 
         .buttonExpandCart{
@@ -448,6 +451,10 @@ export const ContainerShopCart = styled.div`
         animation-duration: .8s;
         animation-timing-function: ease-in-out;
         transition: 0.6s;
+
+        .arrowContainer{
+            margin-right: 43% !important;     
+        }
         
         .containerItensCart{
             height: 15vh;
