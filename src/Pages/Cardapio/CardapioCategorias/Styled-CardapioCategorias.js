@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const CardapioCategoriasContainer = styled.div`
     width: 100%;
+    min-height: 500px;
+    justify-content: flex-start;
     font-family: 'Oswald', sans-serif;
     flex-direction: column;
 

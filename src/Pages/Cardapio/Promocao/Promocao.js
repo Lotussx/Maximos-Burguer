@@ -10,15 +10,12 @@ export default function Promocao({ className01, className02, promoINAU, fecharPr
             <div className='promoContainer'>
                 {promoINAU.map((promocao) => (
                     <div className='produto flex-class'>
-                        <div className='title flex-class'>
-                            <div className='space'></div>
-                            <h3>Promoção de Inauguração</h3>
-                            <div className='space flex-class' onClick={fecharPromo}>
+
+                        <div className='imgProduto flex-class' style={{ background: `url(${promocao.image})` }} >
+                            <div className='fecharPromo flex-class' onClick={fecharPromo}>
                                 <IoClose />
                             </div>
                         </div>
-
-                        <div className='img' style={{ background: `url(${promocao.image})` }} ></div>
 
                         <div className='nomeDescri flex-class'>
                             <h3>{promocao.name} - R$ {promocao.price}</h3>

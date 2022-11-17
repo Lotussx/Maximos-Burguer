@@ -43,14 +43,19 @@ export default function Cardapio() {
     todayDate = todayDate.getDate()
     console.log(todayDate)
 
+
+
     const [promo, setPromo] = useState(false)
+    const [promo2, setPromo2] = useState(false)
 
 
     const promoFunc = () => {
-        if (todayDate === 16) {
+        if (todayDate === 17) {
             setPromo(true)
+            setPromo2(true)
         } else {
             setPromo(false)
+            setPromo2(false)
         }
     }
 
@@ -74,7 +79,10 @@ export default function Cardapio() {
         <CardapioStyle onLoad={promoFunc}>
             <Header />
             <SlidePromo slideSEMANA={slideSEMANA} slideFDS={slideFDS} onADD={onADD}></SlidePromo>
+            
             <CardapioCategorias
+                promo={promo2}
+                promoINAU={promoINAU}
                 productsHAMBU={productsHAMBU}
                 productsESPECIAL={productsESPECIAL}
                 productsHOTDOG={productsHOTDOG}
@@ -94,7 +102,6 @@ export default function Cardapio() {
                 fecharPromo={fecharPromo}
                 confirmaPROMO={confirmaPROMO}
                 className01={promo === false ? 'promoDesativada' : 'promoAtivada'}
-                className02={promo === false ? 'promoContainerOFF' : 'promoContainerON'}
             />
 
             <ShopCart countCartItems={cartItems.length} onADD={onADD} onREMOVE={onREMOVE} cartItems={cartItems}></ShopCart>

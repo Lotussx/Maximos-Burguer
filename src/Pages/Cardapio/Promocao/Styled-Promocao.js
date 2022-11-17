@@ -16,7 +16,7 @@ export const PromoContainer = styled.div`
    font-family: 'Oswald',sans-serif;
    
     &.promoDesativada{
-        display: block;
+        display: none;
     }
 
     &.promoAtivada{
@@ -38,29 +38,35 @@ export const PromoContainer = styled.div`
 
 
         .promoContainer{
-            width: 450px;
+            width: 400px;
             height: 500px;
             background-color: white;
             border-radius: 20px;
             box-shadow: 1px 1px 10px black;
+            margin: 0;
+            padding: 0;
     
             .produto{
                 width: 100%;
                 height: 100%;
                 flex-direction: column;
-                justify-content: flex-start;
-                padding: 4% 4%;
+                justify-content: space-between;
 
-                .title{
+                .imgProduto{
                     width: 100%;
+                    height: 70%;
+                    align-items: flex-start;
+                    background-size: cover !important;
+                    border-radius: 20px 20px 0 0;
                     justify-content: space-between;
+                    padding: 10px;
 
-                    .space{
-                        width: 60px;
-                        height: 60px;
-                        margin-top: -8px;
+                    .fecharPromo{
+                        width: 100%;
+                        justify-content: flex-end;
 
                         svg{
+                            color: white;
                             font-size: 2.8em;
                             cursor: pointer;
                         }
@@ -85,14 +91,14 @@ export const PromoContainer = styled.div`
                     width: 100%;
                     flex-direction: column;
                     justify-content: flex-start;
-                    margin-top: 15px;
+                    margin-bottom: 5px;
 
                     p{
                         margin: 0;
                         margin-top: 10px;
                         font-size: 1em;
                         text-align: center;
-                        padding: 0 5px;
+                        padding: 0 15px;
                     }
 
                     h3{
@@ -103,8 +109,8 @@ export const PromoContainer = styled.div`
                 }
                 
                 button{
-                    margin-top: 60px;
-                    width: 100%;
+                    margin-bottom: 15px;
+                    width: 90%;
                     border: none;
                     border-radius: 20px;
                     background-color: #198754;
@@ -123,9 +129,10 @@ export const PromoContainer = styled.div`
     .promoContainer{
         margin-top: -15%;
         width: 80% !important;
-        height: 400px !important;
+        height: 450px !important;
         
-        .title{
+        .imgProduto{
+            margin-bottom: 10px;
 
             .space{
                 width: 35px !important;

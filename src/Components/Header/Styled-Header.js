@@ -28,8 +28,8 @@ export const HeaderContainer = styled.header`
             z-index: 999 !important; 
 
             div{
-                height: 70px;
-                width: 70px;
+                height: 80px;
+                width: 80px;
                 background-image: url(${logomarca});
                 background-size: cover;
                 border-radius: 50%;

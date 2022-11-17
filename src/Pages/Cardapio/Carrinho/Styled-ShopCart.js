@@ -72,6 +72,62 @@ export const ContainerShopCart = styled.div`
     border-radius: 50%;
     font-family: 'Oswald',sans-serif;
     box-shadow: 1px 1px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cartContent{
+
+            .arrowContainer{
+                display: none;
+            }
+    
+            .barraDivisora1{
+                display: none;
+            }
+    
+            .carrinhoVazio{
+                display: none;
+            }
+    
+            .buttonExpandCart{
+                display: none;
+            }
+    
+            .containerItensCart{
+                display: none;
+            }
+    
+            .precoAdcionais{
+                display: none;
+            }
+
+            .precoTotalContainer{
+                display: none;
+            }
+    
+            .finalizarPedido{
+                display: none;
+            }
+
+
+            .iconCart{
+                font-size: 2.5em;
+                transition: .8s;
+            }
+
+            .contador{
+                position: absolute;
+                border-radius: 50%;
+                background-color: red;
+                width: 27px;
+                height: 27px;
+                border: none;
+                margin-bottom: 30px;
+                margin-left: 30px;
+                color: white;
+            }
+    }
 
     .iconCart{
         cursor: pointer;
@@ -164,6 +220,7 @@ export const ContainerShopCart = styled.div`
             flex-direction: column;
 
             .cartIcon{
+                transition: .8s;
                 width: 95%;
                 justify-content: space-between;
 
@@ -184,6 +241,7 @@ export const ContainerShopCart = styled.div`
                 }
 
                 .arrowContainer{
+                    display: block;
                     cursor: pointer;
                     width: 50px;
                     height: 40px;
@@ -202,6 +260,8 @@ export const ContainerShopCart = styled.div`
             }
 
             .containerItensCart{
+                overflow-x: hidden;
+                display: block;
                 width: 95%;
                 height: 60% !important;
                 overflow-y: scroll;
@@ -259,6 +319,7 @@ export const ContainerShopCart = styled.div`
             }
 
             .precoAdcionais{
+                display: flex;
                 width: 95%;
                 justify-content: space-between;
 
@@ -282,6 +343,7 @@ export const ContainerShopCart = styled.div`
             }
 
             .precoTotalContainer{
+                display: flex;
                 width: 95%;
                 margin-top: 10px;
                 justify-content: space-between;
@@ -308,6 +370,7 @@ export const ContainerShopCart = styled.div`
             }
 
             .finalizarPedido{
+                display: block !important;
                 width: 97%;
                 height: 30px;
                 margin: 10px 0 5px 0;
@@ -430,7 +493,7 @@ export const ContainerShopCart = styled.div`
     &.carrinhoFechado{
         animation: ${cartClosedMobile};
         animation-fill-mode: forwards;
-        animation-duration: .8s;
+        animation-duration: .6s;
         animation-timing-function: ease-in-out;
         transition: 0.6s;
 
@@ -448,7 +511,7 @@ export const ContainerShopCart = styled.div`
     &.carrinhoAberto{
         animation: ${cartOpenedMobile};
         animation-fill-mode: forwards;
-        animation-duration: .8s;
+        animation-duration: .6s;
         animation-timing-function: ease-in-out;
         transition: 0.6s;
 

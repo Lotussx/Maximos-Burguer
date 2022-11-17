@@ -18,9 +18,13 @@ export default function ShopCart(props) {
 
 
     //expandir o carrnho
-    const [openCart, setOpenCart] = useState(false);
+    const [openCart, setOpenCart] = useState(undefined);
     const expandCart = () => {
-        setOpenCart(!openCart)
+        if (openCart === undefined) {
+            setOpenCart(true)
+        } else if (openCart !== undefined) {
+            setOpenCart(!openCart)
+        }
     }
 
     //finalizar o pedido
@@ -53,7 +57,7 @@ export default function ShopCart(props) {
 
 
     return (
-        <ContainerShopCart className={openCart === true ? 'carrinhoAberto' : 'carrinhoFechado'}>
+        <ContainerShopCart className={openCart === undefined ? '' : openCart === true ? 'carrinhoAberto' : 'carrinhoFechado'}>
 
 
             <div className='cartContent flex-class'>
@@ -122,7 +126,7 @@ export default function ShopCart(props) {
                         <div className='precoTotalContainer flex-class'>
                             <h4>Preço Total:</h4>
                             <div className='preco flex-class'>
-                                <span>R$</span> 
+                                <span>R$</span>
                                 <p id='preco'>{itemsPrice.toFixed(2)}</p>
                             </div>
                         </div>

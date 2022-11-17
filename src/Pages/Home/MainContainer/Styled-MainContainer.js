@@ -44,6 +44,7 @@ export const StyledMainContainer = styled.div`
             background-size: cover;
             border-radius: 100%;
             margin-top: -100px;
+            box-shadow: 1px 1px 30px 1px white;
         }
 
         .legenda{
@@ -80,7 +81,7 @@ export const StyledMainContainer = styled.div`
     }
 
 @media screen and (max-width: 450px) {
-    margin-top: 10vh !important;
+    margin-top: 5vh !important;
     height: 80vh !important;
 
     background-position-x: -350px !important;

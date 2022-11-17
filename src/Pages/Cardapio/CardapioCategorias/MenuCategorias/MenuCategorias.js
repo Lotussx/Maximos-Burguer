@@ -1,14 +1,20 @@
 import React from 'react'
 import { MenuCategoriasConteiner } from './Styled-MenuCategorias'
 
-export default function MenuCategorias({ ChangeALL, allContainer, ChangeBATATA, batataContainer, ChangeBEBIDA, bebidaContainer, acaiContainer, ChangeACAI, ChangeBeirute, beiruteContainer, ChangeHAMBU, hambuContainer, ChangeHOTDOG, hotdogContainer, ChangeESPECIAL, especialContainer, ChangeMILKSHAKE, milkShakeContainer }) {
+export default function MenuCategorias({ promo, ChangePROMO, promoContainer, ChangeALL, allContainer, ChangeBATATA, batataContainer, ChangeBEBIDA, bebidaContainer, acaiContainer, ChangeACAI, ChangeBeirute, beiruteContainer, ChangeHAMBU, hambuContainer, ChangeHOTDOG, hotdogContainer, ChangeESPECIAL, especialContainer, ChangeMILKSHAKE, milkShakeContainer }) {
+
 
 
     return (
-        <MenuCategoriasConteiner className='flex-class'>
+        <MenuCategoriasConteiner className='flex-class' >
             <li onClick={ChangeALL} className={`categoria ${allContainer ? 'categoriaON' : ''}`}>
                 <h4>Todos</h4>
             </li>
+            {promo === true && (
+                <li onClick={ChangePROMO} className={`categoria ${promoContainer ? 'categoriaON' : ''}`}>
+                    <h4>Promoção de Inauguração</h4>
+                </li>
+            )}
             <li onClick={ChangeHAMBU} className={`categoria ${hambuContainer ? 'categoriaON' : ''}`}>
                 <h4>Hamburguer</h4>
             </li>
