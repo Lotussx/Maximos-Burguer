@@ -2,30 +2,101 @@ import Promo01 from './Images/Promo/Promo01.png'
 // import Promo02 from './Images/Promo/Promo02.png'
 // import Promo03 from './Images/Promo/Promo03.png'
 
+// SLIDE SEMANA - PROMOÇÕES
+
+import PROMO_2DUPLOCHEDDAR from './Images/Slide/Promos/PROMO-2DUPLOCHEDDAR.png'
+import PROMO_2XBACON from './Images/Slide/Promos/PROMO-2XBACON.png'
+import PROMO_2XEGG from './Images/Slide/Promos/PROMO-2XEGG.png'
+import PROMO_2XTUDO from './Images/Slide/Promos/PROMO-2XTUDO.png'
+import PROMO_3XBACON from './Images/Slide/Promos/PROMO-3XBACON.png'
+import PROMO_3XCALABRESA from './Images/Slide/Promos/PROMO-3XCALABRESA.png'
+import PROMO_3XEGG from './Images/Slide/Promos/PROMO-3XEGG.png'
+import PROMO_4XCHEDDAR from './Images/Slide/Promos/PROMO-4X-CHEDDAR.png'
+import PROMO_DUPLOBACON from './Images/Slide/Promos/PROMO-DUPLOBACON.png'
+import PROMO_HOTDOG from './Images/Slide/Promos/PROMO-HOTDOG.png'
+import PROMO_MINIBARCA from './Images/Slide/Promos/PROMO-MINIBARCA.png'
+
 
 const data = {
     slideSEMANA: [
         {
-            id: '999',
-            name: 'PROMO X-EGG 01',
-            price: 25.99,
-            image: Promo01,
-            description: '1 X-EGG + 1 Batata P + Antarctica'
+            id: '300',
+            name: 'PROMO 2 DUPLO CHEDDAR',
+            price: 30.00,
+            image: PROMO_2DUPLOCHEDDAR,
+            description: '02 Duplo Cheddar + 01 Refri 1L' 
         },
         {
-            id: '888',
-            name: 'PROMO X-EGG 02',
-            price: 25.99,
-            image: Promo01,
-            description: '1 X-EGG + 1 Batata P + Antarctica'
+            id: '301',
+            name: 'PROMO 2 X-BACON',
+            price: 29.99,
+            image: PROMO_2XBACON,
+            description: '02 X-Bacon + 01 Refri 1L + 01 Batata P' 
         },
         {
-            id: '777',
-            name: 'PROMO X-EGG 03',
-            price: 25.99,
-            image: Promo01,
-            description: '1 X-EGG + 1 Batata P + Antarctica'
+            id: '302',
+            name: 'PROMO 02 X-EGG',
+            price: 39.99,
+            image: PROMO_2XEGG,
+            description: '02 X-Egg + 01 Batata P + 02 Milkshake' 
         },
+        {
+            id: '303',
+            name: 'PROMO 02 X-TUDO',
+            price: 35.99,
+            image: PROMO_2XTUDO,
+            description: '02 X-Tudo + 01 Refri 1L' 
+        },
+        {
+            id: '304',
+            name: 'PROMO 03 X-BACON',
+            price: 39.99,
+            image: PROMO_3XBACON,
+            description: '03 X-Bacon + 01 Refri 1L + 01 Batata P' 
+        },
+        {
+            id: '305',
+            name: 'PROMO 03 X-CALABRESA',
+            price: 39.99,
+            image: PROMO_3XCALABRESA,
+            description: '03 X-Calabresa + 01 Refri 1L' 
+        },
+        {
+            id: '306',
+            name: 'PROMO 03 X-EGG',
+            price: 35.99,
+            image: PROMO_3XEGG,
+            description: '03 X-Egg + 01 Refri 1L' 
+        },
+        {
+            id: '307',
+            name: 'PROMO 04 X-CHEDDAR',
+            price: 43.99,
+            image: PROMO_4XCHEDDAR,
+            description: '04 X-Cheddar + 01 Refri 1L' 
+        },
+        {
+            id: '308',
+            name: 'PROMO 02 DUPLO BACON',
+            price: 35.00,
+            image: PROMO_DUPLOBACON,
+            description: '02 Duplo Bacon + 01 Refri 1L' 
+        },
+        {
+            id: '309',
+            name: 'PROMO 04 HOTDOG TRADICIONAL',
+            price: 25.00,
+            image: PROMO_HOTDOG,
+            description: '04 Hotdog Tradicional + 01 Refri 1L' 
+        },
+        {
+            id: '310',
+            name: '01 MINIBARCA',
+            price: 19.99,
+            image: PROMO_MINIBARCA,
+            description: '01 X-Burguer + Batata + Cheddar + Calabresa' 
+        },
+        
     ],
 
     slideFDS: [
