@@ -89,6 +89,12 @@ export default function FinalizarPedido() {
                                 arrMap={Global.milkSHAKEpronto}
                             />
                         }
+                        {Global.sucoPRONTO.length !== 0 &&
+                            <CardAdcionais
+                                adicionais='Sucos: '
+                                arrMap={Global.sucoPRONTO}
+                            />
+                        }
                     </div>
 
                     <form className='formContainer flex-class'>

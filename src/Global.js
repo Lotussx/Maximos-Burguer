@@ -51,6 +51,10 @@ export default class Globais {
     static milkSHAKEpronto = [];
     static descriMilkShake = '';
     
+    
+    static suco = '';
+    static sucoPRONTO = [];
+    
 
 
 }

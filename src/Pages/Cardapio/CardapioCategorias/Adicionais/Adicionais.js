@@ -34,6 +34,7 @@ export default function Adicionais({ className, fecharModalAdicionais, confirmaA
                     <Checkbox preco='3,00' nomeAdicional='Cream cheese' />
                     <Checkbox preco='3,00' nomeAdicional='Cream cheddar' />
                     <Checkbox preco='2,00' nomeAdicional='Ovo' />
+                    <Checkbox preco='3,00' nomeAdicional='Maionese da casa (100ml)' />
                 </div>
 
                 <div className='btnConfirma flex-class'>

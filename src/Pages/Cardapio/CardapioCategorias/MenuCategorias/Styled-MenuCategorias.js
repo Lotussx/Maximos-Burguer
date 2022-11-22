@@ -22,6 +22,7 @@ export const MenuCategoriasConteiner = styled.ul`
         height: 70%;
         border-right: 1px solid #1f1f1f;
         border-left: 1px solid #1f1f1f;
+        cursor: pointer;
 
         h4{
             margin: 0;

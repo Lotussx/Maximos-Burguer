@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const FinalizarPedidoContainer = styled.body`
     position: absolute;
     width: 100%;
-    height: 100%;
     flex-direction: column;
     overflow-x: hidden !important;
     transition: all .5s;

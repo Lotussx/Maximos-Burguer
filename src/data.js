@@ -24,79 +24,79 @@ const data = {
             name: 'PROMO 2 DUPLO CHEDDAR',
             price: 30.00,
             image: PROMO_2DUPLOCHEDDAR,
-            description: '02 Duplo Cheddar + 01 Refri 1L' 
+            description: '02 Duplo Cheddar + 01 Refri 1L'
         },
         {
             id: '301',
             name: 'PROMO 2 X-BACON',
             price: 29.99,
             image: PROMO_2XBACON,
-            description: '02 X-Bacon + 01 Refri 1L + 01 Batata P' 
+            description: '02 X-Bacon + 01 Refri 1L + 01 Batata P'
         },
         {
             id: '302',
             name: 'PROMO 02 X-EGG',
             price: 39.99,
             image: PROMO_2XEGG,
-            description: '02 X-Egg + 01 Batata P + 02 Milkshake' 
+            description: '02 X-Egg + 01 Batata P + 02 Milkshake'
         },
         {
             id: '303',
             name: 'PROMO 02 X-TUDO',
             price: 35.99,
             image: PROMO_2XTUDO,
-            description: '02 X-Tudo + 01 Refri 1L' 
+            description: '02 X-Tudo + 01 Refri 1L'
         },
         {
             id: '304',
             name: 'PROMO 03 X-BACON',
             price: 39.99,
             image: PROMO_3XBACON,
-            description: '03 X-Bacon + 01 Refri 1L + 01 Batata P' 
+            description: '03 X-Bacon + 01 Refri 1L + 01 Batata P'
         },
         {
             id: '305',
             name: 'PROMO 03 X-CALABRESA',
             price: 39.99,
             image: PROMO_3XCALABRESA,
-            description: '03 X-Calabresa + 01 Refri 1L' 
+            description: '03 X-Calabresa + 01 Refri 1L'
         },
         {
             id: '306',
             name: 'PROMO 03 X-EGG',
             price: 35.99,
             image: PROMO_3XEGG,
-            description: '03 X-Egg + 01 Refri 1L' 
+            description: '03 X-Egg + 01 Refri 1L'
         },
         {
             id: '307',
             name: 'PROMO 04 X-CHEDDAR',
             price: 43.99,
             image: PROMO_4XCHEDDAR,
-            description: '04 X-Cheddar + 01 Refri 1L' 
+            description: '04 X-Cheddar + 01 Refri 1L'
         },
         {
             id: '308',
             name: 'PROMO 02 DUPLO BACON',
             price: 35.00,
             image: PROMO_DUPLOBACON,
-            description: '02 Duplo Bacon + 01 Refri 1L' 
+            description: '02 Duplo Bacon + 01 Refri 1L'
         },
         {
             id: '309',
             name: 'PROMO 04 HOTDOG TRADICIONAL',
             price: 25.00,
             image: PROMO_HOTDOG,
-            description: '04 Hotdog Tradicional + 01 Refri 1L' 
+            description: '04 Hotdog Tradicional + 01 Refri 1L'
         },
         {
             id: '310',
             name: '01 MINIBARCA',
             price: 19.99,
             image: PROMO_MINIBARCA,
-            description: '01 X-Burguer + Batata + Cheddar + Calabresa' 
+            description: '01 X-Burguer + Batata + Cheddar + Calabresa'
         },
-        
+
     ],
 
     slideFDS: [
@@ -466,25 +466,78 @@ const data = {
 
     productsBEBIDA: [
         {
-            id: '22',
-            name: 'BEBIDA 01',
-            price: 25.99,
+            id: '45',
+            name: 'COCA-COLA LATA',
+            price: 5.00,
             image: Promo01,
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, perspiciatis.'
+            description: 'Coca-cola em lata (350ml)'
         },
         {
-            id: '23',
-            name: 'BEBIDA 02',
-            price: 27.99,
+            id: '46',
+            name: 'GUARANÁ ANTARCTICA LATA',
+            price: 5.00,
             image: Promo01,
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, perspiciatis.'
+            description: 'Guaraná Antarctica em lata (350ml)'
         },
         {
-            id: '24',
-            name: 'BEBIDA 03',
-            price: 21.99,
+            id: '47',
+            name: 'COCA-COLA 1L',
+            price: 7.00,
             image: Promo01,
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, perspiciatis.'
+            description: ''
+        },
+        {
+            id: '48',
+            name: 'GUARANÁ ANTARCTICA 1L',
+            price: 6.00,
+            image: Promo01,
+            description: ''
+        },
+        {
+            id: '49',
+            name: 'PEPSI 1L',
+            price: 6.00,
+            image: Promo01,
+            description: ''
+        },
+        {
+            id: '50',
+            name: 'COCA-COLA 1.5L',
+            price: 9.00,
+            image: Promo01,
+            description: ''
+        },
+        {
+            id: '51',
+            name: 'COCA-COLA 2L',
+            price: 12.00,
+            image: Promo01,
+            description: ''
+        },
+        {
+            id: '52',
+            name: 'GUARANÁ ANTARCTICA 2L',
+            price: 12.00,
+            image: Promo01,
+            description: ''
+        },
+
+    ],
+
+    productsSUCOS: [
+        {
+            id: '46',
+            name: 'SUCO (400ml)',
+            price: 6.00,
+            image: Promo01,
+            description: 'Clique para escolher eu sabor...'
+        },
+        {
+            id: '47',
+            name: 'SUCO C/LEITE (400ml)',
+            price: 7.00,
+            image: Promo01,
+            description: 'Clique para escolher eu sabor...'
         },
     ]
 

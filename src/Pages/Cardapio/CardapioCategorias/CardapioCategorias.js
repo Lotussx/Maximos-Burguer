@@ -7,14 +7,16 @@ import Adicionais from './Adicionais/Adicionais';
 import MenuCategorias from './MenuCategorias/MenuCategorias';
 import BoxAcai from './BoxAcai/BoxAcai';
 import BoxMilkShake from './BoxMilkShake/BoxMilkShake';
+import BoxSucos from './BoxSucos/BoxSucos';
 
 
-export default function CardapioCategorias({ promo, promoINAU, onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI, productsMILKSHAKE }) {
+export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI, productsMILKSHAKE, productsBEBIDA }) {
 
 
     const [abrirModalAcai, setAbrirModalAcai] = useState(false)
     const [abrirModalAdicionais, setabrirModalAdicionais] = useState(false)
     const [abrirModalMilkShake, setAbrirModalMilkShake] = useState(false)
+    const [abrirModalSucos, setAbrirModalSucos] = useState(false)
     const [modalAdicionaisAcai, setmodalAdicionaisAcai] = useState(false)
 
     const [allContainer, setAllContainer] = useState(undefined);
@@ -117,6 +119,7 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
             Global.precoAdcionais = 0;
             Global.milkSHAKEpronto = []
             Global.acaiPRONTO = []
+            Global.sucoPRONTO = []
         }
 
         setabrirModalAdicionais(!abrirModalAdicionais)
@@ -164,6 +167,10 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
         fecharModalAdicionais()
     }
 
+
+
+
+
     const modalAcai = (product) => {
         Global.descriAcai = product.description
         Global.acai = product.name
@@ -173,6 +180,7 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
             Global.precoAdcionais = 0;
             Global.milkSHAKEpronto = []
             Global.acaiPRONTO = []
+            Global.sucoPRONTO = []
         }
 
         // Desmarcar todos os inputs ao abrir
@@ -214,6 +222,7 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
             Global.precoAdcionais = 0;
             Global.milkSHAKEpronto = []
             Global.acaiPRONTO = []
+            Global.sucoPRONTO = []
         }
 
 
@@ -458,6 +467,10 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
         setmodalAdicionaisAcai(false)
     }
 
+
+
+
+
     const modalMilkSHAKE = (product) => {
         Global.descriMilkShake = product.description
         Global.milkShake = product.name
@@ -467,6 +480,7 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
             Global.precoAdcionais = 0;
             Global.milkSHAKEpronto = []
             Global.acaiPRONTO = []
+            Global.sucoPRONTO = []
         }
 
         // Desmarcar todos os inputs ao abrir
@@ -579,6 +593,82 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
         onADD(Global.produto)
     }
 
+
+
+
+
+
+    const modalSUCOS = (product) => {
+        Global.suco = product.name
+
+        if (countCartItems === 0) {
+            Global.infoAdcionais = [];
+            Global.precoAdcionais = 0;
+            Global.milkSHAKEpronto = []
+            Global.acaiPRONTO = []
+            Global.sucoPRONTO = []
+        }
+
+        // Desmarcar todos os inputs ao abrir
+        let inputs = document.querySelectorAll('.selectSabor input');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+
+        // Habilitar todos os inputs
+        let inputsCheck = document.querySelectorAll('.selectSabor input')
+        for (let i = 0; i < inputsCheck.length; i++) {
+            inputsCheck[i].disabled = false
+        }
+
+        Global.produto = product
+        setAbrirModalSucos(!abrirModalSucos)
+    }
+
+    const verificaSUCO = () => {
+        let inputsDISABLED = document.querySelectorAll('.selectSabor .sabor input:disabled')
+        let checkbox = document.querySelectorAll('.selectSabor .sabor input')
+        let sucoCHECKED = document.querySelectorAll('.selectSabor .sabor input:checked')
+
+
+
+        if (sucoCHECKED.length === 1) {
+            for (let i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked !== true) {
+                    checkbox[i].disabled = true
+                }
+            }
+        } else if (sucoCHECKED.length === 0) {
+            for (let i = 0; i < inputsDISABLED.length; i++) {
+                inputsDISABLED[i].disabled = false
+            }
+        }
+    }
+
+    const confirmaSUCO = () => {
+
+        let name = Global.produto.name
+        let saborCHECKED = document.querySelectorAll('.escolhaSabor .sabor input:checked')
+
+        if (saborCHECKED.length !== 1) {
+            alert('Escolha um sabor')
+        } else {
+
+            let sucoPronto = name + ' - SABOR: ' + saborCHECKED[0].value
+            Global.sucoPRONTO.push(sucoPronto)
+
+            onADD(Global.produto)
+            setAbrirModalSucos(false)
+
+        }
+
+    }
+
+    const fecharModalSucos = () => {
+        setAbrirModalSucos(false)
+    }
+
+
     return (
         <CardapioCategoriasContainer className='flex-class'>
 
@@ -661,6 +751,20 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
                     btnText='Monte seu MilkShake'
                 />
 
+                <Categoria className={bebidaContainer === undefined || bebidaContainer === true ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Sucos'
+                    modalAdicionais={modalSUCOS}
+                    products={productsSUCOS}
+                    btnText='Escolha o sabor'
+                />
+
+                <Categoria className={bebidaContainer === undefined || bebidaContainer === true ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Refrigerantes'
+                    modalAdicionais={onADD}
+                    products={productsBEBIDA}
+                    btnText='Adicionar ao carrinho'
+                />
+
             </>
 
             {/* Box Adicionais */}
@@ -688,12 +792,22 @@ export default function CardapioCategorias({ promo, promoINAU, onADD, countCartI
                 />
             </>
 
+            {/* Box MilkShake */}
             <>
                 <BoxMilkShake
                     className={abrirModalMilkShake === false ? 'modalAdicionaisOFF' : 'modalAdicionaisON'}
                     fecharModalMilkShake={fecharModalMilkShake}
                     verificaMILKSHAKE={verificaMILKSHAKE}
                     confirmaMILKSHAKE={confirmaMILKSHAKE}
+                />
+            </>
+
+            {/* Box Sucos */}
+            <>
+                <BoxSucos className={abrirModalSucos === false ? 'modalAdicionaisOFF' : 'modalAdicionaisON'}
+                    fecharModalSucos={fecharModalSucos}
+                    verificaSUCO={verificaSUCO}
+                    confirmaSUCO={confirmaSUCO}
 
 
                 />

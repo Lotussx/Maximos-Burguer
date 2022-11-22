@@ -18,8 +18,9 @@ const AnimaBox = keyframes`
 
         }
         100%{
-                margin-left: 0;
-                opacity: 1;
+            margin-top: -30%;
+            margin-left: 0;
+            opacity: 1;
         }
 `;
 
@@ -40,10 +41,10 @@ export const AvisoModalContainer = styled.div`
                 justify-content: center;
                 align-items: center;
                 width: 100vw;
-                height: 100%;
+                height: 100vh;
                 padding: 0;
                 background-image: linear-gradient(rgba(0, 0, 0, .8) 100%, black 0%);
-                z-index: 3;
+                z-index: 999;
 
                 display: flex;
                 justify-content: center;

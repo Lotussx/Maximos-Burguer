@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 export default function AvisoModal(props) {
 
+    console.log(Global.infoAdcionais)
+
     const abrirZAP = () => {
         Global.trocoPAGAMENTO = parseFloat(Global.trocoPAGAMENTO).toFixed(2);
 
@@ -20,16 +22,23 @@ export default function AvisoModal(props) {
 
             } else {
 
-                return ("%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO)
+                return ("%0A*FORMA DE PAGAMENTO:* " + Global.opcPAGAMENTO + "%0A%0A=================================")
 
             }
         }
 
         function adicionais() {
-            if (Global.infoAdcionais === []) {
+            if (Global.infoAdcionais === [] || Global.infoAdcionais === '' || Global.infoAdcionais.length === 0) {
                 return ''
             } else {
-                return ("%0A%0A=================================%0A%0A*ADCIONAIS:* " + Global.infoAdcionais + "%0A%0A=================================")
+                return ("%0A%0A*ADCIONAIS:* " + Global.infoAdcionais + "%0A%0A=================================")
+            }
+        }
+        function sucos() {
+            if (Global.sucoPRONTO === []) {
+                return ''
+            } else {
+                return ("%0A%0A*SUCOS:* " + Global.sucoPRONTO + "%0A%0A=================================")
             }
         }
 
@@ -73,6 +82,7 @@ export default function AvisoModal(props) {
             + Global.obsPEDIDO
             + opcPagamento()
             + adicionais()
+            + sucos()
             + adicionaisACAI()
             + adicionaisMILKSHAKE()
             + opcEntrega()

@@ -14,7 +14,7 @@ import Global from '../../Global';
 
 export default function Cardapio() {
 
-    const { promoINAU, slideSEMANA, slideFDS, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
+    const { promoINAU, productsSUCOS, slideSEMANA, slideFDS, productsHAMBU, productsESPECIAL, productsHOTDOG, productsBEIRUTES, productsBEBIDA, productsBATATA, productsACAI, productsMILKSHAKE } = data;
 
 
     const [cartItems, setCartItems] = useState([]);
@@ -79,7 +79,7 @@ export default function Cardapio() {
         <CardapioStyle onLoad={promoFunc}>
             <Header />
             <SlidePromo slideSEMANA={slideSEMANA} slideFDS={slideFDS} onADD={onADD}></SlidePromo>
-            
+
             <CardapioCategorias
                 promo={promo2}
                 promoINAU={promoINAU}
@@ -90,6 +90,7 @@ export default function Cardapio() {
                 productsBEBIDA={productsBEBIDA}
                 productsBATATA={productsBATATA}
                 productsACAI={productsACAI}
+                productsSUCOS={productsSUCOS}
                 productsMILKSHAKE={productsMILKSHAKE}
                 countCartItems={cartItems.length}
                 onADD={onADD}
