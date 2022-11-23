@@ -4,20 +4,33 @@ import Promo01 from './Images/Promo/Promo01.png'
 
 // SLIDE SEMANA - PROMOÇÕES
 
-import PROMO_2DUPLOCHEDDAR from './Images/Slide/Promos/PROMO-2DUPLOCHEDDAR.png'
-import PROMO_2XBACON from './Images/Slide/Promos/PROMO-2XBACON.png'
-import PROMO_2XEGG from './Images/Slide/Promos/PROMO-2XEGG.png'
-import PROMO_2XTUDO from './Images/Slide/Promos/PROMO-2XTUDO.png'
-import PROMO_3XBACON from './Images/Slide/Promos/PROMO-3XBACON.png'
-import PROMO_3XCALABRESA from './Images/Slide/Promos/PROMO-3XCALABRESA.png'
-import PROMO_3XEGG from './Images/Slide/Promos/PROMO-3XEGG.png'
-import PROMO_4XCHEDDAR from './Images/Slide/Promos/PROMO-4X-CHEDDAR.png'
-import PROMO_DUPLOBACON from './Images/Slide/Promos/PROMO-DUPLOBACON.png'
-import PROMO_HOTDOG from './Images/Slide/Promos/PROMO-HOTDOG.png'
-import PROMO_MINIBARCA from './Images/Slide/Promos/PROMO-MINIBARCA.png'
+import PROMO_2DUPLOCHEDDAR from './Images/Slide/Promos/PROMO-2DUPLOCHEDDAR.webp'
+import PROMO_2XBACON from './Images/Slide/Promos/PROMO-2XBACON.webp'
+import PROMO_2XEGG from './Images/Slide/Promos/PROMO-2XEGG.webp'
+import PROMO_2XTUDO from './Images/Slide/Promos/PROMO-2XTUDO.webp'
+import PROMO_3XBACON from './Images/Slide/Promos/PROMO-3XBACON.webp'
+import PROMO_3XCALABRESA from './Images/Slide/Promos/PROMO-3XCALABRESA.webp'
+import PROMO_3XEGG from './Images/Slide/Promos/PROMO-3XEGG.webp'
+import PROMO_4XCHEDDAR from './Images/Slide/Promos/PROMO-4X-CHEDDAR.webp'
+import PROMO_DUPLOBACON from './Images/Slide/Promos/PROMO-DUPLOBACON.webp'
+import PROMO_HOTDOG from './Images/Slide/Promos/PROMO-HOTDOG.webp'
+import PROMO_MINIBARCA from './Images/Slide/Promos/PROMO-MINIBARCA.webp'
+
+// SLIDE SEMANA - PROMOÇÕES
+
+import CLONE_CHEDDAR from './Images/Slide/Clones/CLONE-CHEDDAR.webp'
+import CLONE_MINIBARCA from './Images/Slide/Clones/CLONE-MINIBARCA.webp'
+import CLONE_XBACON from './Images/Slide/Clones/CLONE-XBACON.webp'
+import CLONE_XBURGUER from './Images/Slide/Clones/CLONE-XBURGUER.webp'
+import CLONE_XEGG from './Images/Slide/Clones/CLONE-XEGG.webp'
+import CLONE_XTUDO from './Images/Slide/Clones/CLONE-XTUDO.webp'
+import COMBO_HOTDOG from './Images/Slide/Clones/COMBO-HOTDOG.webp'
+import COMBO_XEGGBACON from './Images/Slide/Clones/COMBO-XEGGBACON.webp'
+
 
 
 const data = {
+
     slideSEMANA: [
         {
             id: '300',
@@ -101,26 +114,62 @@ const data = {
 
     slideFDS: [
         {
-            id: '111',
-            name: 'FIM DE SEMANA 01',
-            price: 25.99,
-            image: Promo01,
-            description: '1 X-EGG + 1 Batata P + Antarctica'
+            id: '311',
+            name: 'CLONE CHEDDAR',
+            price: 19.00,
+            image: CLONE_CHEDDAR,
+            description: '02 Cheddar'
         },
         {
-            id: '222',
-            name: 'FIM DE SEMANA 02',
-            price: 25.99,
-            image: Promo01,
-            description: '1 X-EGG + 1 Batata P + Antarctica'
+            id: '312',
+            name: 'CLONE MINIBARCA',
+            price: 35.00,
+            image: CLONE_MINIBARCA,
+            description: '02 Minibarcas'
         },
         {
-            id: '333',
-            name: 'FIM DE SEMANA 03',
-            price: 25.99,
-            image: Promo01,
-            description: '1 X-EGG + 1 Batata P + Antarctica'
+            id: '313',
+            name: 'CLONE X-BACON',
+            price: 22.00,
+            image: CLONE_XBACON,
+            description: '02 X-Bacon'
         },
+        {
+            id: '314',
+            name: 'CLONE X-BURGUER',
+            price: 18.00,
+            image: CLONE_XBURGUER,
+            description: '02 X-Burguer'
+        },
+        {
+            id: '315',
+            name: 'CLONE X-EGG',
+            price: 19.00,
+            image: CLONE_XEGG,
+            description: '02 X-Egg'
+        },
+        {
+            id: '316',
+            name: 'CLONE X-TUDO',
+            price: 32.00,
+            image: CLONE_XTUDO,
+            description: '02 X-Tudo'
+        },
+        {
+            id: '317',
+            name: 'COMBO HOTDOG',
+            price: 17.99,
+            image: COMBO_HOTDOG,
+            description: '02 Hotdog tradicional + 01 Refri 1L'
+        },
+        {
+            id: '318',
+            name: 'COMBO X-EGGBACON',
+            price: 25.99,
+            image: COMBO_XEGGBACON,
+            description: '01 X-Eggbacon + 01 Batata P + 01 Antarctica (350ml)'
+        },
+
     ],
 
     promoINAU: [

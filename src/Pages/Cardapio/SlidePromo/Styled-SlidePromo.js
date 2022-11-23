@@ -7,6 +7,12 @@ export const SlideContainer = styled.div`
         font-family: 'Oswald', sans-serif;
         text-shadow: 3px 3px 2px black;
 
+        .carousel{
+
+            .carousel-indicators{
+                margin: 3px !important;
+            }
+        }
 
         .itemCarousel{
             height: 400px;
@@ -48,7 +54,7 @@ export const SlideContainer = styled.div`
                         width: 30%;
                         border-radius: 20px;
                         box-shadow: 1px 1px 10px;
-                        margin-top: 20.5%;
+                        margin-top: 22%;
                     }
                 }
             }
@@ -79,7 +85,7 @@ export const SlideContainer = styled.div`
             button{ 
                 font-size: 1em;
                 width: 30%;
-                margin-top: 24% !important;
+                margin-top: 26% !important;
             }
         }
     }
@@ -105,7 +111,7 @@ export const SlideContainer = styled.div`
             button{ 
                 font-size: 0.9em !important;
                 width: 45% !important;
-                margin-top: 33% !important;
+                margin-top: 36% !important;
             }
         }
     }
@@ -122,6 +128,8 @@ export const SlideContainer = styled.div`
             
             button{
                 width: 8px !important;
+                margin-top: 32% !important;
+
             }
         }
     }
@@ -156,38 +164,26 @@ export const SlideContainer = styled.div`
     margin-top: 10vh;
     height: 220px !important;
     
-    .carousel{
-
-        .carousel-indicators{
-            margin: 0 !important;
-        }
-    }
 
     .itemCarousel{
         height: 220px;
 
         .carousel-caption{
-            margin: 0 !important;
-            margin-bottom: 5px !important;
-            padding: 0 !important;
-            height: 95px !important;
-            justify-content: space-between !important;
-        }
 
-        h3{
-            font-size: 1.2em !important;
+            h3{
+                font-size: 1.2em !important;
+            }
+    
+            p{
+                font-size: 0.9em !important;
+            }
+    
+            button{
+                width: 180px !important;
+                font-size: 0.8em !important;
+                margin-top: 21% !important;
+            }
         }
-
-        p{
-            font-size: 0.9em !important;
-        }
-
-        button{
-            width: 180px !important;
-            height: 20px !important;
-            font-size: 0.8em !important;
-            margin: 0 !important;
-        }   
     }
 }
 
