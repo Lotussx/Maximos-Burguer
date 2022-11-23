@@ -10,7 +10,7 @@ import BoxMilkShake from './BoxMilkShake/BoxMilkShake';
 import BoxSucos from './BoxSucos/BoxSucos';
 
 
-export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI, productsMILKSHAKE, productsBEBIDA }) {
+export default function CardapioCategorias({ promoCOMBO, promo, productsSUCOS, promoINAU, onADD, countCartItems, productsESPECIAL, productsHOTDOG, productsBATATA, productsHAMBU, productsBEIRUTE, productsACAI, productsMILKSHAKE, productsBEBIDA }) {
 
 
     const [abrirModalAcai, setAbrirModalAcai] = useState(false)
@@ -20,6 +20,7 @@ export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, on
     const [modalAdicionaisAcai, setmodalAdicionaisAcai] = useState(false)
 
     const [allContainer, setAllContainer] = useState(undefined);
+    const [promoComboContainer, setpromoComboContainer] = useState(undefined);
     const [promoContainer, setPromoContainer] = useState(undefined);
     const [hambuContainer, setHambuContainer] = useState(undefined);
     const [especialContainer, setEspecialContainer] = useState(undefined);
@@ -42,6 +43,7 @@ export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, on
         setBeiruteContainer(undefined);
         setAcaiContainer(undefined);
         setMilkShakeContainer(undefined);
+        setpromoComboContainer(undefined)
     }
     const desativa = () => {
         setPromoContainer(!true);
@@ -54,6 +56,7 @@ export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, on
         setBeiruteContainer(!true);
         setAcaiContainer(!true)
         setMilkShakeContainer(!true);
+        setpromoComboContainer(!true)
     }
     const ChangePROMO = () => {
         desativa()
@@ -107,6 +110,12 @@ export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, on
         desativa()
         setTimeout(function () {
             setBebidaContainer(true)
+        }, 200)
+    }
+    const ChangeCOMBOS_PROMO = () => {
+        desativa()
+        setTimeout(function () {
+            setpromoComboContainer(true)
         }, 200)
     }
 
@@ -685,7 +694,7 @@ export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, on
                     ChangeBATATA={ChangeBATATA} batataContainer={batataContainer}
                     ChangeACAI={ChangeACAI} acaiContainer={acaiContainer}
                     ChangeMILKSHAKE={ChangeMILKSHAKE} milkShakeContainer={milkShakeContainer}
-
+                    ChangeCOMBOS_PROMO={ChangeCOMBOS_PROMO} combo_promoContainer={promoComboContainer}
                     ChangeBEBIDA={ChangeBEBIDA} bebidaContainer={bebidaContainer}
                 />
             </>
@@ -701,6 +710,13 @@ export default function CardapioCategorias({ promo, productsSUCOS, promoINAU, on
                         btnText='Adicionar ao carrinho'
                     />
                 )}
+
+                <Categoria className={promoComboContainer === undefined || promoComboContainer === true ? 'categoryON' : 'categoryOFF'}
+                    nomeCategoria='Combos & Promoções'
+                    modalAdicionais={onADD}
+                    products={promoCOMBO}
+                    btnText='Adicionar ao carrinho'
+                />
 
                 <Categoria className={hambuContainer === undefined || hambuContainer === true ? 'categoryON' : 'categoryOFF'}
                     nomeCategoria='Hamburguer'
