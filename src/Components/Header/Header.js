@@ -11,7 +11,7 @@ export default function Header() {
             <div className='logo-title'>
                 <Link to='/' className='flex-class'>
                     <div></div>
-                    <h3 className='flex-class' >Maximos Burguer</h3>
+                    <h3 className='flex-class' >Máximos Burguer</h3>
                 </Link>
             </div>
             <div className='menuLateral'>

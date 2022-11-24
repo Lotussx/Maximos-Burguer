@@ -27,6 +27,27 @@ import CLONE_XTUDO from './Images/Slide/Clones/CLONE-XTUDO.webp'
 import COMBO_HOTDOG from './Images/Slide/Clones/COMBO-HOTDOG.webp'
 import COMBO_XEGGBACON from './Images/Slide/Clones/COMBO-XEGGBACON.webp'
 
+// CATEGORIA PROMO & COMBO
+
+import PROD_CLONE_CHEDDAR from './Images/Combos&Promos/PROD.CLONE-CHEDDAR.webp'
+import PROD_CLONE_MINIBARCA from './Images/Combos&Promos/PROD.CLONE-MINIBARCA.webp'
+import PROD_CLONE_XBACON from './Images/Combos&Promos/PROD.CLONE-XBACON.webp'
+import PROD_CLONE_XBURGUER from './Images/Combos&Promos/PROD.CLONE-XBURGUER.webp'
+import PROD_CLONE_XEGG from './Images/Combos&Promos/PROD.CLONE-XEGG.webp'
+import PROD_CLONE_XTUDO from './Images/Combos&Promos/PROD.CLONE-XTUDO.webp'
+import PROD_COMBO_HOTDOG from './Images/Combos&Promos/PROD.COMBO-HOTDOG.webp'
+import PROD_COMBO_XEGGBACON from './Images/Combos&Promos/PROD.COMBO-XEGGBACON.webp'
+import PROD_PROMO_2DUPLOCHEDDAR from './Images/Combos&Promos/PROD.PROMO-2DUPLOCHEDDAR.webp'
+import PROD_PROMO_2XBACON from './Images/Combos&Promos/PROD.PROMO-2XBACON.webp'
+import PROD_PROMO_2XEGG from './Images/Combos&Promos/PROD.PROMO-2XEGG.webp'
+import PROD_PROMO_2XTUDO from './Images/Combos&Promos/PROD.PROMO-2XTUDO.webp'
+import PROD_PROMO_3XBACON from './Images/Combos&Promos/PROD.PROMO-3XBACON.webp'
+import PROD_PROMO_3XCALABRESA from './Images/Combos&Promos/PROD.PROMO-3XCALABRESA.webp'
+import PROD_PROMO_3XEGG from './Images/Combos&Promos/PROD.PROMO-3XEGG.webp'
+import PROD_PROMO_4XCHEDDAR from './Images/Combos&Promos/PROD.PROMO-4XCHEDDAR.webp'
+import PROD_PROMO_DUPLOBACON from './Images/Combos&Promos/PROD.PROMO-DUPLOBACON.webp'
+import PROD_PROMO_HOTDOG from './Images/Combos&Promos/PROD.PROMO-HOTDOG.webp'
+import PROD_PROMO_MINIBARCA from './Images/Combos&Promos/PROD.PROMO-MINIBARCA.webp'
 
 
 const data = {
@@ -177,133 +198,133 @@ const data = {
             id: '500',
             name: 'PROMO 2 DUPLO CHEDDAR',
             price: 30.00,
-            image: PROMO_2DUPLOCHEDDAR,
+            image: PROD_PROMO_2DUPLOCHEDDAR,
             description: '02 Duplo Cheddar + 01 Refri 1L'
         },
         {
             id: '501',
             name: 'PROMO 2 X-BACON',
             price: 29.99,
-            image: PROMO_2XBACON,
+            image: PROD_PROMO_2XBACON,
             description: '02 X-Bacon + 01 Refri 1L + 01 Batata P'
         },
         {
             id: '502',
             name: 'PROMO 02 X-EGG',
             price: 39.99,
-            image: PROMO_2XEGG,
+            image: PROD_PROMO_2XEGG,
             description: '02 X-Egg + 01 Batata P + 02 Milkshake'
         },
         {
             id: '503',
             name: 'PROMO 02 X-TUDO',
             price: 35.99,
-            image: PROMO_2XTUDO,
+            image: PROD_PROMO_2XTUDO,
             description: '02 X-Tudo + 01 Refri 1L'
         },
         {
             id: '504',
             name: 'PROMO 03 X-BACON',
             price: 39.99,
-            image: PROMO_3XBACON,
+            image: PROD_PROMO_3XBACON,
             description: '03 X-Bacon + 01 Refri 1L + 01 Batata P'
         },
         {
             id: '505',
             name: 'PROMO 03 X-CALABRESA',
             price: 39.99,
-            image: PROMO_3XCALABRESA,
+            image: PROD_PROMO_3XCALABRESA,
             description: '03 X-Calabresa + 01 Refri 1L'
         },
         {
             id: '506',
             name: 'PROMO 03 X-EGG',
             price: 35.99,
-            image: PROMO_3XEGG,
+            image: PROD_PROMO_3XEGG,
             description: '03 X-Egg + 01 Refri 1L'
         },
         {
             id: '507',
             name: 'PROMO 04 X-CHEDDAR',
             price: 43.99,
-            image: PROMO_4XCHEDDAR,
+            image: PROD_PROMO_4XCHEDDAR,
             description: '04 X-Cheddar + 01 Refri 1L'
         },
         {
             id: '508',
             name: 'PROMO 02 DUPLO BACON',
             price: 35.00,
-            image: PROMO_DUPLOBACON,
+            image: PROD_PROMO_DUPLOBACON,
             description: '02 Duplo Bacon + 01 Refri 1L'
         },
         {
             id: '509',
             name: 'PROMO 04 HOTDOG TRADICIONAL',
             price: 25.00,
-            image: PROMO_HOTDOG,
+            image: PROD_PROMO_HOTDOG,
             description: '04 Hotdog Tradicional + 01 Refri 1L'
         },
         {
             id: '510',
             name: '01 MINIBARCA',
             price: 19.99,
-            image: PROMO_MINIBARCA,
+            image: PROD_PROMO_MINIBARCA,
             description: '01 X-Burguer + Batata + Cheddar + Calabresa'
         },
         {
             id: '511',
             name: 'CLONE CHEDDAR',
             price: 19.00,
-            image: CLONE_CHEDDAR,
+            image: PROD_CLONE_CHEDDAR,
             description: '02 Cheddar'
         },
         {
             id: '512',
             name: 'CLONE MINIBARCA',
             price: 35.00,
-            image: CLONE_MINIBARCA,
+            image: PROD_CLONE_MINIBARCA,
             description: '02 Minibarcas'
         },
         {
             id: '513',
             name: 'CLONE X-BACON',
             price: 22.00,
-            image: CLONE_XBACON,
+            image: PROD_CLONE_XBACON,
             description: '02 X-Bacon'
         },
         {
             id: '514',
             name: 'CLONE X-BURGUER',
             price: 18.00,
-            image: CLONE_XBURGUER,
+            image: PROD_CLONE_XBURGUER,
             description: '02 X-Burguer'
         },
         {
             id: '515',
             name: 'CLONE X-EGG',
             price: 19.00,
-            image: CLONE_XEGG,
+            image: PROD_CLONE_XEGG,
             description: '02 X-Egg'
         },
         {
             id: '516',
             name: 'CLONE X-TUDO',
             price: 32.00,
-            image: CLONE_XTUDO,
+            image: PROD_CLONE_XTUDO,
             description: '02 X-Tudo'
         },
         {
             id: '517',
             name: 'COMBO HOTDOG',
             price: 17.99,
-            image: COMBO_HOTDOG,
+            image: PROD_COMBO_HOTDOG,
             description: '02 Hotdog tradicional + 01 Refri 1L'
         },
         {
             id: '518',
             name: 'COMBO X-EGGBACON',
             price: 25.99,
-            image: COMBO_XEGGBACON,
+            image: PROD_COMBO_XEGGBACON,
             description: '01 X-Eggbacon + 01 Batata P + 01 Antarctica (350ml)'
         },
     ],

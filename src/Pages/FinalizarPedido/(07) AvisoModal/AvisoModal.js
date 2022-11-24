@@ -35,7 +35,7 @@ export default function AvisoModal(props) {
             }
         }
         function sucos() {
-            if (Global.sucoPRONTO === []) {
+            if (Global.sucoPRONTO === [] || Global.sucoPRONTO === '' || Global.sucoPRONTO.length === 0) {
                 return ''
             } else {
                 return ("%0A%0A*SUCOS:* " + Global.sucoPRONTO + "%0A%0A=================================")
