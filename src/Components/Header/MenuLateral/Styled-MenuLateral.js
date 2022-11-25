@@ -219,7 +219,7 @@ export const MenuLateralContainer = styled.div`
     margin-top: 55px;
     
     &.menuLateral-off{
-        margin-right: -170px;
+        margin-right: -160px;
     }
 }
 

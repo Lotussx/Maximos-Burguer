@@ -272,12 +272,13 @@ export const ContainerShopCart = styled.div`
                     margin: 3px 0;
 
                     h4{
+                        width: 50%;
                         margin: 0;
                         font-size: 1.1em;
                     }
 
                     .buttonDiv{
-                        width: 35%;
+                        width: 30%;
 
                         button{
                             margin: 0 3px;

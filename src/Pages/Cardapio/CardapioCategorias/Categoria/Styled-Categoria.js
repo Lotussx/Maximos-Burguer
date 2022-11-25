@@ -64,7 +64,7 @@ export const CategoriaContainer = styled.div`
                     width: 40%;
                     height: 125px;
                     background-position: center !important;
-                    background-size: 110% !important;
+                    background-size: cover !important;
                     border-radius: 10px; 
                     box-shadow: 1px 1px 5px black;
                 }   

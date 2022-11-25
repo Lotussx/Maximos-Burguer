@@ -58,6 +58,7 @@ export const SlideContainer = styled.div`
                         border-radius: 20px;
                         box-shadow: 1px 1px 10px;
                         margin-top: 22%;
+                        z-index: 100 !important;
                     }
                 }
             }
@@ -154,9 +155,10 @@ export const SlideContainer = styled.div`
             }
     
             button{
+                position: absolute;
                 font-size: .8em !important;
                 width: 200px !important;
-                margin-top: 32% !important;
+                margin-top: 210px !important;
 
             }   
         }
@@ -182,9 +184,10 @@ export const SlideContainer = styled.div`
             }
     
             button{
+                position: absolute;
                 width: 180px !important;
                 font-size: 0.8em !important;
-                margin-top: 21% !important;
+                margin-top: 160px !important;
             }
         }
     }

@@ -72,7 +72,7 @@ export const HeaderContainer = styled.header`
 
     .logo-title{
         height: 100%;
-        width: 55%;
+        width: 80%;
         
         a{
             
@@ -94,7 +94,7 @@ export const HeaderContainer = styled.header`
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 380px) {
 
     .logo-title{
         
