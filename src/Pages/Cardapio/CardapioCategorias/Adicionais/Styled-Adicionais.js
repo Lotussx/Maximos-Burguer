@@ -24,6 +24,10 @@ export const AdicionaisContainer = styled.div`
         animation: ${animaModaladd};
         animation-duration: 1s;
         animation-fill-mode: forwards;
+
+        input{
+            cursor: pointer;
+        }
     
         .nomeProduto{
             width: 95%;
@@ -35,6 +39,10 @@ export const AdicionaisContainer = styled.div`
                 width: 40px;
                 height: 40px;
                 font-size: 2.3em;
+
+                svg{
+                    cursor: pointer;
+                }
             }
 
             .nome{

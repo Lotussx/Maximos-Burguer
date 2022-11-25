@@ -10,6 +10,8 @@ const animaModaladd = keyframes`
 `;
 
 export const BoxAcaiContainer = styled.div`
+    z-index: 11 !important;
+
 
     .marginModal{
         margin-left: -3000px !important;
@@ -30,7 +32,11 @@ export const BoxAcaiContainer = styled.div`
         animation-fill-mode: forwards;
         transition: .8s;
         box-shadow: 1px 1px 5px black;
-        z-index: 3 !important;
+        z-index: 11 !important;
+
+        input{
+            cursor: pointer;
+        }
 
     
         .nomeProduto{
@@ -43,6 +49,10 @@ export const BoxAcaiContainer = styled.div`
                 width: 35px;
                 height: 35px;
                 font-size: 2.3em;
+
+                svg{
+                    cursor: pointer;
+                }
             }
 
             .nome{

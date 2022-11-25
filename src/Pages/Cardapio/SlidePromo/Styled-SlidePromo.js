@@ -15,7 +15,7 @@ export const SlideContainer = styled.div`
         }
 
         .carousel-control-next, .carousel-control-prev{
-            z-index: 99 !important;
+            z-index: 3 !important;
         }
         .itemCarousel{
             height: 400px;
@@ -58,7 +58,7 @@ export const SlideContainer = styled.div`
                         border-radius: 20px;
                         box-shadow: 1px 1px 10px;
                         margin-top: 22%;
-                        z-index: 10 !important;
+                        z-index: 2 !important;
                     }
                 }
             }

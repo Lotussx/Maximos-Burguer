@@ -5,7 +5,7 @@ const animaModaladd = keyframes`
     }
     100%{
         opacity: 1;
-        margin-top: 0;
+        margin-top: 20px;
     }
 `;
 
@@ -28,6 +28,10 @@ export const BoxMilkShakeContainer = styled.div`
         box-shadow: 1px 1px 5px black;
         z-index: 3 !important;
 
+        input{
+            cursor: pointer
+        }
+
 
         .nomeProduto{
             width: 95%;
@@ -39,6 +43,10 @@ export const BoxMilkShakeContainer = styled.div`
                 width: 35px;
                 height: 35px;
                 font-size: 2.2em;
+
+                svg{
+                    cursor: pointer;
+                }
             }
 
             .nome{
