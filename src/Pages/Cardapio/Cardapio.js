@@ -95,7 +95,6 @@ export default function Cardapio() {
                 promoCOMBO={promoCOMBO}
                 countCartItems={cartItems.length}
                 onADD={onADD}
-
             />
 
             <Promocao

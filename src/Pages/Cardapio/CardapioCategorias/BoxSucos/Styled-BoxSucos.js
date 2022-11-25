@@ -9,7 +9,6 @@ const animaModaladd = keyframes`
     }
 `;
 
-
 export const BoxSucosContainer = styled.div`
 
     .escolhaSabor{ 
@@ -64,8 +63,6 @@ export const BoxSucosContainer = styled.div`
             flex-direction: column;
             justify-content: flex-start;
             width: 95%;
-
-           
 
             .checkbox{
                 width: 100%;

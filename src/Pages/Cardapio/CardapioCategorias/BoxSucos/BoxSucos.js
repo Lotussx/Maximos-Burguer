@@ -64,11 +64,6 @@ export default function BoxSucos({ className, fecharModalSucos, verificaSUCO, co
                 </div>
             </div>
 
-
-
-
-
-
         </BoxSucosContainer>
     )
 }
