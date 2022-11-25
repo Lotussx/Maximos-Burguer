@@ -14,6 +14,9 @@ export const SlideContainer = styled.div`
             }
         }
 
+        .carousel-control-next, .carousel-control-prev{
+            z-index: 99 !important;
+        }
         .itemCarousel{
             height: 400px;
             
