@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const FinalizarPedidoContainer = styled.body`
+export const FinalizarPedidoContainer = styled.div`
     position: absolute;
     width: 100%;
+    height: 100vh;
     flex-direction: column;
     overflow-x: hidden !important;
     transition: all .5s;
@@ -11,6 +12,7 @@ export const FinalizarPedidoContainer = styled.body`
     .mainContainer{
         font-family: 'Oswald', sans-serif;  
         width: 80%;
+        height: 100%;
         padding-bottom: 50px;
         padding-top: 15vh;
         margin: 0 auto;

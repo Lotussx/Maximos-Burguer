@@ -18,7 +18,7 @@ const AnimaBox = keyframes`
 
         }
         100%{
-            margin-top: -30%;
+            margin-top: -5%;
             margin-left: 0;
             opacity: 1;
         }
