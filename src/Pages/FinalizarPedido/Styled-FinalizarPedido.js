@@ -11,7 +11,7 @@ export const FinalizarPedidoContainer = styled.body`
     .mainContainer{
         font-family: 'Oswald', sans-serif;  
         width: 80%;
-        height: 100%;
+        padding-bottom: 50px;
         padding-top: 15vh;
         margin: 0 auto;
         justify-content: space-between;
