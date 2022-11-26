@@ -278,7 +278,7 @@ export const ContainerShopCart = styled.div`
                     }
 
                     .buttonDiv{
-                        width: 30%;
+                        width: 40%;
 
                         button{
                             margin: 0 3px;
