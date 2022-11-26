@@ -75,6 +75,7 @@ export const MenuLateralContainer = styled.div`
     }
 
     .botoes{
+        margin-top: 30px;
         width: 70%;
         height: 60%;
         margin-top: 45  px;
