@@ -155,7 +155,7 @@ export const SlideContainer = styled.div`
             }
     
             button{
-                position: fixed;
+                position: absolute;
                 font-size: .8em !important;
                 width: 200px !important;
                 margin-top: 210px !important;

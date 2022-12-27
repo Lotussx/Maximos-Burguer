@@ -50,6 +50,33 @@ import PROD_PROMO_HOTDOG from './Images/Combos&Promos/PROD.PROMO-HOTDOG.webp'
 import PROD_PROMO_MINIBARCA from './Images/Combos&Promos/PROD.PROMO-MINIBARCA.webp'
 
 
+// HAMBURGUERS
+
+import X_BACON from './Images/hamburguers/x-bacon.webp'
+import X_BURGUER from './Images/hamburguers/x-burguer.webp'
+import X_CALABRESA from './Images/hamburguers/x-calabresa.webp'
+import X_CHEDDAR from './Images/hamburguers/x-cheddar.webp'
+import X_DOG from './Images/hamburguers/x-dog.webp'
+import X_EGG from './Images/hamburguers/x-egg.webp'
+import X_EGGBACON from './Images/hamburguers/x-eggbacon.webp'
+import X_EGGCALABRESA from './Images/hamburguers/x-eggcalabresa.webp'
+
+// HAMBURGUERS ESPECIAIS
+
+import DUPLO_CHEDDAR from './Images/hamburguers-especiais/duplo-cheddar.webp'
+
+// BATATAS
+
+import BATATA_P from './Images/batatas/batataP.webp'
+import BATATA_M from './Images/batatas/batataM.webp'
+import BATATA_G from './Images/batatas/batataG.webp'
+import BATATA_CALABRESA from './Images/batatas/batataCalabresa.webp'
+
+// HOTDOGS
+
+import HOTDOG_TRADICIONAL from './Images/hotdogs/hotdogTradicional.webp'
+
+
 const data = {
 
     slideSEMANA: [
@@ -351,56 +378,56 @@ const data = {
             id: '02',
             name: 'X-BURGUER',
             price: 10.00,
-            image: 'https://drive.google.com/file/d/1JWvqIC0lHiSkXLC5fgzSmv44ztbYQB8U/view?usp=share_link',
+            image: X_BURGUER,
             description: 'Pão, carne (130g), queijo, salada c/cebola caramelizada, creme e barbecue.            '
         },
         {
             id: '03',
             name: 'X-EGG',
             price: 12.00,
-            image: 'https://drive.google.com/file/d/1RRKhFq6VWFORgBfapbZ0MCH817I2WclC/view?usp=sharing',
+            image: X_EGG,
             description: 'Pão, carne (130g), queijo, ovo, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '04',
             name: 'X-CHEDDAR',
             price: 13.00,
-            image: 'https://drive.google.com/file/d/10XxZCeTbdG6pEVva3oF1XrBaTzf9WLsr/view?usp=share_link',
+            image: X_CHEDDAR,
             description: 'Pão, carne (130g), cheddar, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '05',
             name: 'X-BACON',
             price: 13.00,
-            image: 'https://drive.google.com/file/d/1IN9DSUrVG15l64v_3R6zD24mbzXswq1X/view?usp=share_link',
+            image: X_BACON,
             description: 'Pão, carne (130g), queijo, bacon, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '06',
             name: 'X-EGG BACON',
             price: 15.00,
-            image: 'https://drive.google.com/file/d/1RoWlJwtTcY08R01AXKZqOYP-7URb2CRY/view?usp=share_link',
+            image: X_EGGBACON,
             description: 'Pão, carne (130g), queijo, ovo, bacon, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '07',
             name: 'X-CALABRESA',
             price: 13.00,
-            image: 'https://drive.google.com/file/d/1x0nSW33HUb_MSxTfd9xoe_VFaz0vORy7/view?usp=share_link',
+            image: X_CALABRESA,
             description: 'Pão, carne (130g), queijo, calabresa, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '08',
             name: 'X-EGG CALABRESA',
             price: 13.00,
-            image: Promo01,
+            image: X_EGGCALABRESA,
             description: 'Pão, carne (130g), queijo, calabresa, ovo, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '09',
             name: 'X-DOG',
             price: 12.00,
-            image: Promo01,
+            image: X_DOG,
             description: 'Pão, carne (130g), queijo, salsicha, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
@@ -431,7 +458,7 @@ const data = {
             id: '13',
             name: 'CHEDDAR DUPLO',
             price: 17.00,
-            image: 'https://drive.google.com/file/d/1SErO36EDsRcs2ZOFWYs9vktVc4u5NSKR/view?usp=share_link',
+            image: DUPLO_CHEDDAR,
             description: 'Pão, 2 carnes (130g), queijo, cheddar, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
@@ -481,14 +508,14 @@ const data = {
             name: 'MÁXIMOS BURGUER',
             price: 34.00,
             image: Promo01,
-            description: 'Pão grande, 2 carnes (220g), queijo, calabresa, bacon, salcicha, ovos, presunto, frango, cheddar, salada c/cebola caramelizada, creme e barbecue.'
+            description: 'Pão grande, 2 carnes (220g), queijo, calabresa, bacon, salsicha, ovos, presunto, frango, cheddar, salada c/cebola caramelizada, creme e barbecue.'
         },
         {
             id: '21',
             name: 'BIG MÁXIMOS',
             price: 40.00,
             image: Promo01,
-            description: 'Pão super grande, 4 carnes 130gm, queijo, salcicha, bacon, ovo, presunto, calabresa, salada c/cebola caramelizada, creme e barbecue.'
+            description: 'Pão super grande, 4 carnes 130gm, queijo, salsicha, bacon, ovo, presunto, calabresa, salada c/cebola caramelizada, creme e barbecue.'
         },
     ],
 
@@ -497,7 +524,7 @@ const data = {
             id: '22',
             name: 'HOT DOG TRADICIONAL',
             price: 8.00,
-            image: 'https://drive.google.com/file/d/1xZ4EBLfzZKDwgPlrlBktWiYAzZ0wluJG/view?usp=share_link',
+            image: HOTDOG_TRADICIONAL,
             description: 'Pão, carne moída, salcicha, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, maionese da casa e barbecue.'
         },
         {
@@ -505,35 +532,35 @@ const data = {
             name: 'HOT DOG FRANGO',
             price: 11.00,
             image: Promo01,
-            description: 'Pão, carne moída, salcicha, frango, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
+            description: 'Pão, carne moída, salsicha, frango, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
         },
         {
             id: '24',
             name: 'HOT DOG CARNE DE SOL',
             price: 13.00,
             image: Promo01,
-            description: 'Pão, carne moída, salcicha, carne de sol, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
+            description: 'Pão, carne moída, salsicha, carne de sol, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
         },
         {
             id: '25',
             name: 'HOT DOG CALABRESA',
             price: 12.00,
             image: Promo01,
-            description: 'Pão, carne moída, salcicha, calabresa, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
+            description: 'Pão, carne moída, salsicha, calabresa, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
         },
         {
             id: '26',
             name: 'HOT DOG BACON',
             price: 12.00,
             image: Promo01,
-            description: 'Pão, carne moída, salcicha, bacon, cheddar, cebola, tomate, milho, ervilha, barata palha, queijo maçaricado, molho da casa e barbecue.'
+            description: 'Pão, carne moída, salsicha, bacon, cheddar, cebola, tomate, milho, ervilha, barata palha, queijo maçaricado, molho da casa e barbecue.'
         },
         {
             id: '27',
             name: 'HOT DOG CARQUE',
             price: 13.00,
             image: Promo01,
-            description: 'Pão, carne moída, salcicha, charque, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
+            description: 'Pão, carne moída, salsicha, charque, cheddar, cebola, tomate, milho, ervilha, batata palha, queijo maçaricado, molho da casa e barbecue.'
         },
     ],
 
@@ -543,42 +570,42 @@ const data = {
             name: 'BEIRUTE DE FRANGO',
             price: 25.00,
             image: Promo01,
-            description: 'Pão sírio, frango em cubos, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+            description: 'Pão sírio, frango em cubos, queijo mussarela, presunto, salada, cream cheese, batata frita crocante e molho da casa.'
         },
         {
             id: '29',
             name: 'BEIRUTE DE FRALDINHA',
             price: 28.00,
             image: Promo01,
-            description: 'Pão sírio, fraudinha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+            description: 'Pão sírio, fraudinha, queijo mussarela, presunto, salada, cream cheese, batata frita crocante e molho da casa.'
         },
         {
             id: '30',
             name: 'BEIRUTE DE CAMARÃO',
             price: 35.00,
             image: Promo01,
-            description: 'Pão sírio, camarão, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+            description: 'Pão sírio, camarão, queijo mussarela, presunto, salada, cream cheese, batata frita crocante e molho da casa.'
         },
         {
             id: '31',
             name: 'BEIRUTE MISTO',
             price: 32.00,
             image: Promo01,
-            description: 'Pão sírio, frango em cubos, fraldinha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+            description: 'Pão sírio, frango em cubos, fraldinha, queijo mussarela, presunto, salada, cream cheese, batata frita crocante e molho da casa.'
         },
         {
             id: '32',
             name: 'BEIRUTE DE PICANHA',
             price: 38.00,
             image: Promo01,
-            description: 'Pão sírio, picanha, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+            description: 'Pão sírio, picanha, queijo mussarela, presunto, salada, cream cheese, batata frita crocante e molho da casa.'
         },
         {
             id: '33',
             name: 'BEIRUTE DE CARNE DE SOL',
             price: 36.00,
             image: Promo01,
-            description: 'Pão sírio, carne de sol, queijo mussarela, presunto, salada, cream chesse, batata frita crocante e molho da casa.'
+            description: 'Pão sírio, carne de sol, queijo mussarela, presunto, salada, cream cheese, batata frita crocante e molho da casa.'
         },
 
     ],
@@ -588,28 +615,28 @@ const data = {
             id: '34',
             name: 'Tadicional P',
             price: 7.00,
-            image: 'https://picsum.photos/200',
+            image: BATATA_P,
             description: 'Batata, sal e parmesão'
         },
         {
             id: '35',
             name: 'Tradicional M',
             price: 10.00,
-            image: 'https://picsum.photos/200',
+            image: BATATA_M,
             description: 'Batata, sal e parmesão'
         },
         {
             id: '36',
             name: 'Tradicional G',
             price: 14.00,
-            image: 'https://picsum.photos/200',
+            image: BATATA_G,
             description: 'Batata, sal e parmesão'
         },
         {
             id: '37',
             name: 'Calabrasesa',
             price: 16.00,
-            image: 'https://picsum.photos/200',
+            image: BATATA_CALABRESA,
             description: 'Batata, calabresa, cheddar e parmesão.'
         },
         {
@@ -627,28 +654,28 @@ const data = {
             name: 'AÇAÍ 200ML',
             price: 7.00,
             image: 'https://picsum.photos/200',
-            description: '1 fruta, 3 acompanhamento, 1 caldas.'
+            description: '1 fruta, 3 acompanhamentos, 1 calda.'
         },
         {
             id: '40',
             name: 'AÇAÍ 300ML',
             price: 10.00,
             image: 'https://picsum.photos/200',
-            description: '2 frutas, 4 acompanhamento, 2 caldas.'
+            description: '2 frutas, 4 acompanhamentos, 2 caldas.'
         },
         {
             id: '41',
             name: 'AÇAÍ 400ML',
             price: 13.00,
             image: 'https://picsum.photos/200',
-            description: '2 frutas, 4 acompanhamento, 2 caldas.'
+            description: '2 frutas, 4 acompanhamentos, 2 caldas.'
         },
         {
             id: '42',
             name: 'AÇAÍ 500ML',
             price: 16.00,
             image: 'https://picsum.photos/200',
-            description: '2 frutas, 5 acompanhamento, 2 caldas.'
+            description: '2 frutas, 5 acompanhamentos, 2 caldas.'
         },
 
     ],
